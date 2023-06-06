@@ -211,6 +211,7 @@ class DataValues {
   static Uri repoURL = Uri.parse('https://github.com/mxdhavgautam');
   static const String builtWith = "Built using the Flutter Framework";
 
-  static Uri siteUrl = Uri.parse('https://github.com/mxdhavgautam/portfolio');
+  static Uri siteUrl =
+      Uri.parse('https://github.com/mxdhavgautam/portfolio-src');
   static Uri blankURL = Uri.parse('');
 }
