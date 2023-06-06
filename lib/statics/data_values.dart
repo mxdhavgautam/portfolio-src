@@ -6,7 +6,7 @@ class DataValues {
       'Hey, I\'m Madhav. Welcome to my developer portfolio.';
   static const String appDeveloper = 'Madhav Gautam';
   static const String appPackage = 'dev.mxdhavgautam.mxdhavgautam_dev';
-  static const String appVersion = '1.0.0';
+  static const String appVersion = '1.1.0';
   static const String appBuildNumber = '1';
 
   // External links
