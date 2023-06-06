@@ -39,7 +39,7 @@ class DataValues {
   static const String aboutMeBiographyTitle = 'Bio';
   static const String aboutMeBiographyDescription =
       'I am a Computer Science Engineering student specializing in Artificial Intelligence and Robotics at Vellore Institute of Technology, Chennai. With a passion for technology, I enjoy delving into various aspects of computing, including installing and exploring Custom ROMs to get the most out of my devices as a side hobby.'
-      ' Currently, my focus lies in learning Dart and honing my skills as an intermediate Flutter developer. Coming from a Defence background, I possess remarkable networking and orating skills, enabling me to effectively communicate and connect with others. Moreover, my lifestyle has honed my ability to adapt swiftly to new situations, environments, and people along with the ability to remain composed and level-headed when confronted with high-pressure situations. I am open to collaborative projects that offer learning and growth opportunities.';
+      ' Currently, my focus lies in learning Dart and honing my skills as an intermediate Flutter developer. Coming from a Defence background, I possess remarkable networking and orating skills, which enable me to effectively communicate and connect with others. Moreover, my lifestyle has honed my ability to adapt swiftly to new situations, environments, and people along with the ability to remain composed and level-headed when confronted with high-pressure situations. I am open to collaborative projects that offer learning and growth opportunities.';
   static const String aboutMeLanguageTitle = 'Languages';
   static const String aboutMeLanguageDescription = 'Hindi (Native)\n'
       'English (Professional)\n'
