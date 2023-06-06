@@ -10,7 +10,7 @@ class DataValues {
   static const String appBuildNumber = '1';
 
   // External links
-  static Uri devURL = Uri.parse('https://mxdhavgautam.github.io');
+  static Uri devURL = Uri.parse('https://mxdhavgautam.netlify.app');
   static Uri githubURL = Uri.parse('https://github.com/mxdhavgautam');
   static Uri linkedinURL = Uri.parse('https://linkedin.com/in/mxdhavgautam');
   static Uri twitterURL = Uri.parse('https://twitter.com/mxdhavgautam');
@@ -18,12 +18,6 @@ class DataValues {
   static Uri instagramURL = Uri.parse('https://instagram.com/mxdhavgautam');
   static Uri resumeURL = Uri.parse(
       'https://drive.google.com/file/d/1e76x0ccQ56oUlqZdGdfcu9Pbekv6x8IA/view?usp=sharing');
-  /* 
-  static Uri biographyURL = Uri.parse('https://biography.dileepabandara.dev');
-  static Uri profilesURL = Uri.parse('https://profile.dileepabandara.dev');
-  static Uri toolkitURL = Uri.parse('https://toolkit.dileepabandara.dev'); */
-  static Uri technotesURL = Uri.parse('');
-  static Uri lateNightStudentURL = Uri.parse('https://github.com/mxdhavgautam');
 
   // Header
   static const String headerGreetings = 'Hey! I\'m';
