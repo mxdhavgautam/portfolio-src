@@ -99,7 +99,7 @@ class DataValues {
       'BTech in Computer Science Engineering with Specialisation in Artificial Intelligence and Robotics';
   static const String educationOrg2Course1Grade =
       'awarded by Vellore Institute of Technology';
-  static const String educationOrg2Course1Year = '2021 - Ongoing';
+  static const String educationOrg2Course1Year = '2021 - 2025, Ongoing';
   static const String educationOrg2Course2Name =
       'Flutter And Dart - The Complete Guide [2023 Edition]';
   static const String educationOrg2Course2Grade =
