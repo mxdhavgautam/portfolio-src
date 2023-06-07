@@ -17,7 +17,7 @@ class DataValues {
   static Uri telegramURL = Uri.parse('https://t.me/mxdhavgautam');
   static Uri instagramURL = Uri.parse('https://instagram.com/mxdhavgautam');
   static Uri resumeURL = Uri.parse(
-      'https://drive.google.com/file/d/1e76x0ccQ56oUlqZdGdfcu9Pbekv6x8IA/view?usp=sharing');
+      'https://drive.google.com/file/d/19WAgrRImLlezZPJ5EWkdGnBeehkb8FxH/view?usp=sharing');
 
   // Header
   static const String headerGreetings = 'Hey! I\'m';
