@@ -39993,13 +39993,13 @@ I(a){var s=null,r=A.pu("assets/images/logo.png",250,250),q=$.fG().p3,p=t.p
 return A.ci(s,new A.bz(B.AA,A.bw(A.a([A.ev(A.a([r,B.J3,A.bw(A.a([A.cm("Hey! I'm",q.f,s),A.cm("Madhav Gautam",q.b,s),A.cm("Student | Enthusiast | Developer",q.r,s),B.Q,B.fq],p),B.J,B.w,B.m)],p),B.J,B.bo,B.m),B.wt,new A.GR().a8E()],p),B.J,B.w,B.m),s),B.bF,s,s,s,s,s,s)}}
 A.Ec.prototype={
 I(a){var s=null,r=$.T0(),q=t.p,p=t.w
-return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lc,B.aa,A.d2(A.ev(A.a([A.fR(A.bw(A.a([new A.dT().hf(u.f,"Bio"),B.aa],q),B.I,B.w,B.m)),A.d2(s,s,A.bd(a,s,p).w.a.a*0.08),A.fR(A.bw(A.a([B.au,new A.dT().hf("Male (He/Him)","Gender"),B.au,new A.dT().hf(u.y,"Languages"),B.au,new A.dT().hf(u.j,"Skills")],q),B.I,B.w,B.m)),A.d2(s,s,A.bd(a,s,p).w.a.a*0.08),A.fR(A.bw(A.a([B.au,new A.dT().hf(u.F,"Hobbies"),B.au,new A.dT().hf(u.d,"Goal")],q),B.I,B.w,B.m))],q),B.I,B.w,B.m),s,s),B.aa,A.d2(A.ev(A.a([A.fR(new A.dd().nT(u.M,"assets/icons/student.png",J.bp($.d6()),"Engineering Student",$.d6())),A.d2(s,s,A.bd(a,s,p).w.a.a*0.03),A.fR(new A.dd().nT(u.E,"assets/icons/volunteer.png",J.bp($.d6()),"Enthusiast",$.d6())),A.d2(s,s,A.bd(a,s,p).w.a.a*0.03),A.fR(new A.dd().nT(u.r,"assets/icons/developer.png",J.bp($.d6()),"Developer",$.d6()))],q),B.I,B.w,B.m),s,s),B.aa],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
+return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.ld,B.aa,A.d2(A.ev(A.a([A.fR(A.bw(A.a([new A.dT().hf(u.f,"Bio"),B.aa],q),B.I,B.w,B.m)),A.d2(s,s,A.bd(a,s,p).w.a.a*0.08),A.fR(A.bw(A.a([B.au,new A.dT().hf("Male (He/Him)","Gender"),B.au,new A.dT().hf(u.y,"Languages"),B.au,new A.dT().hf(u.j,"Skills")],q),B.I,B.w,B.m)),A.d2(s,s,A.bd(a,s,p).w.a.a*0.08),A.fR(A.bw(A.a([B.au,new A.dT().hf(u.F,"Hobbies"),B.au,new A.dT().hf(u.d,"Goal")],q),B.I,B.w,B.m))],q),B.I,B.w,B.m),s,s),B.aa,A.d2(A.ev(A.a([A.fR(new A.dd().nT(u.M,"assets/icons/student.png",J.bp($.d6()),"Engineering Student",$.d6())),A.d2(s,s,A.bd(a,s,p).w.a.a*0.03),A.fR(new A.dd().nT(u.E,"assets/icons/volunteer.png",J.bp($.d6()),"Enthusiast",$.d6())),A.d2(s,s,A.bd(a,s,p).w.a.a*0.03),A.fR(new A.dd().nT(u.r,"assets/icons/developer.png",J.bp($.d6()),"Developer",$.d6()))],q),B.I,B.w,B.m),s,s),B.aa],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
 A.Ed.prototype={
 I(a){var s=null,r=$.T2(),q=t.p
-return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lf,A.ev(A.a([A.fR(new A.dd().kz(!0,"vit",J.bp($.d6()),"Vellore Institute of Technology",$.d6(),[u.H,u.v,"2021 - Ongoing",u.R,u.G,"2023","Advanced Cpp Training",u.D,"2021"])),A.d2(s,s,A.bd(a,s,t.w).w.a.a*0.05),A.fR(new A.dd().kz(!0,"ncs",J.bp($.d6()),"Navy Children School - Delhi",$.d6(),["CBSE Board Exam - Class 12th","Combined Maths, Physics, and Chemistry","2021 - 92%","CBSE Board Exam - Class 10th","Passed with distinction - 91%","2019"]))],q),B.I,B.cq,B.m)],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
+return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lf,A.ev(A.a([A.fR(new A.dd().kz(!0,"vit",J.bp($.d6()),"Vellore Institute of Technology",$.d6(),[u.H,u.v,"2021 - 2025 (Ongoing)",u.R,u.G,"2023","Advanced Cpp Training",u.D,"2021"])),A.d2(s,s,A.bd(a,s,t.w).w.a.a*0.05),A.fR(new A.dd().kz(!0,"ncs",J.bp($.d6()),"Navy Children School - Delhi",$.d6(),["CBSE Board Exam - Class 12th","Combined Maths, Physics, and Chemistry","2021 - 92%","CBSE Board Exam - Class 10th","Passed with distinction - 91%","2019"]))],q),B.I,B.cq,B.m)],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
 A.Ee.prototype={
 I(a){var s=null,r="Navy Children School - Delhi",q=$.T4(),p=t.w,o=t.p
-return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.ld,A.ev(A.a([A.fR(new A.dd().wF("enactus",s,J.bp($.i1()),"Video Editor","Enactus - VIT Chennai",$.i1(),u.U,"March 2022 - Present")),A.d2(s,s,A.bd(a,s,p).w.a.a*0.05),A.fR(new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School",$.i1(),[u.X,r,"2019 - 2020",u.s,r,"2019 - 2020","Managing Team - School Annual Day",r,"2019"])),A.d2(s,s,A.bd(a,s,p).w.a.a*0.05),A.fR(new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School (contd.)",$.i1(),["Managing Team & DJ - Farewell",r,"2019",u.l,r,"2018",u.C,u.L,"2016"]))],o),B.I,B.cq,B.m)],o),B.I,B.w,B.m),s),B.aO,s,s,q,s,s,s)}}
+return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.le,A.ev(A.a([A.fR(new A.dd().wF("enactus",s,J.bp($.i1()),"Video Editor","Enactus - VIT Chennai",$.i1(),u.U,"March 2022 - Present")),A.d2(s,s,A.bd(a,s,p).w.a.a*0.05),A.fR(new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School",$.i1(),[u.X,r,"2019 - 2020",u.s,r,"2019 - 2020","Managing Team - School Annual Day",r,"2019"])),A.d2(s,s,A.bd(a,s,p).w.a.a*0.05),A.fR(new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School (contd.)",$.i1(),["Managing Team & DJ - Farewell",r,"2019",u.l,r,"2018",u.C,u.L,"2016"]))],o),B.I,B.cq,B.m)],o),B.I,B.w,B.m),s),B.aO,s,s,q,s,s,s)}}
 A.Ef.prototype={
 I(a){var s=null,r=$.T3(),q=t.p
 return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lb,A.ev(A.a([A.fR(new A.dd().wF("portfolio",!0,J.bp($.mf()),"My Developer Portfolio","Devfolio",$.mf(),u.Y,"May 2023 - Present"))],q),B.I,B.cq,B.m),B.aa],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
@@ -40007,7 +40007,7 @@ A.Eg.prototype={
 I(a){var s,r=null,q=$.T1(),p=$.fG().p3,o=p.w.r
 p=p.r.w
 s=t.p
-return A.ci(r,new A.bz(B.bj,A.bw(A.a([B.le,A.ev(A.a([A.cm("Send me an email at",A.dD(r,r,B.i,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),B.iS,A.eT(A.eM(r,A.jY(A.eW("mxdhavgautam@gmail.com",r,A.dD(r,r,B.a2,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),"Click to copy email to clipboard"),B.O,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,new A.Vr(a),r,r,r,r,r,r),B.aX,r,r,r)],s),B.J,B.bo,B.m),B.aa,B.fq],s),B.J,B.w,B.m),r),B.aO,r,r,q,r,r,r)}}
+return A.ci(r,new A.bz(B.bj,A.bw(A.a([B.lc,A.ev(A.a([A.cm("Send me an email at",A.dD(r,r,B.i,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),B.iS,A.eT(A.eM(r,A.jY(A.eW("mxdhavgautam@gmail.com",r,A.dD(r,r,B.a2,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),"Click to copy email to clipboard"),B.O,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,new A.Vr(a),r,r,r,r,r,r),B.aX,r,r,r)],s),B.J,B.bo,B.m),B.aa,B.fq],s),B.J,B.w,B.m),r),B.aO,r,r,q,r,r,r)}}
 A.Vr.prototype={
 $0(){var s,r=null
 A.u2(B.k6)
@@ -40019,7 +40019,7 @@ A.Eh.prototype={
 wU(a){var s=null,r=J.bp($.mf())
 return A.eT(A.eM(s,A.jY(A.eW("Get Source Code",s,A.dD(s,s,B.a2,s,s,s,s,s,s,s,s,A.a9(a).p3.z.r,s,s,A.a9(a).p3.z.w,s,s,!0,s,s,s,s,s,s,s,s),s),r),B.O,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.Vs(),s,s,s,s,s,s),B.aX,s,s,s)},
 I(a){var s=null,r=t.p
-return A.ci(s,A.bw(A.a([B.aa,A.cm("Madhav Gautam (v1.1.0)",A.a9(a).p3.z,s),B.aW,A.ev(A.a([A.cm("Built using the Flutter Framework",A.a9(a).p3.z,s),B.iS,this.wU(a)],r),B.J,B.bo,B.m),B.aW,A.cm("All Rights Reserved.",A.a9(a).p3.z,s),B.aa],r),B.J,B.w,B.m),B.bF,s,s,s,s,s,1/0)}}
+return A.ci(s,A.bw(A.a([B.aa,A.cm("Madhav Gautam (v1.1.1)",A.a9(a).p3.z,s),B.aW,A.ev(A.a([A.cm("Built using the Flutter Framework",A.a9(a).p3.z,s),B.iS,this.wU(a)],r),B.J,B.bo,B.m),B.aW,A.cm("All Rights Reserved.",A.a9(a).p3.z,s),B.aa],r),B.J,B.w,B.m),B.bF,s,s,s,s,s,1/0)}}
 A.Vs.prototype={
 $0(){A.oq($.mf())},
 $S:0}
@@ -40071,13 +40071,13 @@ I(a){var s=null,r=A.pu("assets/images/logo.png",250,250),q=$.fG().p3,p=t.p
 return A.ci(s,new A.bz(B.Ax,A.bw(A.a([A.bw(A.a([r,B.aa,A.bw(A.a([A.cm("Hey! I'm",q.f,s),A.cm("Madhav Gautam",q.b,B.cI),A.cm("Student | Enthusiast | Developer",q.r,s),B.Q,B.fq],p),B.J,B.w,B.m)],p),B.J,B.bo,B.m),B.aa],p),B.J,B.w,B.m),s),B.bF,s,s,s,s,s,s)}}
 A.Gg.prototype={
 I(a){var s=null,r=$.T0(),q=t.p
-return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lc,B.aa,A.d2(A.bw(A.a([new A.dT().hf(u.f,"Bio"),B.Q,B.au,new A.dT().hf("Male (He/Him)","Gender"),B.au,new A.dT().hf(u.y,"Languages"),B.au,new A.dT().hf(u.j,"Skills"),B.au,new A.dT().hf(u.F,"Hobbies"),B.au,new A.dT().hf(u.d,"Goal")],q),B.I,B.w,B.m),s,s),B.aa,A.d2(A.bw(A.a([new A.dd().nT(u.M,"assets/icons/student.png",J.bp($.d6()),"Engineering Student",$.d6()),B.Q,new A.dd().nT(u.E,"assets/icons/volunteer.png",J.bp($.d6()),"Enthusiast",$.d6()),B.Q,new A.dd().nT(u.r,"assets/icons/developer.png",J.bp($.d6()),"Developer",$.d6())],q),B.I,B.w,B.m),s,s),B.aa],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
+return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.ld,B.aa,A.d2(A.bw(A.a([new A.dT().hf(u.f,"Bio"),B.Q,B.au,new A.dT().hf("Male (He/Him)","Gender"),B.au,new A.dT().hf(u.y,"Languages"),B.au,new A.dT().hf(u.j,"Skills"),B.au,new A.dT().hf(u.F,"Hobbies"),B.au,new A.dT().hf(u.d,"Goal")],q),B.I,B.w,B.m),s,s),B.aa,A.d2(A.bw(A.a([new A.dd().nT(u.M,"assets/icons/student.png",J.bp($.d6()),"Engineering Student",$.d6()),B.Q,new A.dd().nT(u.E,"assets/icons/volunteer.png",J.bp($.d6()),"Enthusiast",$.d6()),B.Q,new A.dd().nT(u.r,"assets/icons/developer.png",J.bp($.d6()),"Developer",$.d6())],q),B.I,B.w,B.m),s,s),B.aa],q),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
 A.Gh.prototype={
 I(a){var s=null,r=$.T2()
-return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lf,B.au,new A.dd().kz(!0,"vit",J.bp($.d6()),"Vellore Institute of Technology",$.d6(),[u.H,u.v,"2021 - Ongoing",u.R,u.G,"2023","Advanced Cpp Training",u.D,"2021"]),B.Q,new A.dd().kz(!0,"ncs",J.bp($.d6()),"Navy Children School - Delhi",$.d6(),["CBSE Board Exam - Class 12th","Combined Maths, Physics, and Chemistry","2021 - 92%","CBSE Board Exam - Class 10th","Passed with distinction - 91%","2019"])],t.p),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
+return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lf,B.au,new A.dd().kz(!0,"vit",J.bp($.d6()),"Vellore Institute of Technology",$.d6(),[u.H,u.v,"2021 - 2025 (Ongoing)",u.R,u.G,"2023","Advanced Cpp Training",u.D,"2021"]),B.Q,new A.dd().kz(!0,"ncs",J.bp($.d6()),"Navy Children School - Delhi",$.d6(),["CBSE Board Exam - Class 12th","Combined Maths, Physics, and Chemistry","2021 - 92%","CBSE Board Exam - Class 10th","Passed with distinction - 91%","2019"])],t.p),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
 A.Gi.prototype={
 I(a){var s=null,r="Navy Children School - Delhi",q=$.T4()
-return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.ld,B.au,new A.dd().wF("enactus",s,"","Video Editor","Enactus - VIT Chennai",$.i1(),u.U,"March 2022 - Present"),B.Q,new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School",$.i1(),[u.X,r,"2019 - 2020",u.s,r,"2019 - 2020","Managing Team - School Annual Day",r,"2019"]),B.Q,new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School (contd.)",$.i1(),["Managing Team & DJ - Farewell",r,"2019",u.l,r,"2018",u.C,u.L,"2016"])],t.p),B.I,B.w,B.m),s),B.aO,s,s,q,s,s,s)}}
+return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.le,B.au,new A.dd().wF("enactus",s,"","Video Editor","Enactus - VIT Chennai",$.i1(),u.U,"March 2022 - Present"),B.Q,new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School",$.i1(),[u.X,r,"2019 - 2020",u.s,r,"2019 - 2020","Managing Team - School Annual Day",r,"2019"]),B.Q,new A.dd().kz(!1,"ncs",J.bp($.i1()),"Navy Children School (contd.)",$.i1(),["Managing Team & DJ - Farewell",r,"2019",u.l,r,"2018",u.C,u.L,"2016"])],t.p),B.I,B.w,B.m),s),B.aO,s,s,q,s,s,s)}}
 A.Gj.prototype={
 I(a){var s=null,r=$.T3()
 return A.ci(s,new A.bz(B.bj,A.bw(A.a([B.lb,B.au,new A.dd().wF("portfolio",!0,J.bp($.mf()),"My Developer Portfolio","Devfolio",$.mf(),u.Y,"May 2023 - Present")],t.p),B.I,B.w,B.m),s),B.aO,s,s,r,s,s,s)}}
@@ -40085,7 +40085,7 @@ A.Gk.prototype={
 I(a){var s,r=null,q=$.T1(),p=$.fG().p3,o=p.w.r
 p=p.r.w
 s=t.p
-return A.ci(r,A.bw(A.a([B.aa,new A.bz(B.AI,A.bw(A.a([B.le,B.au,A.cm("Send me an email at",A.dD(r,r,B.i,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),B.J4,A.eT(A.eM(r,A.jY(A.eW("mxdhavgautam@gmail.com",r,A.dD(r,r,B.a2,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),"Click to copy email to clipboard"),B.O,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,new A.a_B(a),r,r,r,r,r,r),B.aX,r,r,r)],s),B.J,B.w,B.m),r),B.Q,B.fq,B.aa],s),B.J,B.w,B.m),B.aO,r,r,q,r,r,r)}}
+return A.ci(r,A.bw(A.a([B.aa,new A.bz(B.AI,A.bw(A.a([B.lc,B.au,A.cm("Send me an email at",A.dD(r,r,B.i,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),B.J4,A.eT(A.eM(r,A.jY(A.eW("mxdhavgautam@gmail.com",r,A.dD(r,r,B.a2,r,r,r,r,r,r,r,r,o,r,r,p,r,r,!0,r,r,r,r,r,r,r,r),r),"Click to copy email to clipboard"),B.O,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,new A.a_B(a),r,r,r,r,r,r),B.aX,r,r,r)],s),B.J,B.w,B.m),r),B.Q,B.fq,B.aa],s),B.J,B.w,B.m),B.aO,r,r,q,r,r,r)}}
 A.a_B.prototype={
 $0(){var s,r=null
 A.u2(B.k6)
@@ -40097,7 +40097,7 @@ A.Gl.prototype={
 wU(a){var s=null,r=J.bp($.mf())
 return A.eT(A.eM(s,A.jY(A.eW("Get Source Code",s,A.dD(s,s,B.a2,s,s,s,s,s,s,s,s,A.a9(a).p3.z.r,s,s,A.a9(a).p3.z.w,s,s,!0,s,s,s,s,s,s,s,s),s),r),B.O,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.a_C(),s,s,s,s,s,s),B.aX,s,s,s)},
 I(a){var s=null,r=t.p
-return A.ci(s,A.bw(A.a([B.aa,A.cm("Madhav Gautam (v1.1.0)",A.a9(a).p3.z,s),B.aW,A.ev(A.a([A.cm("Built using the Flutter Framework",A.a9(a).p3.z,s),B.iS,this.wU(a)],r),B.J,B.bo,B.m),B.aW,A.cm("All Rights Reserved.",A.a9(a).p3.z,s),B.aa],r),B.J,B.w,B.m),B.bF,s,s,s,s,s,1/0)}}
+return A.ci(s,A.bw(A.a([B.aa,A.cm("Madhav Gautam (v1.1.1)",A.a9(a).p3.z,s),B.aW,A.ev(A.a([A.cm("Built using the Flutter Framework",A.a9(a).p3.z,s),B.iS,this.wU(a)],r),B.J,B.bo,B.m),B.aW,A.cm("All Rights Reserved.",A.a9(a).p3.z,s),B.aa],r),B.J,B.w,B.m),B.bF,s,s,s,s,s,1/0)}}
 A.a_C.prototype={
 $0(){A.oq($.mf())},
 $S:0}
@@ -76016,9 +76016,9 @@ B.l9=new A.po(0,"ltr")
 B.la=new A.po(1,"rtl")
 B.hJ=new A.po(3,"sandwich")
 B.lb=new A.kT("Projects","Here, you'll find a collection of hands-on projects that highlight my journey as a budding Flutter developer. Through these projects, I've gained valuable experience, honed my problem-solving skills, and applied industry best practices. Each project showcases my creativity and proficiency in Flutter development, offering a glimpse into my ability to bring ideas to life.",null)
-B.lc=new A.kT("About Me","Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",null)
-B.ld=new A.kT("Extra-Curriculars","Engaging in extracurricular activities has enriched my professional journey by fostering essential soft skills, such as leadership, teamwork, and time management. These activities demonstrate my proactive approach to personal growth and highlight my ability to balance multiple commitments. Additionally, they have provided networking opportunities and showcased my passion and dedication in specific areas of interest. Overall, my involvement in extracurricular activities enhances my professional role by contributing to a well-rounded skill set and a diverse perspective.",null)
-B.le=new A.kT("Contact","Thanks for taking the time to check out my public profile! Feel free to ask me anything or start a conversation. I love meeting new people, so don't hesitate to reach out to me on social media. If you need to discuss something important, just shoot me an email, and I'll do my best to get back to you within 12 to 24 hours.",null)
+B.lc=new A.kT("Contact","Thanks for taking the time to check out my portfolio! Feel free to ask me anything or start a conversation. I love meeting new people, so don't hesitate to reach out to me on social media. If you need to discuss something important, just shoot me an email, and I'll do my best to get back to you within 12 to 24 hours.",null)
+B.ld=new A.kT("About Me","Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",null)
+B.le=new A.kT("Extra-Curriculars","Engaging in extracurricular activities has enriched my professional journey by fostering essential soft skills, such as leadership, teamwork, and time management. These activities demonstrate my proactive approach to personal growth and highlight my ability to balance multiple commitments. Additionally, they have provided networking opportunities and showcased my passion and dedication in specific areas of interest. Overall, my involvement in extracurricular activities enhances my professional role by contributing to a well-rounded skill set and a diverse perspective.",null)
 B.lf=new A.kT("Education","My education has been diverse and includes a combination of formal schooling, undergraduate studies, and engagement with various learning platforms. Since 2020, I have participated in different educational endeavors, ranging from traditional schools to online learning platforms. Below, you will find information about my schools, undergraduate institution, and other educational sources that have contributed to my knowledge and skills development.",null)
 B.bl=new A.Fu(0,"accepted")
 B.V=new A.Fu(1,"rejected")

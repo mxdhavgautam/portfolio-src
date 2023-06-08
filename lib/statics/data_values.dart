@@ -6,7 +6,7 @@ class DataValues {
       'Hey, I\'m Madhav. Welcome to my developer portfolio.';
   static const String appDeveloper = 'Madhav Gautam';
   static const String appPackage = 'dev.mxdhavgautam.mxdhavgautam_dev';
-  static const String appVersion = '1.1.0';
+  static const String appVersion = '1.1.1';
   static const String appBuildNumber = '1';
 
   // External links
@@ -99,7 +99,7 @@ class DataValues {
       'BTech in Computer Science Engineering with Specialisation in Artificial Intelligence and Robotics';
   static const String educationOrg2Course1Grade =
       'awarded by Vellore Institute of Technology';
-  static const String educationOrg2Course1Year = '2021 - 2025, Ongoing';
+  static const String educationOrg2Course1Year = '2021 - 2025 (Ongoing)';
   static const String educationOrg2Course2Name =
       'Flutter And Dart - The Complete Guide [2023 Edition]';
   static const String educationOrg2Course2Grade =
@@ -196,7 +196,7 @@ class DataValues {
   // Contact
   static const String contactTitle = 'Contact';
   static const String contactDescription =
-      'Thanks for taking the time to check out my public profile! Feel free to ask me anything or start a conversation. I love meeting new people, so don\'t hesitate to reach out to me on social media. If you need to discuss something important, just shoot me an email, and I\'ll do my best to get back to you within 12 to 24 hours.';
+      'Thanks for taking the time to check out my portfolio! Feel free to ask me anything or start a conversation. I love meeting new people, so don\'t hesitate to reach out to me on social media. If you need to discuss something important, just shoot me an email, and I\'ll do my best to get back to you within 12 to 24 hours.';
   static const String contactBanner = 'Send me an email at';
   static const String contactEmail = 'mxdhavgautam@gmail.com';
 
