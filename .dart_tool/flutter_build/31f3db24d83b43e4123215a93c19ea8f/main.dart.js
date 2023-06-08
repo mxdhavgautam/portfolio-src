@@ -72951,7 +72951,7 @@ C8(a){return this.a9Y(a)},
 a9Y(a){var s=0,r=A.W(t.z),q,p,o
 var $async$C8=A.X(function(b,c){if(b===1)return A.T(c,r)
 while(true)$async$outer:switch(s){case 0:o=a.a
-switch(o){case"remove":try{self.removeSplashFromWeb()}catch(n){o=A.c3('Did you forget to run "flutter pub run flutter_native_splash:create"? \n Could not run the JS command removeSplashFromWeb()')
+switch(o){case"remove":try{self.removeSplashFromWeb()}catch(n){o=A.c3('Did you forget to run "dart run flutter_native_splash:create"? \n Could not run the JS command removeSplashFromWeb()')
 throw A.d(o)}s=1
 break $async$outer
 default:throw A.d(A.a1q("Unimplemented","flutter_native_splash for web doesn't implement '"+o+"'",null,null))}case 1:return A.U(q,r)}})
