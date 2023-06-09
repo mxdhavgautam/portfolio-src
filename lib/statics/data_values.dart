@@ -110,32 +110,32 @@ class DataValues {
       'awarded by Spoken Tutorial Project at IIT Bombay';
   static const String educationOrg2Course3Year = '2021';
 
-  static const String extracOrg1Title = 'Navy Children School';
-  static const String extracOrg2Title = 'Navy Children School (contd.)';
-  static const String extracOrg1Activity1Name =
+  static const String extracOrg2Title = 'Navy Children School';
+  static const String extracOrg3Title = 'Navy Children School (contd.)';
+  static const String extracOrg2Activity1Name =
       'Served as a Prefect on the School\'s Prefectorial Board';
-  static const String extracOrg1Activity1Grade = 'Navy Children School - Delhi';
-  static const String extracOrg1Activity1Year = '2019 - 2020';
-  static const String extracOrg1Activity2Name =
+  static const String extracOrg2Activity1Grade = 'Navy Children School - Delhi';
+  static const String extracOrg2Activity1Year = '2019 - 2020';
+  static const String extracOrg2Activity2Name =
       'Editorial Board Member for the School\'s Online Newsletter';
-  static const String extracOrg1Activity2Grade = 'Navy Children School - Delhi';
-  static const String extracOrg1Activity2Year = '2019 - 2020';
-  static const String extracOrg1Activity3Name =
+  static const String extracOrg2Activity2Grade = 'Navy Children School - Delhi';
+  static const String extracOrg2Activity2Year = '2019 - 2020';
+  static const String extracOrg2Activity3Name =
       'Managing Team - School Annual Day';
-  static const String extracOrg1Activity3Grade = 'Navy Children School - Delhi';
-  static const String extracOrg1Activity3Year = '2019';
-  static const String extracOrg1Activity4Name = 'Managing Team & DJ - Farewell';
-  static const String extracOrg1Activity4Grade = 'Navy Children School - Delhi';
-  static const String extracOrg1Activity4Year = '2019';
-  static const String extracOrg1Activity5Name =
+  static const String extracOrg2Activity3Grade = 'Navy Children School - Delhi';
+  static const String extracOrg2Activity3Year = '2019';
+  static const String extracOrg2Activity4Name = 'Managing Team & DJ - Farewell';
+  static const String extracOrg2Activity4Grade = 'Navy Children School - Delhi';
+  static const String extracOrg2Activity4Year = '2019';
+  static const String extracOrg2Activity5Name =
       'Inter-School Nukkad Natak (Street Play) Competition - Qualified for Zonals';
-  static const String extracOrg1Activity5Grade = 'Navy Children School - Delhi';
-  static const String extracOrg1Activity5Year = '2018';
-  static const String extracOrg1Activity6Name =
+  static const String extracOrg2Activity5Grade = 'Navy Children School - Delhi';
+  static const String extracOrg2Activity5Year = '2018';
+  static const String extracOrg2Activity6Name =
       'English Extempore Competition - Silver Medalist';
-  static const String extracOrg1Activity6Grade =
+  static const String extracOrg2Activity6Grade =
       'Navy Children School, NSB - Vishakhapatnam';
-  static const String extracOrg1Activity6Year = '2016';
+  static const String extracOrg2Activity6Year = '2016';
 
   /* // Experience
   static const String experienceTitle = 'Experience';
@@ -158,40 +158,33 @@ class DataValues {
       'Visit toolkit.dileepabandara.dev for more details >>'; */
 
   // Extra-Curriculars
-  static const String volunteeringTitle = 'Extra-Curriculars';
-  static const String volunteeringDescription =
+  static const String extracTitle = 'Extra-Curriculars';
+  static const String extracDescription =
       'Engaging in extracurricular activities has enriched my professional journey by fostering essential soft skills, such as leadership, teamwork, and time management. These activities demonstrate my proactive approach to personal growth and highlight my ability to balance multiple commitments. Additionally, they have provided networking opportunities and showcased my passion and dedication in specific areas of interest. Overall, my involvement in extracurricular activities enhances my professional role by contributing to a well-rounded skill set and a diverse perspective.';
-  static const String volunteeringOrg1Title = 'Enactus - VIT Chennai';
-  static const String volunteeringOrg1Role = 'Video Editor';
-  static const String volunteeringOrg1Years = 'March 2022 - Present';
-  static const String volunteeringOrg1Vales =
+  static const String exracOrg1Title = 'Enactus - VIT Chennai';
+  static const String extracOrg1Role = 'Video Editor';
+  static const String extracOrg1Years = 'March 2022 - Present';
+  static const String extracOrg1Vales =
       'Enactus is a network of leaders committed to using business as a catalyst for positive social and environmental impact. We educate, inspire, and support young people to use innovation and entrepreneurship to solve the world\'s biggest problems.';
-  /* static const String volunteeringOrg2Title = 'Microsoft';
-  static const String volunteeringOrg2Role =
-      'Microsoft Learn Student Ambassador';
-  static const String volunteeringOrg2Years = 'October 2022 - Present';
-  static const String volunteeringOrg2Vales =
-      'Microsoft Learn Student Ambassadors are a global group of campus leaders who are eager to help fellow students, create robust tech communities, and develop technical and career skills for the future.'; */
-  static const String volunteeringBanner = 'Find more about my';
-  static const String volunteeringBannerTitle = 'extra-curriculars';
-  static const String volunteeringBannerWeb =
+  static const String extracBanner = 'Find more about my';
+  static const String extracBannerTitle = 'extra-curriculars';
+  static const String extracBannerWeb =
       'Visit linkedin.com/mxdhavgautam for more details >>';
-  static Uri volunteeringURL =
-      Uri.parse('https://linkedin.com/in/mxdhavgautam');
+  static Uri extracURL = Uri.parse('https://linkedin.com/in/mxdhavgautam');
 
-  // TechNotes
-  static const String technotesTitle = 'Projects';
-  static const String technotesDescription =
+  // Projects
+  static const String projectsTitle = 'Projects';
+  static const String projectsDescription =
       'Here, you\'ll find a collection of hands-on projects that highlight my journey as a budding Flutter developer. Through these projects, I\'ve gained valuable experience, honed my problem-solving skills, and applied industry best practices. Each project showcases my creativity and proficiency in Flutter development, offering a glimpse into my ability to bring ideas to life.';
-  static const String technotesOrg1Title = 'Devfolio';
-  static const String technotesOrg1Role = 'My Developer Portfolio';
-  static const String technotesOrg1Years = 'May 2023 - Present';
-  static const String technotesOrg1Vales =
+  static const String projectsOrg1Title = 'Devfolio';
+  static const String projectsOrg1Role = 'My Developer Portfolio';
+  static const String projectsOrg1Years = 'May 2023 - Present';
+  static const String projectsOrg1Vales =
       'This responsive portfolio, built with Flutter, demonstrates my development skills as well as my work and presentation style. I aim to produce high-quality work from the first draft itself and I have applied this same philosophy to this project as well. I have consulted online resources such as StackOverflow, GitHub and Reddit to learn how to create this portfolio, as it was my first project. This shows my eagerness to learn and my resourcefulness as an individual. The code for this project is available on my Github profile.';
-  static const String technotesOrg2Title = 'Coming Soon!';
-  static const String technotesOrg2Role = ' ';
-  static const String technotesOrg2Years = ' ';
-  static const String technotesOrg2Vales = ' ';
+  static const String projectsOrg2Title = 'Coming Soon!';
+  static const String projectsOrg2Role = ' ';
+  static const String projectsOrg2Years = ' ';
+  static const String projectsOrg2Vales = ' ';
 
   // Contact
   static const String contactTitle = 'Contact';

@@ -8,7 +8,7 @@ import 'desktop/ds_2_about_me.dart';
 import 'desktop/ds_3_education.dart';
 //import 'desktop/ds_4_experience.dart';
 import 'desktop/ds_5_extracurriculars.dart';
-import 'desktop/ds_6_technotes.dart';
+import 'desktop/ds_6_projects.dart';
 import 'desktop/ds_7_contact.dart';
 import 'desktop/ds_8_footer.dart';
 import 'mobile/ms_1_header.dart';
@@ -16,7 +16,7 @@ import 'mobile/ms_2_about_me.dart';
 import 'mobile/ms_3_education.dart';
 //import 'mobile/ms_4_experience.dart';
 import 'mobile/ms_5_extracurriculars.dart';
-import 'mobile/ms_6_technotes.dart';
+import 'mobile/ms_6_projects.dart';
 import 'mobile/ms_7_contact.dart';
 import 'mobile/ms_8_footer.dart';
 

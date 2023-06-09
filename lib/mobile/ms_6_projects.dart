@@ -20,15 +20,15 @@ class MS6TechNotes extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const FrameTitle(
-                title: DataValues.technotesTitle,
-                description: DataValues.technotesDescription),
+                title: DataValues.projectsTitle,
+                description: DataValues.projectsDescription),
             const SizedBox(height: 30.0),
             ContainerCard().type3(
               image: 'portfolio',
-              title: DataValues.technotesOrg1Title,
-              role: DataValues.technotesOrg1Role,
-              years: DataValues.technotesOrg1Years,
-              values: DataValues.technotesOrg1Vales,
+              title: DataValues.projectsOrg1Title,
+              role: DataValues.projectsOrg1Role,
+              years: DataValues.projectsOrg1Years,
+              values: DataValues.projectsOrg1Vales,
               message: DataValues.siteUrl.toString(),
               url: DataValues.siteUrl,
               isButtonEnabled: true,
