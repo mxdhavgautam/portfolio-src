@@ -19,6 +19,7 @@ import 'mobile/ms_5_extracurriculars.dart';
 import 'mobile/ms_6_projects.dart';
 import 'mobile/ms_7_contact.dart';
 import 'mobile/ms_8_footer.dart';
+import 'package:seo/seo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,11 +30,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Madhav Gautam',
-      debugShowCheckedModeBanner: false,
-      theme: AppThemeData.darkTheme,
-      home: const HomePage(),
+    return SeoController(
+      enabled: true,
+      tree: WidgetTree(context: context),
+      child: MaterialApp(
+        title: 'Madhav Gautam',
+        theme: AppThemeData.darkTheme,
+        home: const HomePage(),
+      ),
     );
   }
 }

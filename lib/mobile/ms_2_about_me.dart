@@ -18,7 +18,7 @@ class MS2AboutMe extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextPairs().type1(
+          SeoTextPairs().type1(
             title: DataValues.aboutMeBiographyTitle,
             description: DataValues.aboutMeBiographyDescription,
           ),
@@ -29,42 +29,42 @@ class MS2AboutMe extends StatelessWidget {
             url: DataValues.biographyURL,
           ),*/
           const SizedBox(height: 30.0),
-          TextPairs().type1(
+          SeoTextPairs().type1(
             title: DataValues.aboutMeGenderTitle,
             description: DataValues.aboutMeGenderDescription,
           ),
           const SizedBox(height: 30.0),
-          TextPairs().type1(
+          SeoTextPairs().type1(
             title: DataValues.aboutMeLanguageTitle,
             description: DataValues.aboutMeLanguageDescription,
           ),
           const SizedBox(height: 30.0),
-          TextPairs().type1(
+          SeoTextPairs().type1(
             title: DataValues.aboutMeSkillsTitle,
             description: DataValues.aboutMeSkillsDescription,
           ),
           //const SizedBox(height: 30.0),
-          // TextPairs().type1(
+          // SeoTextPairs().type1(
           //   title: DataValues.aboutMeNationalityTitle,
           //   description: DataValues.aboutMeNationalityDescription,
           // ),
           // const SizedBox(height: 30.0),
-          // TextPairs().type1(
+          // SeoTextPairs().type1(
           //   title: DataValues.aboutMeLocationTitle,
           //   description: DataValues.aboutMeLocationDescription,
           // ),
           // const SizedBox(height: 30.0),
-          // TextPairs().type1(
+          // SeoTextPairs().type1(
           //   title: DataValues.aboutMeWorkDomainTitle,
           //   description: DataValues.aboutMeWorkDomainDescription,
           // ),
           const SizedBox(height: 30.0),
-          TextPairs().type1(
+          SeoTextPairs().type1(
             title: DataValues.aboutMeHobbiesTitle,
             description: DataValues.aboutMeHobbiesDescription,
           ),
           const SizedBox(height: 30.0),
-          TextPairs().type1(
+          SeoTextPairs().type1(
             title: DataValues.aboutMeGoalTitle,
             description: DataValues.aboutMeGoalDescription,
           ),
