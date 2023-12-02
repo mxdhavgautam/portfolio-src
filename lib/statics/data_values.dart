@@ -140,7 +140,7 @@ class DataValues {
   // Experience
   static const String experienceTitle = 'Experience';
   static const String experienceDescription =
-      'This section summarises my experience as an intern and glances over the skills I utilised, applied and obtained during the course of my summer break.';
+      'This section summarises my experience as an intern and glances over the skills I\'ve utilised, applied and obtained during the course of my summer break.';
   static const String experienceOrg1Title =
       'WESEE | Ministry of Defense, New Delhi';
   static const String experienceOrg1Role =
