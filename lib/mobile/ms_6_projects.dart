@@ -6,8 +6,8 @@ import '../theme/app_theme.dart';
 import '../widgets/container_card.dart';
 import '../widgets/frame_title.dart';
 
-class MS6TechNotes extends StatelessWidget {
-  const MS6TechNotes({Key? key}) : super(key: key);
+class MS6Projects extends StatelessWidget {
+  const MS6Projects({super.key});
 
   @override
   Widget build(BuildContext context) {

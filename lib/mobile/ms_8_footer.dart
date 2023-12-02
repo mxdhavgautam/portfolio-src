@@ -5,7 +5,7 @@ import '../statics/data_values.dart';
 import '../theme/app_theme.dart';
 
 class MS8Footer extends StatelessWidget {
-  const MS8Footer({Key? key}) : super(key: key);
+  const MS8Footer({super.key});
 
   Widget getSourceCode(BuildContext context) {
     return MouseRegion(

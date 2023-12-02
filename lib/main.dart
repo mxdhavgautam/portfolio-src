@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -94,9 +94,9 @@ class _HomePageState extends State<HomePage> {
           DS1Header(),
           DS2AboutMe(),
           DS3Education(),
-          DS6TechNotes(),
           DS4Experience(),
-          DS5Volunteering(),
+          DS6Projects(),
+          DS5Extracurriculars(),
           DS7Contact(),
           DS8Footer(),
         ],
@@ -111,9 +111,9 @@ class _HomePageState extends State<HomePage> {
           MS1Header(),
           MS2AboutMe(),
           MS3Education(),
-          MS6TechNotes(),
           MS4Experience(),
-          MS5Volunteering(),
+          MS6Projects(),
+          MS5Extracurriculars(),
           MS7Contact(),
           MS8Footer(),
         ],

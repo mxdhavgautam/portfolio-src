@@ -7,7 +7,7 @@ import '../widgets/container_card.dart';
 import '../widgets/frame_title.dart';
 
 class DS3Education extends StatelessWidget {
-  const DS3Education({Key? key}) : super(key: key);
+  const DS3Education({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +59,10 @@ class DS3Education extends StatelessWidget {
                       DataValues.educationOrg1Course2Name,
                       DataValues.educationOrg1Course2Grade,
                       DataValues.educationOrg1Course2Year,
+                      // Add placeholders for three more values
+                      '',
+                      '',
+                      '',
                     ],
                     message: DataValues.linkedinURL.toString(),
                     url: DataValues.linkedinURL,
@@ -66,6 +70,7 @@ class DS3Education extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 40.0),
           ],
         ),
       ),

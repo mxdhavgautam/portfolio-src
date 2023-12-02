@@ -9,7 +9,7 @@ import '../widgets/frame_title.dart';
 import '../widgets/social_profiles.dart';
 
 class MS7Contact extends StatelessWidget {
-  const MS7Contact({Key? key}) : super(key: key);
+  const MS7Contact({super.key});
 
   @override
   Widget build(BuildContext context) {

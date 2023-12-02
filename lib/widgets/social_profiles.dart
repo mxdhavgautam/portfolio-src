@@ -1,11 +1,11 @@
-//import 'package:dileepabandara_dev/widgets/button_text.dart';
+//import 'button_text.dart';
 import 'package:flutter/material.dart';
 
 import '../statics/data_values.dart';
 import 'button_icon.dart';
 
 class SocialProfiles extends StatelessWidget {
-  const SocialProfiles({Key? key}) : super(key: key);
+  const SocialProfiles({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +16,6 @@ class SocialProfiles extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ButtonIcon(name: 'dev', url: DataValues.devURL).returnButton(),
-            //const SizedBox(width: 10.0),
-            //ButtonIcon(name: 'hashnode', url: DataValues.hashnodeURL)
-            //.returnButton(),
             const SizedBox(width: 10.0),
             ButtonIcon(name: 'github', url: DataValues.githubURL)
                 .returnButton(),
@@ -28,14 +25,9 @@ class SocialProfiles extends StatelessWidget {
             const SizedBox(width: 10.0),
             ButtonIcon(name: 'twitter', url: DataValues.twitterURL)
                 .returnButton(),
-            //const SizedBox(width: 10.0),
-            //ButtonIcon(name: 'youtube', url: DataValues.youtubeURL).returnButton(),
             const SizedBox(width: 10.0),
             ButtonIcon(name: 'telegram', url: DataValues.telegramURL)
                 .returnButton(),
-            //const SizedBox(width: 10.0),
-            //ButtonIcon(name: 'facebook', url: DataValues.facebookURL)
-            //.returnButton(),
             const SizedBox(width: 10.0),
             ButtonIcon(name: 'instagram', url: DataValues.instagramURL)
                 .returnButton(),

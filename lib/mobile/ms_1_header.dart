@@ -5,7 +5,7 @@ import '../theme/app_theme.dart';
 import '../widgets/social_profiles.dart';
 
 class MS1Header extends StatelessWidget {
-  const MS1Header({Key? key}) : super(key: key);
+  const MS1Header({super.key});
 
   List<Widget> headerData() {
     return [

@@ -2,8 +2,7 @@ import 'package:mxdhavgautam/theme/responsive_screen_provider.dart';
 import 'package:flutter/material.dart';
 
 class FrameTitle extends StatelessWidget {
-  const FrameTitle({Key? key, required this.title, required this.description})
-      : super(key: key);
+  const FrameTitle({super.key, required this.title, required this.description});
 
   final String title;
   final String description;

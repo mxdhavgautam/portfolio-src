@@ -7,8 +7,8 @@ import '../theme/app_theme.dart';
 import '../widgets/container_card.dart';
 import '../widgets/frame_title.dart';
 
-class DS5Volunteering extends StatelessWidget {
-  const DS5Volunteering({Key? key}) : super(key: key);
+class DS5Extracurriculars extends StatelessWidget {
+  const DS5Extracurriculars({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +83,7 @@ class DS5Volunteering extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 40.0),
           ],
         ),
       ),

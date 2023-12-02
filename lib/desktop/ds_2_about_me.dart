@@ -10,7 +10,7 @@ import '../widgets/container_card.dart';
 import '../widgets/frame_title.dart';
 
 class DS2AboutMe extends StatelessWidget {
-  const DS2AboutMe({Key? key}) : super(key: key);
+  const DS2AboutMe({super.key});
 
   Widget bio(BuildContext context) {
     return SizedBox(

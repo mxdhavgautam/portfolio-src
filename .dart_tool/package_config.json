@@ -303,9 +303,9 @@
     },
     {
       "name": "xml",
-      "rootUri": "file:///C:/Users/MadhavGautam/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.4.2",
+      "rootUri": "file:///C:/Users/MadhavGautam/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "yaml",
@@ -320,7 +320,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-12-02T12:25:45.320479Z",
+  "generated": "2023-12-02T19:06:04.482012Z",
   "generator": "pub",
   "generatorVersion": "3.2.2"
 }
