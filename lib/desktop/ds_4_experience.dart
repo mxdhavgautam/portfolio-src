@@ -1,10 +1,10 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import '../statics/data_values.dart';
 import '../statics/key_holders.dart';
 import '../theme/app_theme.dart';
 import '../widgets/container_card.dart';
-import '../widgets/container_banner.dart';
+//import '../widgets/container_banner.dart';
 import '../widgets/frame_title.dart';
 
 class DS4Experience extends StatelessWidget {
@@ -29,7 +29,7 @@ class DS4Experience extends StatelessWidget {
               children: [
                 Expanded(
                   child: ContainerCard().type3(
-                    image: 'dileepabandara_dev',
+                    image: 'mod',
                     title: DataValues.experienceOrg1Title,
                     role: DataValues.experienceOrg1Role,
                     years: DataValues.experienceOrg1Years,
@@ -42,33 +42,33 @@ class DS4Experience extends StatelessWidget {
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
                 Expanded(
                   child: ContainerCard().type3(
-                    image: 'ddstechvira',
+                    image: 'hcl',
                     title: DataValues.experienceOrg2Title,
                     role: DataValues.experienceOrg2Role,
                     years: DataValues.experienceOrg2Years,
                     values: DataValues.experienceOrg2Vales,
-                    message: DataValues.linkedinURL.toString(),
+                    message:
+                        'Certificate to be added on Internship Completion (Link to LinkedIn)',
                     url: DataValues.linkedinURL,
-                    isButtonEnabled: true,
+                    isButtonEnabled: false,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 80.0),
-            Center(
-              child: ContainerBanner().type1(
-                  isDesktop: true,
-                  title1: DataValues.experienceBanner,
-                  title2: DataValues.experienceBannerTitle,
-                  description: DataValues.experienceBannerWeb,
-                  image: 'logo',
-                  message: 'View Toolkit',
-                  url: DataValues.toolkitURL),
-            ),
+            //const SizedBox(height: 80.0),
+            // Center(
+            //   child: ContainerBanner().type1(
+            //       isDesktop: true,
+            //       title1: DataValues.experienceBanner,
+            //       title2: DataValues.experienceBannerTitle,
+            //       description: DataValues.experienceBannerWeb,
+            //       image: 'logo',
+            //       message: 'View Toolkit',
+            //       url: Uri.parse('')), //DataValues.toolkitURL),
+            // ),
           ],
         ),
       ),
     );
   }
 }
-*/

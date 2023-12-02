@@ -17,7 +17,7 @@ class DataValues {
   static Uri telegramURL = Uri.parse('https://t.me/mxdhavgautam');
   static Uri instagramURL = Uri.parse('https://instagram.com/mxdhavgautam');
   static Uri resumeURL = Uri.parse(
-      'https://drive.google.com/file/d/19WAgrRImLlezZPJ5EWkdGnBeehkb8FxH/view?usp=sharing');
+      'https://drive.google.com/file/d/1ZKibT3HCV42WFerWrZ0ZIBrFMvveQM7F/view?usp=sharing');
 
   // Header
   static const String headerGreetings = 'Hey! I\'m';
@@ -137,25 +137,28 @@ class DataValues {
       'Navy Children School, NSB - Vishakhapatnam';
   static const String extracOrg2Activity6Year = '2016';
 
-  /* // Experience
+  // Experience
   static const String experienceTitle = 'Experience';
   static const String experienceDescription =
       'Since I started my diploma in 2019, I\'ve started to learn and apply my knowledge in different places. So I started working as a freelance solution developer, and with time, I fell in love with different technologies. I received industrial training in my second year, and now I try out my experience.';
-  static const String experienceOrg1Title = 'Dileepa Bandara';
-  static const String experienceOrg1Role = 'Solution Developer';
-  static const String experienceOrg1Years = 'June 2019 - June 2022';
+  static const String experienceOrg1Title =
+      'WESEE | Ministry of Defense, New Delhi';
+  static const String experienceOrg1Role =
+      'Software Development Life Cycle Process Intern';
+  static const String experienceOrg1Years = '10 August - 23 September 2023';
   static const String experienceOrg1Vales =
-      'Mobile, Desktop, Web development, UI UX, Tech Support Assistant & Data Analysis.';
-  static const String experienceOrg2Title = 'DDS Techvira';
+      'Qt, C/C++, UI/UX, MySQL, NoSQL, Computer Networking Protocols, Software Testing';
+  static const String experienceOrg2Title = 'HCLTech | Lucknow, Online';
   static const String experienceOrg2Role =
-      'Trainee Software Developer (Flutter)';
-  static const String experienceOrg2Years = 'May 2021 - November 2021';
+      'Software Development Intern (Flutter)';
+  static const String experienceOrg2Years =
+      '4 October - 4 December 2023 (Ongoing)';
   static const String experienceOrg2Vales =
-      'Android, Flutter, Dart, Firebase, Git, REST API, JSON Parsing & UI UX Designing.';
-  static const String experienceBanner = 'Find my working';
-  static const String experienceBannerTitle = 'toolkit';
-  static const String experienceBannerWeb =
-      'Visit toolkit.dileepabandara.dev for more details >>'; */
+      'Android, Flutter, Dart, Git, GitHub, UI UX Designing, Analytical Thinking, Material Design';
+  //static const String experienceBanner = 'Find my working';
+  //static const String experienceBannerTitle = 'toolkit';
+  //static const String experienceBannerWeb =
+  // 'Visit toolkit.dileepabandara.dev for more details >>';
 
   // Extra-Curriculars
   static const String extracTitle = 'Extra-Curriculars';

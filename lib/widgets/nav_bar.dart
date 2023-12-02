@@ -41,7 +41,7 @@ class NavBar {
           ),
           message: 'Go to ${DataValues.navBarEducation} section',
         ),
-        /*const SizedBox(width: 20.0),
+        const SizedBox(width: 20.0),
         ButtonTextLarge(
           text: DataValues.navBarExperience,
           onPressed: () => Scrollable.ensureVisible(
@@ -49,7 +49,7 @@ class NavBar {
             duration: const Duration(milliseconds: 1000),
           ),
           message: 'Go to ${DataValues.navBarExperience} section',
-        ),*/
+        ),
         const SizedBox(width: 20.0),
         ButtonTextLarge(
           text: DataValues.navBarTechNotes,
@@ -138,7 +138,7 @@ class NavBar {
             ),
             message: 'Go to ${DataValues.navBarEducation} section',
           ),
-          /*const SizedBox(height: 20.0),
+          const SizedBox(height: 20.0),
           ButtonTextLarge(
             text: DataValues.navBarExperience,
             onPressed: () => Scrollable.ensureVisible(
@@ -146,7 +146,7 @@ class NavBar {
               duration: const Duration(milliseconds: 1000),
             ),
             message: 'Go to ${DataValues.navBarExperience} section',
-          ),*/
+          ),
           const SizedBox(height: 20.0),
           ButtonTextLarge(
             text: DataValues.navBarTechNotes,

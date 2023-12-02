@@ -6,7 +6,7 @@ import 'widgets/nav_bar.dart';
 import 'desktop/ds_1_header.dart';
 import 'desktop/ds_2_about_me.dart';
 import 'desktop/ds_3_education.dart';
-//import 'desktop/ds_4_experience.dart';
+import 'desktop/ds_4_experience.dart';
 import 'desktop/ds_5_extracurriculars.dart';
 import 'desktop/ds_6_projects.dart';
 import 'desktop/ds_7_contact.dart';
@@ -14,7 +14,7 @@ import 'desktop/ds_8_footer.dart';
 import 'mobile/ms_1_header.dart';
 import 'mobile/ms_2_about_me.dart';
 import 'mobile/ms_3_education.dart';
-//import 'mobile/ms_4_experience.dart';
+import 'mobile/ms_4_experience.dart';
 import 'mobile/ms_5_extracurriculars.dart';
 import 'mobile/ms_6_projects.dart';
 import 'mobile/ms_7_contact.dart';
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
           DS2AboutMe(),
           DS3Education(),
           DS6TechNotes(),
-          //DS4Experience(),
+          DS4Experience(),
           DS5Volunteering(),
           DS7Contact(),
           DS8Footer(),
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
           MS2AboutMe(),
           MS3Education(),
           MS6TechNotes(),
-          //MS4Experience(),
+          MS4Experience(),
           MS5Volunteering(),
           MS7Contact(),
           MS8Footer(),
