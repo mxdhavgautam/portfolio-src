@@ -4,7 +4,6 @@ import '../statics/data_values.dart';
 import '../statics/key_holders.dart';
 import '../theme/app_theme.dart';
 import '../widgets/container_card.dart';
-//import '../widgets/container_banner.dart';
 import '../widgets/frame_title.dart';
 
 class MS4Experience extends StatelessWidget {
@@ -47,17 +46,6 @@ class MS4Experience extends StatelessWidget {
               url: DataValues.linkedinURL,
               isButtonEnabled: false,
             ),
-            // const SizedBox(height: 40.0),
-            // Center(
-            //   child: ContainerBanner().type1(
-            //       isDesktop: false,
-            //       title1: DataValues.experienceBanner,
-            //       title2: DataValues.experienceBannerTitle,
-            //       description: DataValues.experienceBannerWeb,
-            //       image: 'logo',
-            //       message: 'View Toolkit',
-            //       url: Uri.parse('uri')), //DataValues.toolkitURL),
-            // ),
           ],
         ),
       ),

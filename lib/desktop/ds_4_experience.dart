@@ -4,7 +4,6 @@ import '../statics/data_values.dart';
 import '../statics/key_holders.dart';
 import '../theme/app_theme.dart';
 import '../widgets/container_card.dart';
-//import '../widgets/container_banner.dart';
 import '../widgets/frame_title.dart';
 
 class DS4Experience extends StatelessWidget {
@@ -34,8 +33,9 @@ class DS4Experience extends StatelessWidget {
                     role: DataValues.experienceOrg1Role,
                     years: DataValues.experienceOrg1Years,
                     values: DataValues.experienceOrg1Vales,
-                    message: DataValues.linkedinURL.toString(),
-                    url: DataValues.linkedinURL,
+                    message: 'View my Internship Completion Certificate',
+                    url: Uri.parse(
+                        'https://drive.google.com/file/d/1koGRWt7gK_vAiK3fTFFl0i-HT11t6icd/view?usp=sharing'),
                     isButtonEnabled: true,
                   ),
                 ),
@@ -55,17 +55,6 @@ class DS4Experience extends StatelessWidget {
                 ),
               ],
             ),
-            //const SizedBox(height: 80.0),
-            // Center(
-            //   child: ContainerBanner().type1(
-            //       isDesktop: true,
-            //       title1: DataValues.experienceBanner,
-            //       title2: DataValues.experienceBannerTitle,
-            //       description: DataValues.experienceBannerWeb,
-            //       image: 'logo',
-            //       message: 'View Toolkit',
-            //       url: Uri.parse('')), //DataValues.toolkitURL),
-            // ),
             const SizedBox(height: 40.0),
           ],
         ),
