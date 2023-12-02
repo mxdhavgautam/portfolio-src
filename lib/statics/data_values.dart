@@ -1,12 +1,12 @@
 class DataValues {
   // About App
   static const String appName = 'Madhav Gautam';
-  static const String appNameLong = 'mxdhavgautam.github.io';
+  static const String appNameLong = 'mxdhavgautam.netlify.app';
   static const String appDescription =
       'Hey, I\'m Madhav. Welcome to my developer portfolio.';
   static const String appDeveloper = 'Madhav Gautam';
-  static const String appPackage = 'dev.mxdhavgautam.mxdhavgautam_dev';
-  static const String appVersion = '1.1.1';
+  static const String appPackage = 'app.netlify.mxdhavgautam';
+  static const String appVersion = '1.2.0';
   static const String appBuildNumber = '1';
 
   // External links
@@ -140,7 +140,7 @@ class DataValues {
   // Experience
   static const String experienceTitle = 'Experience';
   static const String experienceDescription =
-      'Since I started my diploma in 2019, I\'ve started to learn and apply my knowledge in different places. So I started working as a freelance solution developer, and with time, I fell in love with different technologies. I received industrial training in my second year, and now I try out my experience.';
+      'This section summarises my experience as an intern and glances over the skills I utilised, applied and obtained during the course of my summer break.';
   static const String experienceOrg1Title =
       'WESEE | Ministry of Defense, New Delhi';
   static const String experienceOrg1Role =
