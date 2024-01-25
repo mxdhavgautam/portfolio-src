@@ -29,19 +29,6 @@ class DS5Extracurriculars extends StatelessWidget {
               children: [
                 Expanded(
                   child: ContainerCard().type3(
-                    image: 'enactus',
-                    title: DataValues.extracOrg1Title,
-                    role: DataValues.extracOrg1Role,
-                    years: DataValues.extracOrg1Years,
-                    values: DataValues.extracOrg1Vales,
-                    message: DataValues.blankURL.toString(),
-                    url: DataValues.blankURL,
-                    isButtonEnabled: null,
-                  ),
-                ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                Expanded(
-                  child: ContainerCard().type3(
                     image: 'comsoc',
                     title: DataValues.extracOrg4Title,
                     role: DataValues.extracOrg4Role,
@@ -52,7 +39,20 @@ class DS5Extracurriculars extends StatelessWidget {
                     isButtonEnabled: null,
                   ),
                 ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                Expanded(
+                  child: ContainerCard().type3(
+                    image: 'enactus',
+                    title: DataValues.extracOrg1Title,
+                    role: DataValues.extracOrg1Role,
+                    years: DataValues.extracOrg1Years,
+                    values: DataValues.extracOrg1Vales,
+                    message: DataValues.blankURL.toString(),
+                    url: DataValues.blankURL,
+                    isButtonEnabled: null,
+                  ),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                 Expanded(
                   child: ContainerCard().type2(
                     image: 'ncs',
@@ -73,7 +73,7 @@ class DS5Extracurriculars extends StatelessWidget {
                     url: DataValues.blankURL,
                   ),
                 ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                 Expanded(
                   child: ContainerCard().type2(
                     image: 'ncs',
