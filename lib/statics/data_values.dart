@@ -112,6 +112,7 @@ class DataValues {
 
   static const String extracOrg2Title = 'Navy Children School';
   static const String extracOrg3Title = 'Navy Children School (contd.)';
+
   static const String extracOrg2Activity1Name =
       'Served as a Prefect on the School\'s Prefectorial Board';
   static const String extracOrg2Activity1Grade = 'Navy Children School - Delhi';
@@ -148,11 +149,10 @@ class DataValues {
   static const String experienceOrg1Years = '10 August - 23 September 2023';
   static const String experienceOrg1Vales =
       'Qt, C/C++, UI/UX, MySQL, NoSQL, Computer Networking Protocols, Software Testing';
-  static const String experienceOrg2Title = 'HCLTech | Lucknow, Online';
+  static const String experienceOrg2Title = 'HCLTech | Lucknow';
   static const String experienceOrg2Role =
       'Software Development Intern (Flutter)';
-  static const String experienceOrg2Years =
-      '4 October - 4 December 2023 (Ongoing)';
+  static const String experienceOrg2Years = '4 October - 4 December 2023';
   static const String experienceOrg2Vales =
       'Android, Flutter, Dart, Git, GitHub, UI UX Designing, Analytical Thinking, Material Design';
   // static const String experienceBanner = 'Find my working';
@@ -164,8 +164,8 @@ class DataValues {
   static const String extracTitle = 'Extra-Curriculars';
   static const String extracDescription =
       'Engaging in extracurricular activities has enriched my professional journey by fostering essential soft skills, such as leadership, teamwork, and time management. These activities demonstrate my proactive approach to personal growth and highlight my ability to balance multiple commitments. Additionally, they have provided networking opportunities and showcased my passion and dedication in specific areas of interest. Overall, my involvement in extracurricular activities enhances my professional role by contributing to a well-rounded skill set and a diverse perspective.';
-  static const String exracOrg1Title = 'Enactus - VIT Chennai';
-  static const String extracOrg1Role = 'Video Editor';
+  static const String extracOrg1Title = 'Enactus (VIT Chennai)';
+  static const String extracOrg1Role = 'Video Editor - Creative Team';
   static const String extracOrg1Years = 'March 2022 - Present';
   static const String extracOrg1Vales =
       'Enactus is a network of leaders committed to using business as a catalyst for positive social and environmental impact. We educate, inspire, and support young people to use innovation and entrepreneurship to solve the world\'s biggest problems.';
@@ -174,6 +174,12 @@ class DataValues {
   static const String extracBannerWeb =
       'Visit linkedin.com/mxdhavgautam for more details >>';
   static Uri extracURL = Uri.parse('https://linkedin.com/in/mxdhavgautam');
+
+  static const String extracOrg4Title = 'IEEE Computer Society VITC';
+  static const String extracOrg4Role = 'Creative Lead';
+  static const String extracOrg4Years = 'January 2024 - Present';
+  static const String extracOrg4Vales =
+      'IEEE Computer Society VIT Chennai is a vibrant community of diverse minds united in the pursuit of learning, creating, developing, and exploring. Fueled by an infectious desire to grow and a persistent commitment to facing challenges head-on, we embrace audacious goals. Our foundation is built on mutual learning and growth, empowering members to innovate, develop, and create—the ultimate Return on Investment for a Technical Society. With a transcendent passion for technology and a sincere understanding of people\'s challenges, we aim to tackle today\'s great problems and collectively prepare for a brighter tomorrow.';
 
   // Projects
   static const String projectsTitle = 'Projects';

@@ -47,10 +47,10 @@ class DS4Experience extends StatelessWidget {
                     role: DataValues.experienceOrg2Role,
                     years: DataValues.experienceOrg2Years,
                     values: DataValues.experienceOrg2Vales,
-                    message:
-                        'Certificate to be added on Internship Completion (Link to LinkedIn)',
-                    url: DataValues.linkedinURL,
-                    isButtonEnabled: false,
+                    message: 'View my Internship Completion Certificate',
+                    url: Uri.parse(
+                        'https://drive.google.com/file/d/15zI4GRXVM-6J9CvhuwxzudmmU48hk69s/view?usp=sharing'),
+                    isButtonEnabled: true,
                   ),
                 ),
               ],
