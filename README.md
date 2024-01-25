@@ -2,6 +2,14 @@
 
 Welcome to the source code repository of my personal portfolio website! This repository contains all the code and assets needed to run my portfolio website, which is live at [mxdhavgautam.netlify.app](https://mxdhavgautam.netlify.app/). Feel free to explore the code, provide feedback, or even use it for your own purposes, all under the terms of the [MIT Open Source License](LICENSE).
 
+## Table of Contents
+- [Overview](#overview)
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Installation and Usage](#installation-and-usage)
+- [Feedback](#feedback)
+- [License](#license)
+
 ## Overview
 This repository contains the source code for my personal portfolio website. The project is built with [Flutter](https://flutter.dev), and it showcases my skills, projects, and experiences in a visually appealing manner.
 
