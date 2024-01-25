@@ -179,8 +179,7 @@ class DataValues {
   static const String extracOrg4Role = 'Creative Lead';
   static const String extracOrg4Years = 'January 2024 - Present';
   static const String extracOrg4Vales =
-      'IEEE Computer Society VIT Chennai is a vibrant community of diverse minds united in the pursuit of learning, creating, developing, and exploring. Fueled by an infectious desire to grow and a persistent commitment to facing challenges head-on, we embrace audacious goals. Our foundation is built on mutual learning and growth, empowering members to innovate, develop, and create—the ultimate Return on Investment for a Technical Society. With a transcendent passion for technology and a sincere understanding of people\'s challenges, we aim to tackle today\'s great problems and collectively prepare for a brighter tomorrow.';
-
+      'IEEE Computer Society VIT Chennai is a dynamic community dedicated to learning, creating, and exploring. Fueled by a shared passion for technology, we thrive on overcoming challenges and empowering members to innovate. Our focus on mutual learning and growth is the key to solving today\'s problems and preparing for a brighter future.';
   // Projects
   static const String projectsTitle = 'Projects';
   static const String projectsDescription =
