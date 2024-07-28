@@ -6,7 +6,7 @@ class DataValues {
       'Hey, I\'m Madhav. Welcome to my developer portfolio.';
   static const String appDeveloper = 'Madhav Gautam';
   static const String appPackage = 'app.netlify.mxdhavgautam';
-  static const String appVersion = '1.3.0';
+  static const String appVersion = '1.4.0';
   static const String appBuildNumber = '1';
 
   // External links
@@ -17,7 +17,7 @@ class DataValues {
   static Uri telegramURL = Uri.parse('https://t.me/mxdhavgautam');
   static Uri instagramURL = Uri.parse('https://instagram.com/mxdhavgautam');
   static Uri resumeURL = Uri.parse(
-      'https://drive.google.com/file/d/1ognkIhqzsapLT1hAHFzJgwNZU8uPZGA5/view?usp=sharing');
+      'https://drive.google.com/file/d/1VyS6HByrAb157orl5piXnK0FLHh89N-A/view?usp=sharing');
 
   // Header
   static const String headerGreetings = 'Hey! I\'m';
@@ -38,8 +38,8 @@ class DataValues {
       'Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.';
   static const String aboutMeBiographyTitle = 'Bio';
   static const String aboutMeBiographyDescription =
-      'I am a Computer Science Engineering student specializing in Artificial Intelligence and Robotics at Vellore Institute of Technology, Chennai. With a passion for technology, I enjoy delving into various aspects of computing, including installing and exploring Custom ROMs to get the most out of my devices as a side hobby.'
-      ' Currently, my focus lies in learning Dart and honing my skills as an intermediate Flutter developer. Coming from a Defence background, I possess remarkable networking and orating skills, which enable me to effectively communicate and connect with others. Moreover, my lifestyle has honed my ability to adapt swiftly to new situations, environments, and people along with the ability to remain composed and level-headed when confronted with high-pressure situations. I am open to collaborative projects that offer learning and growth opportunities.';
+      'I am a Computer Science Engineering student specializing in Artificial Intelligence and Robotics at Vellore Institute of Technology, Chennai. With a passion for technology, I enjoy delving into various aspects of computing to get the most out of my devices. Currently, my focus lies in learning Dart and honing my skills as an intermediate Flutter developer.'
+      ' Coming from a Defence background, I possess remarkable networking and orating skills, which enable me to effectively communicate and connect with others. Moreover, my lifestyle has honed my ability to adapt swiftly to new situations, environments, and people along with the ability to remain composed and level-headed when confronted with high-pressure situations.';
   static const String aboutMeLanguageTitle = 'Languages';
   static const String aboutMeLanguageDescription = 'Hindi (Native)\n'
       'English (Professional)\n'
@@ -166,7 +166,7 @@ class DataValues {
       'Engaging in extracurricular activities has enriched my professional journey by fostering essential soft skills, such as leadership, teamwork, and time management. These activities demonstrate my proactive approach to personal growth and highlight my ability to balance multiple commitments. Additionally, they have provided networking opportunities and showcased my passion and dedication in specific areas of interest. Overall, my involvement in extracurricular activities enhances my professional role by contributing to a well-rounded skill set and a diverse perspective.';
   static const String extracOrg1Title = 'Enactus (VIT Chennai)';
   static const String extracOrg1Role = 'Video Editor - Creative Team';
-  static const String extracOrg1Years = 'March 2022 - Present';
+  static const String extracOrg1Years = 'March 2022 - January 2024';
   static const String extracOrg1Vales =
       'Enactus is a network of leaders committed to using business as a catalyst for positive social and environmental impact. We educate, inspire, and support young people to use innovation and entrepreneurship to solve the world\'s biggest problems.';
   static const String extracBanner = 'Find more about my';
@@ -176,7 +176,7 @@ class DataValues {
   static Uri extracURL = Uri.parse('https://linkedin.com/in/mxdhavgautam');
 
   static const String extracOrg4Title = 'IEEE Computer Society VITC';
-  static const String extracOrg4Role = 'Creative Lead';
+  static const String extracOrg4Role = 'Advisory Board Member, Design Head';
   static const String extracOrg4Years = 'January 2024 - Present';
   static const String extracOrg4Vales =
       'IEEE Computer Society VIT Chennai is a dynamic community dedicated to learning, creating, and exploring. Fueled by a shared passion for technology, we thrive on overcoming challenges and empowering members to innovate. Our focus on mutual learning and growth is the key to solving today\'s problems and preparing for a brighter future.';
