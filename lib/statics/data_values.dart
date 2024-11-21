@@ -6,7 +6,7 @@ class DataValues {
       'Hey, I\'m Madhav. Welcome to my developer portfolio.';
   static const String appDeveloper = 'Madhav Gautam';
   static const String appPackage = 'app.netlify.mxdhavgautam';
-  static const String appVersion = '1.4.0';
+  static const String appVersion = '1.5.0';
   static const String appBuildNumber = '1';
 
   // External links
@@ -17,7 +17,7 @@ class DataValues {
   static Uri telegramURL = Uri.parse('https://t.me/mxdhavgautam');
   static Uri instagramURL = Uri.parse('https://instagram.com/mxdhavgautam');
   static Uri resumeURL = Uri.parse(
-      'https://drive.google.com/file/d/1VyS6HByrAb157orl5piXnK0FLHh89N-A/view?usp=sharing');
+      'https://drive.google.com/file/d/1TzHIDSJmybK27U6ERVLWt3okoJJsMYMU/view?usp=drive_link');
 
   // Header
   static const String headerGreetings = 'Hey! I\'m';
@@ -78,7 +78,7 @@ class DataValues {
   static const String aboutMeBannerTitle = 'public profiles:';
   static const String aboutMeBannerWeb =
       'You can find all my public profiles at the top of this page.';
-  static Uri profilesURL = Uri.parse('https://mxdhavgautam.github.io');
+  static Uri profilesURL = Uri.parse('https://mxdhavgautam.netlify.app');
 
   // Education
   static const String educationTitle = 'Education';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppThemeData {
   // Colors: Main Colors
-  static const Color primaryColor = Color.fromRGBO(229, 57, 53, 1.0);
+  static const Color primaryColor = Color(0xFFE53935);
   static const Color secondaryColor = Color.fromRGBO(131, 121, 121, 1);
 
   // Colors: Text
@@ -19,8 +19,8 @@ class AppThemeData {
   static const iconSecondary = Color.fromRGBO(255, 255, 255, 1.0);
 
   // Colors: Background and Cards
-  static const backgroundBlack = Color.fromRGBO(18, 18, 18, 1.0);
-  static const backgroundGrey = Color.fromRGBO(25, 25, 25, 1.0);
+  static const backgroundBlack = Color.fromRGBO(18, 18, 18, 1);
+  static const backgroundGrey = Color.fromRGBO(25, 25, 25, 1);
   static const cardGrey = Color.fromRGBO(15, 15, 15, 1.0);
   static const tooltip = Color.fromRGBO(33, 33, 33, 1.0);
 

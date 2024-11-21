@@ -17,7 +17,7 @@ dependencies:
   seo: ^0.0.5
 flutter_native_splash:
   image: assets/images/splash.png
-  color: "#151515"
+  color: "#252525"
 
 dev_dependencies:
   flutter_test:
