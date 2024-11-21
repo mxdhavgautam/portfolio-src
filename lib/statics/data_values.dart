@@ -73,7 +73,7 @@ class DataValues {
       '\n';
   static const String aboutMeGoalTitle = 'Goal';
   static const String aboutMeGoalDescription =
-      'To grow personally and professionally, while making a positive impact on the community. Currently looking for internship roles in the field of software development.';
+      'To grow personally and professionally, while making a positive impact on the community. Currently looking for internship roles in the field of software development, AI/ML engineering, data science and data analysis.';
   static const String aboutMeBanner = 'My';
   static const String aboutMeBannerTitle = 'public profiles:';
   static const String aboutMeBannerWeb =
