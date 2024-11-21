@@ -64,7 +64,7 @@ class DataValues {
       'As a tech enthusiast, I immerse myself in the world of computing technologies, including custom ROMs, to maximize the potential of my devices. I am passionate about exploring software applications and programs, fine-tuning them to enhance performance and unlock new capabilities. I continuously strive to broaden my understanding of technology. Whether it\'s optimizing my devices or tackling real-world challenges, I am driven by the desire to push the boundaries of what is possible in the tech realm and my love for tech.';
   static const String aboutMeDeveloperTitle = 'Developer';
   static const String aboutMeDeveloperDescription =
-      'As a new software developer, I am dedicated to expanding my knowledge and honing my skills in coding and programming. I actively seek opportunities to further my understanding of various programming languages and frameworks, always striving to improve my ability to design and develop innovative software solutions. With a strong focus on critical thinking, problem-solving, and analytical research, I embrace challenges as learning opportunities and consistently push myself to grow. Through ongoing self-improvement and hands-on experience, I aim to become proficient in and capable of making valuable contributions to cutting-edge projects.';
+      'With a strong focus on critical thinking, problem-solving, and analytical research, I embrace challenges as learning opportunities and consistently push myself to grow. Through ongoing self-improvement and hands-on experience, I aim to become proficient in and capable of making valuable contributions to cutting-edge projects.';
   static const String aboutMeHobbiesTitle = 'Hobbies';
   static const String aboutMeHobbiesDescription = 'Learning New Things\n'
       'Trekking/Hiking\n'
@@ -180,6 +180,12 @@ class DataValues {
   static const String extracOrg4Years = 'January 2024 - Present';
   static const String extracOrg4Vales =
       'IEEE Computer Society VIT Chennai is a dynamic community dedicated to learning, creating, and exploring. Fueled by a shared passion for technology, we thrive on overcoming challenges and empowering members to innovate. Our focus on mutual learning and growth is the key to solving today\'s problems and preparing for a brighter future.';
+static const String extracOrg5Title = 'Voyage E-Summit 2024';
+  static const String extracOrg5Role = 'Admin - Social Media and Content Head';
+  static const String extracOrg5Years = 'January 2024 - August 2024';
+  static const String extracOrg5Vales = 'The Voyage E-Summit, held from August 12-14, 2024, at VIT Chennai, was an entrepreneurial event designed to inspire and equip attendees with tools to excel in starting and growing ventures. It featured a hackathon, a startup conclave with panel discussions, pitch competitions, and mentoring sessions, along with insights from renowned speakers like Kumar Vembu and Ankur Warikoo. The summit fostered networking, skill-building, and exposure to the latest trends in entrepreneurship and digital marketing.';
+
+
   // Projects
   static const String projectsTitle = 'Projects';
   static const String projectsDescription =
@@ -187,12 +193,12 @@ class DataValues {
   static const String projectsOrg1Title = 'Devfolio';
   static const String projectsOrg1Role = 'My Developer Portfolio';
   static const String projectsOrg1Years = 'May 2023 - Present';
-  static const String projectsOrg1Vales =
+  static const String projectsOrg1Values =
       'This responsive portfolio, built with Flutter, demonstrates my development skills as well as my work and presentation style. I aim to produce high-quality work from the first draft itself and I have applied this same philosophy to this project as well. I have consulted online resources such as StackOverflow, GitHub and Reddit to learn how to create this portfolio after taking inspiration and help from a flutter portfolio template created by Mr. Dileepa Bandara, as this was my first project. This shows my eagerness to learn and my resourcefulness as an individual. The code for this project is available on my Github profile and the Social Media Icons used in this portfolio have been taken from \'Icons8.com\'.';
-  static const String projectsOrg2Title = 'Coming Soon!';
-  static const String projectsOrg2Role = ' ';
-  static const String projectsOrg2Years = ' ';
-  static const String projectsOrg2Vales = ' ';
+  static const String projectsOrg2Title = 'Society Complaint Management System';
+  static const String projectsOrg2Role = 'Technologies: Python and MySQL';
+  static const String projectsOrg2Years = 'January 2022';
+  static const String projectsOrg2Values = 'This project aims to efficiently manage complaints in residential areas, societies, or hostels by recording and tracking their statuses (pending or resolved) using a MySQL database, error handling, and file handling for backups. Inspired by the inefficiencies of manual registers, it offers a streamlined, user-friendly solution to upgrade traditional complaint systems while maintaining accessible, organized records.';
 
   // Contact
   static const String contactTitle = 'Contact';
@@ -208,5 +214,6 @@ class DataValues {
 
   static Uri siteUrl =
       Uri.parse('https://github.com/mxdhavgautam/portfolio-src');
+  static Uri societyUrl = Uri.parse('https://github.com/mxdhavgautam/SocietyComplaintManagementSystem');
   static Uri blankURL = Uri.parse('');
 }

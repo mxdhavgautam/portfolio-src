@@ -25,6 +25,17 @@ class MS5Extracurriculars extends StatelessWidget {
                 description: DataValues.extracDescription),
             const SizedBox(height: 30.0),
             ContainerCard().type3(
+              image: 'voyage',
+              title: DataValues.extracOrg5Title,
+              role: DataValues.extracOrg5Role,
+              years: DataValues.extracOrg5Years,
+              values: DataValues.extracOrg5Vales,
+              message: '',
+              url: DataValues.blankURL,
+              isButtonEnabled: null,
+            ),
+            const SizedBox(height: 20.0),
+            ContainerCard().type3(
               image: 'comsoc',
               title: DataValues.extracOrg4Title,
               role: DataValues.extracOrg4Role,

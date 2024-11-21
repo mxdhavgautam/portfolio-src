@@ -29,6 +29,19 @@ class DS5Extracurriculars extends StatelessWidget {
               children: [
                 Expanded(
                   child: ContainerCard().type3(
+                    image: 'voyage',
+                    title: DataValues.extracOrg5Title,
+                    role: DataValues.extracOrg5Role,
+                    years: DataValues.extracOrg5Years,
+                    values: DataValues.extracOrg5Vales,
+                    message: DataValues.blankURL.toString(),
+                    url: DataValues.blankURL,
+                    isButtonEnabled: null,
+                  ),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                Expanded(
+                  child: ContainerCard().type3(
                     image: 'comsoc',
                     title: DataValues.extracOrg4Title,
                     role: DataValues.extracOrg4Role,
