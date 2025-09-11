@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="Madhav Gautam | Developer Portfolio">
     <meta name="twitter:description" content="Explore my skills, education, experience, projects, and contact details.">
     <meta name="twitter:image" content="/icons/icon-512.png">
-    <link rel="manifest" href="manifest.json">
+    
     <!-- Font preloads to ensure fonts load promptly in release -->
     <link rel="preload" href="/assets/fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="">
     <link rel="preload" href="/assets/fonts/Poppins-Medium.ttf" as="font" type="font/ttf" crossorigin="">
@@ -152,6 +152,20 @@
           window.flutterWebRenderer = "html";
         }
       });
+  </script>
+  <!-- One-time: Unregister any existing Flutter service workers and clear caches -->
+  <script>
+    (function () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations()
+          .then(function (regs) { regs.forEach(function (reg) { reg.unregister(); }); })
+          .finally(function () {
+            if (window.caches) {
+              caches.keys().then(function (keys) { keys.forEach(function (k) { caches.delete(k); }); });
+            }
+          });
+      }
+    })();
   </script>
 
   <!-- JSON-LD Structured Data -->
