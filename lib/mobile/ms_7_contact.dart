@@ -15,7 +15,7 @@ class MS7Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: KeyHolders.contactKey,
-      color: AppThemeData.backgroundGrey,
+      color: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
           const SizedBox(

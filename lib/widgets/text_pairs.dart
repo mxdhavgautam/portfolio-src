@@ -19,14 +19,14 @@ class SeoTextPairs {
   }
 
   Widget type1({required String title, required String description}) {
-    return Column(
+    return Builder(builder: (context) => Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
             _wrapWithSeo(
               text: title,
-              style: AppThemeData.darkTheme.textTheme.titleMedium!,
+              style: Theme.of(context).textTheme.titleMedium!,
               tagStyle: TextTagStyle.h1,
             ),
           ],
@@ -34,11 +34,11 @@ class SeoTextPairs {
         const SizedBox(height: 10.0),
         _wrapWithSeo(
           text: description,
-          style: AppThemeData.darkTheme.textTheme.labelLarge!,
+          style: Theme.of(context).textTheme.labelLarge!,
           tagStyle: TextTagStyle.p,
         ),
       ],
-    );
+    ));
   }
 
   Widget type2({
@@ -47,39 +47,33 @@ class SeoTextPairs {
     required String value2,
     required bool isThreeLines,
   }) {
-    return Column(
+    return Builder(builder: (context) => Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _wrapWithSeo(
           text: title,
-          style: TextStyle(
-            fontSize: AppThemeData.darkTheme.textTheme.titleSmall!.fontSize,
-            fontWeight: AppThemeData.darkTheme.textTheme.titleSmall!.fontWeight,
-            color: AppThemeData.textWhite,
-          ),
+          style: Theme.of(context).textTheme.titleSmall!,
           tagStyle: TextTagStyle.h2,
         ),
-        _wrapWithSeo(
-          text: value1,
-          style: TextStyle(
-            fontSize: AppThemeData.darkTheme.textTheme.labelLarge!.fontSize,
-            fontWeight: AppThemeData.darkTheme.textTheme.labelLarge!.fontWeight,
-            color: AppThemeData.textGreyDark,
-          ),
-          tagStyle: TextTagStyle.p,
+        Text(
+          value1,
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? const Color(0xFF424242)
+                    : Theme.of(context).textTheme.labelLarge!.color,
+              ),
         ),
         isThreeLines ? const SizedBox(height: 20.0) : Container(),
-        _wrapWithSeo(
-          text: value2,
-          style: TextStyle(
-            fontSize: AppThemeData.darkTheme.textTheme.labelLarge!.fontSize,
-            fontWeight: AppThemeData.darkTheme.textTheme.labelLarge!.fontWeight,
-            color: AppThemeData.textGreyDark,
-          ),
-          tagStyle: TextTagStyle.p,
+        Text(
+          value2,
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? const Color(0xFF424242)
+                    : Theme.of(context).textTheme.labelLarge!.color,
+              ),
         ),
       ],
-    );
+    ));
   }
 
   Widget type3({
@@ -87,38 +81,32 @@ class SeoTextPairs {
     required String value1,
     required String value2,
   }) {
-    return Column(
+    return Builder(builder: (context) => Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _wrapWithSeo(
           text: title,
-          style: TextStyle(
-            fontSize: AppThemeData.darkTheme.textTheme.titleSmall!.fontSize,
-            fontWeight: AppThemeData.darkTheme.textTheme.titleSmall!.fontWeight,
-            color: AppThemeData.textWhite,
-          ),
+          style: Theme.of(context).textTheme.titleSmall!,
           tagStyle: TextTagStyle.h3,
         ),
-        _wrapWithSeo(
-          text: value1,
-          style: TextStyle(
-            fontSize: AppThemeData.darkTheme.textTheme.labelLarge!.fontSize,
-            fontWeight: AppThemeData.darkTheme.textTheme.labelLarge!.fontWeight,
-            color: AppThemeData.textGreyDark,
-          ),
-          tagStyle: TextTagStyle.p,
+        Text(
+          value1,
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? const Color(0xFF424242)
+                    : Theme.of(context).textTheme.labelLarge!.color,
+              ),
         ),
         const SizedBox(height: 20.0),
-        _wrapWithSeo(
-          text: value2,
-          style: TextStyle(
-            fontSize: AppThemeData.darkTheme.textTheme.labelLarge!.fontSize,
-            fontWeight: AppThemeData.darkTheme.textTheme.labelLarge!.fontWeight,
-            color: AppThemeData.textGreyDark,
-          ),
-          tagStyle: TextTagStyle.p,
+        Text(
+          value2,
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? const Color(0xFF424242)
+                    : Theme.of(context).textTheme.labelLarge!.color,
+              ),
         ),
       ],
-    );
+    ));
   }
 }

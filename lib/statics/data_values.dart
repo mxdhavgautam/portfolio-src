@@ -158,7 +158,7 @@ class DataValues {
   // static const String experienceBanner = 'Find my working';
   // static const String experienceBannerTitle = 'toolkit';
   // static const String experienceBannerWeb =
-  // 'Visit toolkit.dileepabandara.dev for more details >>';
+  // 'Visit for more details >>';
 
   // Extra-Curriculars
   static const String extracTitle = 'Extra-Curriculars';
@@ -194,7 +194,7 @@ static const String extracOrg5Title = 'Voyage E-Summit 2024';
   static const String projectsOrg1Role = 'My Developer Portfolio';
   static const String projectsOrg1Years = 'May 2023 - Present';
   static const String projectsOrg1Values =
-      'This responsive portfolio, built with Flutter, demonstrates my development skills as well as my work and presentation style. I aim to produce high-quality work from the first draft itself and I have applied this same philosophy to this project as well. I have consulted online resources such as StackOverflow, GitHub and Reddit to learn how to create this portfolio after taking inspiration and help from a flutter portfolio template created by Mr. Dileepa Bandara, as this was my first project. This shows my eagerness to learn and my resourcefulness as an individual. The code for this project is available on my Github profile and the Social Media Icons used in this portfolio have been taken from \'Icons8.com\'.';
+      'This responsive portfolio, built with Flutter, demonstrates my development skills as well as my work and presentation style. I aim to produce high-quality work from the first draft itself and I have applied this same philosophy to this project as well. I have consulted online resources such as StackOverflow, GitHub and Reddit to learn how to create this portfolio as this was my first project. This shows my eagerness to learn and my resourcefulness as an individual. The code for this project is available on my Github profile and the Social Media Icons used in this portfolio have been taken from \'Icons8.com\'.';
   static const String projectsOrg2Title = 'Society Complaint Management System';
   static const String projectsOrg2Role = 'Technologies: Python and MySQL';
   static const String projectsOrg2Years = 'January 2022';

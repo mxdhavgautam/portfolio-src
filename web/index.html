@@ -1,13 +1,33 @@
 <!DOCTYPE html><html><head>
     <base href="/">
     <meta charset="UTF-8">
-    <title>Madhav Gautam</title>
-    <meta name="description" content="Hey, I'm Madhav. Welcome to my developer portfolio.">
+    <title>Madhav Gautam | Developer Portfolio</title>
+    <meta name="description" content="Hey, I'm Madhav. Welcome to my developer portfolio. Explore skills, education, experience, projects, and contact details.">
+    <link rel="canonical" href="https://mxdhavgautam.netlify.app/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Madhav Gautam">
+    <meta name="keywords" content="Madhav Gautam, Flutter developer, portfolio, VIT Chennai, projects, experience, contact, software developer">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Madhav Gautam | Developer Portfolio">
+    <meta property="og:description" content="Explore my skills, education, experience, projects, and contact details.">
+    <meta property="og:url" content="https://mxdhavgautam.netlify.app/">
+    <meta property="og:image" content="/icons/icon-512.png">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Madhav Gautam | Developer Portfolio">
+    <meta name="twitter:description" content="Explore my skills, education, experience, projects, and contact details.">
+    <meta name="twitter:image" content="/icons/icon-512.png">
     <link rel="manifest" href="manifest.json">
+    <!-- Font preloads to ensure fonts load promptly in release -->
+    <link rel="preload" href="/assets/fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="">
+    <link rel="preload" href="/assets/fonts/Poppins-Medium.ttf" as="font" type="font/ttf" crossorigin="">
+    <link rel="preload" href="/assets/fonts/Poppins-SemiBold.ttf" as="font" type="font/ttf" crossorigin="">
+    <link rel="preload" href="/assets/fonts/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin="">
 
     <!-- Browser meta tags & icons -->
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Flutter manages viewport automatically for Web; explicit viewport meta removed to avoid warnings -->
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -17,14 +37,18 @@
     <link rel="icon" type="image/x-icon" href="icons/favicon.ico" sizes="any">
 
 
-    <script>
-      // The value below is injected by flutter build, do not touch.
-      var serviceWorkerVersion = null;
-    </script>
-    <!-- This script adds the flutter initialization JS code -->
-    <script src="flutter.js" defer=""></script>
+    <!-- Removed deprecated flutter.js and serviceWorkerVersion, using new bootstrap script instead -->
     
     
+  
+  
+  <!-- Removed duplicate viewport meta -->
+  
+  
+  
+  
+  
+  
   
   
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
@@ -40,7 +64,7 @@
     body {
       margin: 0;
       min-height: 100%;
-      background-color: #191919;
+      background-color: #F7F7F7;
           background-size: 100% 100%;
     }
 
@@ -89,6 +113,12 @@
       bottom: 0;
       right: 0;
     }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #191919;
+          }
+    }
   </style>
   <script id="splash-screen-script">
     function removeSplashFromWeb() {
@@ -108,6 +138,10 @@
   
   
   
+  
+  
+  
+  
 
   <script>
     import("./scripts/botd-1.1.0.js")
@@ -120,21 +154,79 @@
       });
   </script>
 
-<script>
-      window.addEventListener("load", function (ev) {
-        // Download main.dart.js
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: function (engineInitializer) {
-            engineInitializer.initializeEngine().then(function (appRunner) {
-              appRunner.runApp();
-            });
-          },
-        });
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Madhav Gautam",
+    "url": "https://mxdhavgautam.netlify.app/",
+    "jobTitle": "Software Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vellore Institute of Technology"
+    },
+    "sameAs": [
+      "https://github.com/mxdhavgautam",
+      "https://linkedin.com/in/mxdhavgautam",
+      "https://twitter.com/mxdhavgautam",
+      "https://instagram.com/mxdhavgautam"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Madhav Gautam | Developer Portfolio",
+    "url": "https://mxdhavgautam.netlify.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://mxdhavgautam.netlify.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Projects",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Devfolio",
+          "description": "My Developer Portfolio",
+          "url": "https://github.com/mxdhavgautam/portfolio-src"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Society Complaint Management System",
+          "description": "Python and MySQL project",
+          "url": "https://github.com/mxdhavgautam/SocietyComplaintManagementSystem"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Configure renderer using new initialization API -->
+  <script type="application/javascript">
+    window.addEventListener('load', function() {
+      _flutter.loader.load({
+        config: { renderer: 'html' }
       });
-</script>
+    });
+  </script>
+  <!-- New Flutter Web bootstrap per latest docs -->
+  <script src="flutter_bootstrap.js" async=""></script>
 
 
 

@@ -33,7 +33,9 @@ class MS8Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: AppThemeData.backgroundBlack,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? AppThemeData.backgroundBlack
+          : Theme.of(context).colorScheme.surfaceVariant,
       child: Column(
         children: [
           const SizedBox(

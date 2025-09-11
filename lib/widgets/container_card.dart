@@ -14,17 +14,27 @@ class ContainerCard {
     required String message,
     required Uri url,
   }) {
-    return Container(
+    return Builder(builder: (context) {
+      return Container(
       decoration: BoxDecoration(
-        color: AppThemeData.cardGrey,
+        color: Theme.of(context).brightness == Brightness.dark
+            ? AppThemeData.cardGrey
+            : Theme.of(context).colorScheme.surfaceVariant,
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
+          Theme.of(context).brightness == Brightness.dark
+              ? BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 1,
+                  blurRadius: 3,
+                  offset: const Offset(0, 3),
+                )
+              : const BoxShadow(
+                  color: Color(0x22000000),
+                  spreadRadius: 0,
+                  blurRadius: 6,
+                  offset: Offset(0, 3),
+                ),
         ],
       ),
       child: Padding(
@@ -36,23 +46,28 @@ class ContainerCard {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(image, height: 70.0, width: 70.0),
+                Builder(
+                  builder: (context) {
+                    final double dpr = MediaQuery.of(context).devicePixelRatio;
+                    return Image.asset(
+                      image,
+                      height: 70.0,
+                      width: 70.0,
+                      cacheHeight: (70.0 * dpr).round(),
+                      cacheWidth: (70.0 * dpr).round(),
+                    );
+                  },
+                ),
                 const SizedBox(height: 20.0),
                 SelectableText(
                   title,
-                  style: TextStyle(
-                    fontSize:
-                        AppThemeData.darkTheme.textTheme.titleMedium!.fontSize,
-                    fontWeight: AppThemeData
-                        .darkTheme.textTheme.headlineSmall!.fontWeight,
-                    color: AppThemeData.textWhite,
-                  ),
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ],
             ),
             const SizedBox(height: 10.0),
             SelectableText(description,
-                style: AppThemeData.darkTheme.textTheme.labelLarge),
+                style: Theme.of(context).textTheme.labelLarge),
             const SizedBox(height: 20.0),
             // ButtonTextSmall(
             //   text: 'View More >>',
@@ -62,7 +77,8 @@ class ContainerCard {
           ],
         ),
       ),
-    );
+      );
+    });
   }
 
   Widget type2({
@@ -73,17 +89,27 @@ class ContainerCard {
     required Uri url,
     required bool buttonEnabled,
   }) {
-    return Container(
+    return Builder(builder: (context) {
+      return Container(
       decoration: BoxDecoration(
-        color: AppThemeData.cardGrey,
+        color: Theme.of(context).brightness == Brightness.dark
+            ? AppThemeData.cardGrey
+            : Theme.of(context).colorScheme.surfaceVariant,
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
+          Theme.of(context).brightness == Brightness.dark
+              ? BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 1,
+                  blurRadius: 3,
+                  offset: const Offset(0, 3),
+                )
+              : const BoxShadow(
+                  color: Color(0x22000000),
+                  spreadRadius: 0,
+                  blurRadius: 6,
+                  offset: Offset(0, 3),
+                ),
         ],
       ),
       child: Padding(
@@ -95,16 +121,23 @@ class ContainerCard {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/images/$image.png', height: 70.0),
+                Builder(
+                  builder: (context) {
+                    final double dpr = MediaQuery.of(context).devicePixelRatio;
+                    return Image.asset(
+                      'assets/images/$image.png',
+                      height: 70.0,
+                      semanticLabel: title,
+                      cacheHeight: (70.0 * dpr).round(),
+                    );
+                  },
+                ),
                 const SizedBox(height: 20.0),
-                SelectableText(title,
-                    style: TextStyle(
-                      fontSize: AppThemeData
-                          .darkTheme.textTheme.titleMedium!.fontSize,
-                      fontWeight: AppThemeData
-                          .darkTheme.textTheme.headlineSmall!.fontWeight,
-                      color: AppThemeData.textPrimary,
-                    )),
+                Text(title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(color: AppThemeData.textPrimary)),
                 const SizedBox(height: 10.0),
                 SeoTextPairs().type2(
                   title: values[0],
@@ -138,7 +171,8 @@ class ContainerCard {
           ],
         ),
       ),
-    );
+      );
+    });
   }
 
   Widget type3({
@@ -151,17 +185,27 @@ class ContainerCard {
     required Uri url,
     bool? isButtonEnabled,
   }) {
-    return Container(
+    return Builder(builder: (context) {
+      return Container(
       decoration: BoxDecoration(
-        color: AppThemeData.cardGrey,
+        color: Theme.of(context).brightness == Brightness.dark
+            ? AppThemeData.cardGrey
+            : Theme.of(context).colorScheme.surfaceVariant,
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
+          Theme.of(context).brightness == Brightness.dark
+              ? BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 1,
+                  blurRadius: 3,
+                  offset: const Offset(0, 3),
+                )
+              : const BoxShadow(
+                  color: Color(0x22000000),
+                  spreadRadius: 0,
+                  blurRadius: 6,
+                  offset: Offset(0, 3),
+                ),
         ],
       ),
       child: Padding(
@@ -173,20 +217,27 @@ class ContainerCard {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/images/$image.png', height: 70.0),
+                Builder(
+                  builder: (context) {
+                    final double dpr = MediaQuery.of(context).devicePixelRatio;
+                    return Image.asset(
+                      'assets/images/$image.png',
+                      height: 70.0,
+                      semanticLabel: title,
+                      cacheHeight: (70.0 * dpr).round(),
+                    );
+                  },
+                ),
                 const SizedBox(height: 20.0),
-                SelectableText(title,
-                    style: TextStyle(
-                      fontSize: AppThemeData
-                          .darkTheme.textTheme.titleMedium!.fontSize,
-                      fontWeight: AppThemeData
-                          .darkTheme.textTheme.headlineSmall!.fontWeight,
-                      color: AppThemeData.textPrimary,
-                    )),
+                Text(title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(color: AppThemeData.textPrimary)),
                 const SizedBox(height: 10.0),
                 SeoTextPairs().type2(
                   title: role,
-                  value1: years ??= '',
+                  value1: years ?? '',
                   value2: values,
                   isThreeLines: true,
                 ),
@@ -196,23 +247,24 @@ class ContainerCard {
             if (isButtonEnabled == null)
               Text(
                 '',
-                style: AppThemeData.darkTheme.textTheme.labelMedium,
+                style: Theme.of(context).textTheme.labelMedium,
               )
-            else if (isButtonEnabled = true)
+            else if (isButtonEnabled == true)
               ButtonTextSmall(
                 text: 'Dive in >>',
                 message: message,
                 url: url,
               )
-            else if (isButtonEnabled = false)
+            else if (isButtonEnabled == false)
               Text(
                 'Stay tuned :)',
-                style: AppThemeData.darkTheme.textTheme.labelMedium,
+                style: Theme.of(context).textTheme.labelMedium,
               ),
           ],
         ),
       ),
-    );
+      );
+    });
   }
 
   Widget type4({

@@ -37,6 +37,7 @@ class AppThemeData {
     brightness: Brightness.dark,
     primaryColor: primaryColor,
     scaffoldBackgroundColor: secondaryColor,
+    cardColor: cardGrey,
     fontFamily: 'Poppins',
     iconTheme: const IconThemeData(color: iconPrimary),
     textSelectionTheme: const TextSelectionThemeData(
@@ -97,6 +98,86 @@ class AppThemeData {
           fontWeight: FontWeight.w500,
           color: AppThemeData.textWhite),
     ),
-    colorScheme: const ColorScheme.dark().copyWith(surface: backgroundBlack),
+    colorScheme: const ColorScheme.dark().copyWith(
+      surface: backgroundBlack,
+      primary: primaryColor,
+      onSurface: textWhite,
+      surfaceVariant: Color(0xFF1F1F1F),
+    ),
+  );
+
+  // Light Theme
+  static final ThemeData lightTheme = ThemeData(
+    brightness: Brightness.light,
+    primaryColor: primaryColor,
+    scaffoldBackgroundColor: const Color(0xFFFFFFFF),
+    cardColor: Color(0xFFF2F2F2),
+    fontFamily: 'Poppins',
+    iconTheme: const IconThemeData(color: primaryColor),
+    textSelectionTheme: const TextSelectionThemeData(
+      cursorColor: primaryColor,
+      selectionColor: Color(0xFFFFCDD2),
+      selectionHandleColor: primaryColor,
+    ),
+    tooltipTheme: const TooltipThemeData(
+      decoration: BoxDecoration(
+        color: Color(0xFFFFFFFF),
+        border: Border(
+          top: BorderSide(color: Color(0xFFBDBDBD), width: 1.0),
+          left: BorderSide(color: Color(0xFFBDBDBD), width: 1.0),
+          right: BorderSide(color: Color(0xFFBDBDBD), width: 1.0),
+          bottom: BorderSide(color: Color(0xFFBDBDBD), width: 1.0),
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(4.0)),
+      ),
+      textStyle: TextStyle(color: Color(0xFF212121)),
+    ),
+    snackBarTheme: const SnackBarThemeData(
+      backgroundColor: primaryColor,
+      contentTextStyle: TextStyle(color: Colors.white),
+      actionTextColor: Colors.white,
+    ),
+    textTheme: const TextTheme(
+      displayMedium: TextStyle(
+        fontSize: 54.0,
+        fontWeight: FontWeight.w700,
+        color: Color(0xFF212121),
+      ),
+      displaySmall: TextStyle(
+          fontSize: 42.0,
+          fontWeight: FontWeight.w700,
+          color: Color(0xFF212121)),
+      headlineSmall: TextStyle(
+          fontSize: 28.0,
+          fontWeight: FontWeight.w700,
+          color: primaryColor),
+      titleLarge: TextStyle(
+          fontSize: 20.0,
+          fontWeight: FontWeight.w500,
+          color: Color(0xFF616161)),
+      titleMedium: TextStyle(
+          fontSize: 18.0,
+          fontWeight: FontWeight.w500,
+          color: Color(0xFF212121)),
+      titleSmall: TextStyle(
+          fontSize: 16.0,
+          fontWeight: FontWeight.w400,
+          color: Color(0xFF757575)),
+      labelLarge: TextStyle(
+          fontSize: 14.0,
+          fontWeight: FontWeight.w400,
+          color: Color(0xFF616161)),
+      labelMedium: TextStyle(
+          fontSize: 12.0,
+          fontWeight: FontWeight.w500,
+          color: Color(0xFF212121)),
+    ),
+    colorScheme: const ColorScheme.light().copyWith(
+      surface: Colors.white,
+      primary: primaryColor,
+      secondary: Color(0xFF9E9E9E),
+      onSurface: Color(0xFF212121),
+      surfaceVariant: Color(0xFFF7F7F7),
+    ),
   );
 }

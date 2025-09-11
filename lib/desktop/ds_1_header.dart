@@ -8,7 +8,7 @@ import '../widgets/social_profiles.dart';
 class DS1Header extends StatelessWidget {
   const DS1Header({super.key});
 
-  List<Widget> headerData() {
+  List<Widget> headerData(BuildContext context) {
     return [
       Image.asset('assets/images/logo.png', height: 250.0, width: 250.0),
       const SizedBox(width: 60.0),
@@ -16,15 +16,15 @@ class DS1Header extends StatelessWidget {
         children: [
           SelectableText(
             DataValues.headerGreetings,
-            style: AppThemeData.darkTheme.textTheme.headlineSmall,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           SelectableText(
             DataValues.headerName,
-            style: AppThemeData.darkTheme.textTheme.displayMedium,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           SelectableText(
             DataValues.headerTitle,
-            style: AppThemeData.darkTheme.textTheme.titleLarge,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           const SizedBox(height: 20.0),
           const SocialProfiles(),
@@ -36,14 +36,16 @@ class DS1Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppThemeData.backgroundBlack,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? AppThemeData.backgroundBlack
+          : Theme.of(context).colorScheme.surfaceVariant,
       child: Padding(
           padding: const EdgeInsets.only(top: 60.0, bottom: 40.0),
           child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: headerData(),
+                children: headerData(context),
               ),
               const SizedBox(height: 60.0),
               NavBar().desktopNavBar(),

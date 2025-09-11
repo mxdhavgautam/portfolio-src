@@ -15,7 +15,7 @@ class DS7Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: KeyHolders.contactKey,
-      color: AppThemeData.backgroundGrey,
+      color: Theme.of(context).colorScheme.surface,
       child: Padding(
         padding: const EdgeInsets.all(40.0),
         child: Column(
@@ -28,13 +28,7 @@ class DS7Contact extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SelectableText(DataValues.contactBanner,
-                    style: TextStyle(
-                      fontSize: AppThemeData
-                          .darkTheme.textTheme.titleMedium!.fontSize,
-                      fontWeight: AppThemeData
-                          .darkTheme.textTheme.titleLarge!.fontWeight,
-                      color: AppThemeData.textWhite,
-                    )),
+                    style: Theme.of(context).textTheme.titleMedium),
                 const SizedBox(width: 5.0),
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
@@ -47,7 +41,7 @@ class DS7Contact extends StatelessWidget {
                         content: Text(
                           'Email successfully copied to clipboard',
                           textAlign: TextAlign.center,
-                          style: AppThemeData.darkTheme.textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         duration: const Duration(seconds: 2),
                       ));
@@ -56,13 +50,10 @@ class DS7Contact extends StatelessWidget {
                       message: 'Click to copy email to clipboard',
                       child: Text(
                         DataValues.contactEmail,
-                        style: TextStyle(
-                          fontSize: AppThemeData
-                              .darkTheme.textTheme.titleMedium!.fontSize,
-                          fontWeight: AppThemeData
-                              .darkTheme.textTheme.titleLarge!.fontWeight,
-                          color: AppThemeData.textPrimary,
-                        ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
+                            ?.copyWith(color: AppThemeData.textPrimary),
                       ),
                     ),
                   ),

@@ -15,7 +15,7 @@ class ContainerBanner {
       required String message,
       required Uri url}) {
     return Container(
-      color: AppThemeData.backgroundGrey,
+      color: Theme.of(context).colorScheme.surface,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -29,24 +29,15 @@ class ContainerBanner {
                       children: [
                         SelectableText(
                           title1,
-                          style: TextStyle(
-                            fontSize: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontSize,
-                            fontWeight: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontWeight,
-                            color: AppThemeData.textWhite,
-                          ),
+                          style: Theme.of(context).textTheme.titleLarge,
                         ),
                         const SizedBox(width: 4.0),
                         SelectableText(
                           title2,
-                          style: TextStyle(
-                            fontSize: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontSize,
-                            fontWeight: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontWeight,
-                            color: AppThemeData.textPrimary,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
+                              ?.copyWith(color: AppThemeData.textPrimary),
                         ),
                       ],
                     )
@@ -55,37 +46,22 @@ class ContainerBanner {
                       children: [
                         SelectableText(
                           title1,
-                          style: TextStyle(
-                            fontSize: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontSize,
-                            fontWeight: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontWeight,
-                            color: AppThemeData.textWhite,
-                          ),
+                          style: Theme.of(context).textTheme.titleLarge,
                         ),
                         const SizedBox(width: 4.0),
                         SelectableText(
                           title2,
-                          style: TextStyle(
-                            fontSize: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontSize,
-                            fontWeight: AppThemeData
-                                .darkTheme.textTheme.titleLarge!.fontWeight,
-                            color: AppThemeData.textPrimary,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
+                              ?.copyWith(color: AppThemeData.textPrimary),
                         ),
                       ],
                     ),
               const SizedBox(height: 5.0),
               SelectableText(
                 description,
-                style: TextStyle(
-                  fontSize:
-                      AppThemeData.darkTheme.textTheme.labelLarge!.fontSize,
-                  fontWeight:
-                      AppThemeData.darkTheme.textTheme.labelLarge!.fontWeight,
-                  color: AppThemeData.textGreyDark,
-                ),
+                style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
             ],
@@ -93,7 +69,9 @@ class ContainerBanner {
           const SizedBox(height: 20.0),
           ButtonRectangle(
             name: message,
-            color: AppThemeData.buttonSecondary,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppThemeData.buttonSecondary
+                : const Color(0xFFE0E0E0),
             message: url.toString(),
             onPressed: () async {
               if (!await launchUrl(url)) {
@@ -122,12 +100,7 @@ class ContainerBanner {
           child: Text(
             message,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: AppThemeData.darkTheme.textTheme.labelLarge!.fontSize,
-              fontWeight:
-                  AppThemeData.darkTheme.textTheme.labelLarge!.fontWeight,
-              color: AppThemeData.textGreyDark,
-            ),
+            style: Theme.of(context).textTheme.labelLarge,
           ),
         ),
       ),

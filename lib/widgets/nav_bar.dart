@@ -83,28 +83,31 @@ class NavBar {
 
   Widget mobileNavBar() {
     Widget miniHeader() {
-      return Column(
-        children: [
-          Image.asset('assets/images/logo.png', height: 80.0, width: 80.0),
-          const SizedBox(height: 10.0),
-          SelectableText(
-            DataValues.headerName,
-            style: TextStyle(
-              color: AppThemeData.textPrimary,
-              fontSize: AppThemeData.darkTheme.textTheme.titleLarge?.fontSize,
-              fontWeight: FontWeight.bold,
+      return Builder(builder: (context) {
+        return Column(
+          children: [
+            Image.asset('assets/images/logo.png', height: 80.0, width: 80.0),
+            const SizedBox(height: 10.0),
+            SelectableText(
+              DataValues.headerName,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge
+                  ?.copyWith(color: AppThemeData.textPrimary, fontWeight: FontWeight.bold),
             ),
-          ),
-          SelectableText(
-            DataValues.headerTitle,
-            style: AppThemeData.darkTheme.textTheme.labelLarge,
-          ),
-        ],
-      );
+            SelectableText(
+              DataValues.headerTitle,
+              style: Theme.of(context).textTheme.labelLarge,
+            ),
+          ],
+        );
+      });
     }
 
-    return Drawer(
-      backgroundColor: AppThemeData.backgroundBlack,
+    return Builder(builder: (context) => Drawer(
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? AppThemeData.backgroundBlack
+          : Colors.white,
       child: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         children: [
@@ -176,6 +179,6 @@ class NavBar {
               message: 'Go to ${DataValues.navBarContactMe} section'),
         ],
       ),
-    );
+    ));
   }
 }

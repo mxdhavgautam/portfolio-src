@@ -14,7 +14,7 @@ class MS5Extracurriculars extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: KeyHolders.volunteeringKey,
-      color: AppThemeData.backgroundGrey,
+      color: Theme.of(context).colorScheme.surface,
       child: Padding(
         padding: const EdgeInsets.all(40.0),
         child: Column(
@@ -24,7 +24,7 @@ class MS5Extracurriculars extends StatelessWidget {
                 title: DataValues.extracTitle,
                 description: DataValues.extracDescription),
             const SizedBox(height: 30.0),
-            ContainerCard().type3(
+            RepaintBoundary(child: ContainerCard().type3(
               image: 'voyage',
               title: DataValues.extracOrg5Title,
               role: DataValues.extracOrg5Role,
@@ -33,9 +33,9 @@ class MS5Extracurriculars extends StatelessWidget {
               message: '',
               url: DataValues.blankURL,
               isButtonEnabled: null,
-            ),
+            )),
             const SizedBox(height: 20.0),
-            ContainerCard().type3(
+            RepaintBoundary(child: ContainerCard().type3(
               image: 'comsoc',
               title: DataValues.extracOrg4Title,
               role: DataValues.extracOrg4Role,
@@ -44,9 +44,9 @@ class MS5Extracurriculars extends StatelessWidget {
               message: '',
               url: DataValues.blankURL,
               isButtonEnabled: null,
-            ),
+            )),
             const SizedBox(height: 20.0),
-            ContainerCard().type3(
+            RepaintBoundary(child: ContainerCard().type3(
               image: 'enactus',
               title: DataValues.extracOrg1Title,
               role: DataValues.extracOrg1Role,
@@ -55,9 +55,9 @@ class MS5Extracurriculars extends StatelessWidget {
               message: '',
               url: DataValues.blankURL,
               isButtonEnabled: null,
-            ),
+            )),
             const SizedBox(height: 20.0),
-            ContainerCard().type2(
+            RepaintBoundary(child: ContainerCard().type2(
               image: 'ncs',
               title: DataValues.extracOrg2Title,
               buttonEnabled: false,
@@ -74,9 +74,9 @@ class MS5Extracurriculars extends StatelessWidget {
               ],
               message: DataValues.blankURL.toString(),
               url: DataValues.blankURL,
-            ),
+            )),
             const SizedBox(height: 20.0),
-            ContainerCard().type2(
+            RepaintBoundary(child: ContainerCard().type2(
               image: 'ncs',
               title: DataValues.extracOrg3Title,
               buttonEnabled: false,
@@ -93,7 +93,7 @@ class MS5Extracurriculars extends StatelessWidget {
               ],
               message: DataValues.blankURL.toString(),
               url: DataValues.blankURL,
-            ),
+            )),
           ],
         ),
       ),

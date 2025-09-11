@@ -30,12 +30,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Defer initial heavy work until after splash is shown
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      // Allow the splash to be visible for a tick while we warm caches
+      await Future<void>.delayed(const Duration(milliseconds: 50));
+      final List<String> moreToCache = <String>[
+        'assets/images/hcl.png',
+        'assets/images/github.png',
+      ];
+      for (final String assetPath in moreToCache) {
+        precacheImage(AssetImage(assetPath), context);
+      }
+    });
     return SeoController(
       enabled: true,
       tree: WidgetTree(context: context),
       child: MaterialApp(
         title: 'Madhav Gautam',
-        theme: AppThemeData.darkTheme,
+        theme: AppThemeData.lightTheme,
+        darkTheme: AppThemeData.darkTheme,
+        themeMode: ThemeMode.system,
         home: const HomePage(),
       ),
     );
@@ -58,19 +72,30 @@ class _HomePageState extends State<HomePage> {
     _scrollController = ScrollController()
       ..addListener(
         () {
-          setState(
-            () {
-              if (_scrollController.offset >= 300) {
-                _showBackToTopButton = true;
-              } else {
-                _showBackToTopButton = false;
-              }
-            },
-          );
+          final bool shouldShow = _scrollController.offset >= 300;
+          if (shouldShow != _showBackToTopButton) {
+            setState(() {
+              _showBackToTopButton = shouldShow;
+            });
+          }
         },
       );
 
     super.initState();
+
+    // Precache key images to reduce first-scroll jank, especially near extracurriculars
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final List<String> imagesToCache = <String>[
+        'assets/images/voyage.png',
+        'assets/images/comsoc.png',
+        'assets/images/enactus.png',
+        'assets/images/ncs.png',
+        'assets/images/logo.png',
+      ];
+      for (final String assetPath in imagesToCache) {
+        precacheImage(AssetImage(assetPath), context);
+      }
+    });
   }
 
   @override
@@ -87,10 +112,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget desktopUI() {
-      return ListView(
-        shrinkWrap: true,
-        physics: const ClampingScrollPhysics(),
-        children: const [
+      return const Column(
+        children: [
           DS1Header(),
           DS2AboutMe(),
           DS3Education(),
@@ -104,10 +127,8 @@ class _HomePageState extends State<HomePage> {
     }
 
     Widget mobileUI() {
-      return ListView(
-        shrinkWrap: true,
-        physics: const ClampingScrollPhysics(),
-        children: const [
+      return const Column(
+        children: [
           MS1Header(),
           MS2AboutMe(),
           MS3Education(),
@@ -131,7 +152,7 @@ class _HomePageState extends State<HomePage> {
         controller: _scrollController,
         physics: const BouncingScrollPhysics(),
         child: Container(
-          color: AppThemeData.backgroundGrey,
+          color: Theme.of(context).colorScheme.surface,
           child: ResponsiveScreenProvider.isDesktopScreen(context)
               ? desktopUI()
               : mobileUI(),

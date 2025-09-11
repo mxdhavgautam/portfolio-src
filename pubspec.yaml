@@ -13,11 +13,13 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.9
-  flutter_native_splash: ^2.3.1
+  flutter_native_splash: ^2.4.6
   seo: ^0.0.5
 flutter_native_splash:
   image: assets/images/splash.png
-  color: "#191919"
+  color: "#F7F7F7"
+  image_dark: assets/images/splash-dark.png
+  color_dark: "#191919"
 
 dev_dependencies:
   flutter_test:

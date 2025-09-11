@@ -13,7 +13,7 @@ class MS4Experience extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       key: KeyHolders.experienceKey,
-      color: AppThemeData.backgroundGrey,
+      color: Theme.of(context).colorScheme.surface,
       child: Padding(
         padding: const EdgeInsets.all(40.0),
         child: Column(

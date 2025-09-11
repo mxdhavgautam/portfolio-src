@@ -26,8 +26,32 @@ class ButtonIcon {
         },
         child: Tooltip(
           message: url.toString(),
-          child: Image.asset('assets/icons/$name.png',
-              height: height, width: width),
+          child: Builder(
+            builder: (context) {
+              final double dpr = MediaQuery.of(context).devicePixelRatio;
+              final bool isLight = Theme.of(context).brightness == Brightness.light;
+              final String assetName = isLight ? '${name}-light' : name;
+              return Image.asset(
+                'assets/icons/$assetName.png',
+                height: height,
+                width: width,
+                semanticLabel: name,
+                cacheHeight: (height * dpr).round(),
+                cacheWidth: (width * dpr).round(),
+                errorBuilder: (context, error, stack) {
+                  // Fallback to default icon if light variant is missing
+                  return Image.asset(
+                    'assets/icons/$name.png',
+                    height: height,
+                    width: width,
+                    semanticLabel: name,
+                    cacheHeight: (height * dpr).round(),
+                    cacheWidth: (width * dpr).round(),
+                  );
+                },
+              );
+            },
+          ),
         ),
       ),
     );
