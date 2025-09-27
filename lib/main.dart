@@ -20,8 +20,10 @@ import 'mobile/ms_6_projects.dart';
 import 'mobile/ms_7_contact.dart';
 import 'mobile/ms_8_footer.dart';
 import 'package:seo/seo.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 

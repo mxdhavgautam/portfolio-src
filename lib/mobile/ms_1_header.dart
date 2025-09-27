@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../statics/data_values.dart';
 import '../theme/app_theme.dart';
 import '../widgets/social_profiles.dart';
+import 'package:seo/seo.dart';
 
 class MS1Header extends StatelessWidget {
   const MS1Header({super.key});
@@ -17,10 +18,14 @@ class MS1Header extends StatelessWidget {
             DataValues.headerGreetings,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
-          SelectableText(
-            DataValues.headerName,
-            style: Theme.of(context).textTheme.displayMedium,
-            textAlign: TextAlign.center,
+          Seo.text(
+            text: DataValues.headerName,
+            style: TextTagStyle.h1,
+            child: SelectableText(
+              DataValues.headerName,
+              style: Theme.of(context).textTheme.displayMedium,
+              textAlign: TextAlign.center,
+            ),
           ),
           SelectableText(
             DataValues.headerTitle,

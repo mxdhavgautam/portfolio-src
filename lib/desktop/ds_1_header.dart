@@ -4,6 +4,7 @@ import '../statics/data_values.dart';
 import '../theme/app_theme.dart';
 import '../widgets/nav_bar.dart';
 import '../widgets/social_profiles.dart';
+import 'package:seo/seo.dart';
 
 class DS1Header extends StatelessWidget {
   const DS1Header({super.key});
@@ -18,9 +19,13 @@ class DS1Header extends StatelessWidget {
             DataValues.headerGreetings,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
-          SelectableText(
-            DataValues.headerName,
-            style: Theme.of(context).textTheme.displayMedium,
+          Seo.text(
+            text: DataValues.headerName,
+            style: TextTagStyle.h1,
+            child: SelectableText(
+              DataValues.headerName,
+              style: Theme.of(context).textTheme.displayMedium,
+            ),
           ),
           SelectableText(
             DataValues.headerTitle,
