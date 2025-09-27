@@ -48,13 +48,13 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    final double dpr = MediaQuery.of(context).devicePixelRatio;
                     return Image.asset(
                       image,
                       height: 70.0,
                       width: 70.0,
-                      cacheHeight: (70.0 * dpr).round(),
-                      cacheWidth: (70.0 * dpr).round(),
+                      errorBuilder: (context, error, stackTrace) {
+                        return const SizedBox(height: 70.0, width: 70.0);
+                      },
                     );
                   },
                 ),
@@ -123,12 +123,13 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    final double dpr = MediaQuery.of(context).devicePixelRatio;
                     return Image.asset(
                       'assets/images/$image.png',
                       height: 70.0,
                       semanticLabel: title,
-                      cacheHeight: (70.0 * dpr).round(),
+                      errorBuilder: (context, error, stackTrace) {
+                        return const SizedBox(height: 70.0, width: 70.0);
+                      },
                     );
                   },
                 ),
@@ -219,12 +220,13 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    final double dpr = MediaQuery.of(context).devicePixelRatio;
                     return Image.asset(
                       'assets/images/$image.png',
                       height: 70.0,
                       semanticLabel: title,
-                      cacheHeight: (70.0 * dpr).round(),
+                      errorBuilder: (context, error, stackTrace) {
+                        return const SizedBox(height: 70.0, width: 70.0);
+                      },
                     );
                   },
                 ),
