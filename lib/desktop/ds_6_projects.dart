@@ -25,7 +25,7 @@ class DS6Projects extends StatelessWidget {
             LayoutBuilder(
               builder: (context, constraints) {
                 final double spacing = MediaQuery.of(context).size.width * 0.02;
-                final double itemWidth = (constraints.maxWidth - spacing * 1) / 2;
+                final double itemWidth = (constraints.maxWidth - spacing * 2) / 3;
                 return Wrap(
                   spacing: spacing,
                   runSpacing: 30.0,
@@ -55,6 +55,20 @@ class DS6Projects extends StatelessWidget {
                         message: DataValues.societyUrl.toString(),
                         url: DataValues.societyUrl,
                         isButtonEnabled: true,
+                      )),
+                    ),
+                    SizedBox(
+                      width: itemWidth,
+                      child: RepaintBoundary(child: ContainerCard().type3(
+                        image: 'cardiac',
+                        title: DataValues.projectsOrg3Title,
+                        role: DataValues.projectsOrg3Role,
+                        years: DataValues.projectsOrg3Years,
+                        values: DataValues.projectsOrg3Values,
+                        message: DataValues.cardiacUrl.toString(),
+                        url: DataValues.cardiacUrl,
+                        isButtonEnabled: true,
+                        buttonText: 'View on GitHub >>',
                       )),
                     ),
                   ],
