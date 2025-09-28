@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:developer';
+import 'package:seo/seo.dart';
 
 class ButtonTextLarge extends StatelessWidget {
   final String text;
@@ -49,9 +50,13 @@ class ButtonTextSmall extends StatelessWidget {
             }
             log("Direct to: $url");
           },
-          child: Text(
-            text,
-            style: Theme.of(context).textTheme.labelMedium,
+          child: Seo.link(
+            href: url.toString(),
+            anchor: text,
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.labelMedium,
+            ),
           ),
         ),
       ),

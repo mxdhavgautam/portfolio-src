@@ -5,6 +5,7 @@ import 'dart:developer';
 import '../theme/app_theme.dart';
 import '../widgets/text_pairs.dart';
 import 'button_text.dart';
+import 'package:seo/seo.dart';
 
 class ContainerCard {
   Widget type1({
@@ -48,20 +49,28 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    return Image.asset(
-                      image,
-                      height: 70.0,
-                      width: 70.0,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const SizedBox(height: 70.0, width: 70.0);
-                      },
+                    return Seo.image(
+                      src: image,
+                      alt: title,
+                      child: Image.asset(
+                        image,
+                        height: 70.0,
+                        width: 70.0,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const SizedBox(height: 70.0, width: 70.0);
+                        },
+                      ),
                     );
                   },
                 ),
                 const SizedBox(height: 20.0),
-                SelectableText(
-                  title,
-                  style: Theme.of(context).textTheme.titleMedium,
+                Seo.text(
+                  text: title,
+                  style: TextTagStyle.h3,
+                  child: SelectableText(
+                    title,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                 ),
               ],
             ),
@@ -123,22 +132,31 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    return Image.asset(
-                      'assets/images/$image.png',
-                      height: 70.0,
-                      semanticLabel: title,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const SizedBox(height: 70.0, width: 70.0);
-                      },
+                    final String src = 'assets/images/$image.png';
+                    return Seo.image(
+                      src: src,
+                      alt: title,
+                      child: Image.asset(
+                        src,
+                        height: 70.0,
+                        semanticLabel: title,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const SizedBox(height: 70.0, width: 70.0);
+                        },
+                      ),
                     );
                   },
                 ),
                 const SizedBox(height: 20.0),
-                Text(title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleMedium
-                        ?.copyWith(color: AppThemeData.textPrimary)),
+                Seo.text(
+                  text: title,
+                  style: TextTagStyle.h3,
+                  child: Text(title,
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleMedium
+                          ?.copyWith(color: AppThemeData.textPrimary)),
+                ),
                 const SizedBox(height: 10.0),
                 SeoTextPairs().type2(
                   title: values[0],
@@ -185,6 +203,7 @@ class ContainerCard {
     required String message,
     required Uri url,
     bool? isButtonEnabled,
+    String buttonText = 'Dive in >>',
   }) {
     return Builder(builder: (context) {
       return Container(
@@ -220,13 +239,18 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    return Image.asset(
-                      'assets/images/$image.png',
-                      height: 70.0,
-                      semanticLabel: title,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const SizedBox(height: 70.0, width: 70.0);
-                      },
+                    final String src = 'assets/images/$image.png';
+                    return Seo.image(
+                      src: src,
+                      alt: title,
+                      child: Image.asset(
+                        src,
+                        height: 70.0,
+                        semanticLabel: title,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const SizedBox(height: 70.0, width: 70.0);
+                        },
+                      ),
                     );
                   },
                 ),
@@ -253,7 +277,7 @@ class ContainerCard {
               )
             else if (isButtonEnabled == true)
               ButtonTextSmall(
-                text: 'Dive in >>',
+                text: buttonText,
                 message: message,
                 url: url,
               )

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:developer';
+import 'package:seo/seo.dart';
 
 class ButtonIcon {
   final String name;
@@ -31,24 +32,32 @@ class ButtonIcon {
               final double dpr = MediaQuery.of(context).devicePixelRatio;
               final bool isLight = Theme.of(context).brightness == Brightness.light;
               final String assetName = isLight ? '${name}-light' : name;
-              return Image.asset(
-                'assets/icons/$assetName.png',
-                height: height,
-                width: width,
-                semanticLabel: name,
-                cacheHeight: (height * dpr).round(),
-                cacheWidth: (width * dpr).round(),
-                errorBuilder: (context, error, stack) {
-                  // Fallback to default icon if light variant is missing
-                  return Image.asset(
-                    'assets/icons/$name.png',
+              final String src = 'assets/icons/$assetName.png';
+              return Seo.link(
+                href: url.toString(),
+                anchor: name,
+                child: Seo.image(
+                  src: src,
+                  alt: name,
+                  child: Image.asset(
+                    src,
                     height: height,
                     width: width,
                     semanticLabel: name,
                     cacheHeight: (height * dpr).round(),
                     cacheWidth: (width * dpr).round(),
-                  );
-                },
+                    errorBuilder: (context, error, stack) {
+                      return Image.asset(
+                        'assets/icons/$name.png',
+                        height: height,
+                        width: width,
+                        semanticLabel: name,
+                        cacheHeight: (height * dpr).round(),
+                        cacheWidth: (width * dpr).round(),
+                      );
+                    },
+                  ),
+                ),
               );
             },
           ),

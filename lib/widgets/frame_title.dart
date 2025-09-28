@@ -1,5 +1,6 @@
 import 'package:mxdhavgautam/theme/responsive_screen_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:seo/seo.dart';
 
 class FrameTitle extends StatelessWidget {
   const FrameTitle({super.key, required this.title, required this.description});
@@ -12,19 +13,27 @@ class FrameTitle extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          SelectableText(
-            title,
-            style: Theme.of(context).textTheme.displaySmall,
+          Seo.text(
+            text: title,
+            style: TextTagStyle.h2,
+            child: SelectableText(
+              title,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
           ),
           Padding(
             padding: ResponsiveScreenProvider.isDesktopScreen(context)
                 ? const EdgeInsets.only(
                     left: 160.0, right: 160.0, top: 10.0, bottom: 40.0)
                 : EdgeInsets.zero,
-            child: SelectableText(
-              description,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleSmall,
+            child: Seo.text(
+              text: description,
+              style: TextTagStyle.p,
+              child: SelectableText(
+                description,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
             ),
           ),
         ],

@@ -5,6 +5,7 @@ import '../statics/key_holders.dart';
 import '../theme/app_theme.dart';
 import 'button_rectangle.dart';
 import 'button_text.dart';
+import 'package:seo/seo.dart';
 
 final Uri url = DataValues.resumeURL;
 
@@ -86,7 +87,11 @@ class NavBar {
       return Builder(builder: (context) {
         return Column(
           children: [
-            Image.asset('assets/images/logo.png', height: 80.0, width: 80.0),
+          Seo.image(
+            src: 'assets/images/logo.png',
+            alt: 'Madhav Gautam logo',
+            child: Image.asset('assets/images/logo.png', height: 80.0, width: 80.0),
+          ),
             const SizedBox(height: 10.0),
             SelectableText(
               DataValues.headerName,

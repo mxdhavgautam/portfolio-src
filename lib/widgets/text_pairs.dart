@@ -55,22 +55,30 @@ class SeoTextPairs {
           style: Theme.of(context).textTheme.titleSmall!,
           tagStyle: TextTagStyle.h2,
         ),
-        Text(
-          value1,
-          style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? const Color(0xFF424242)
-                    : Theme.of(context).textTheme.labelLarge!.color,
-              ),
+        Seo.text(
+          text: value1,
+          style: TextTagStyle.p,
+          child: Text(
+            value1,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? const Color(0xFF424242)
+                      : Theme.of(context).textTheme.labelLarge!.color,
+                ),
+          ),
         ),
         isThreeLines ? const SizedBox(height: 20.0) : Container(),
-        Text(
-          value2,
-          style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? const Color(0xFF424242)
-                    : Theme.of(context).textTheme.labelLarge!.color,
-              ),
+        Seo.text(
+          text: value2,
+          style: TextTagStyle.p,
+          child: Text(
+            value2,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? const Color(0xFF424242)
+                      : Theme.of(context).textTheme.labelLarge!.color,
+                ),
+          ),
         ),
       ],
     ));
@@ -89,22 +97,30 @@ class SeoTextPairs {
           style: Theme.of(context).textTheme.titleSmall!,
           tagStyle: TextTagStyle.h3,
         ),
-        Text(
-          value1,
-          style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? const Color(0xFF424242)
-                    : Theme.of(context).textTheme.labelLarge!.color,
-              ),
+        Seo.text(
+          text: value1,
+          style: TextTagStyle.p,
+          child: Text(
+            value1,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? const Color(0xFF424242)
+                      : Theme.of(context).textTheme.labelLarge!.color,
+                ),
+          ),
         ),
         const SizedBox(height: 20.0),
-        Text(
-          value2,
-          style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? const Color(0xFF424242)
-                    : Theme.of(context).textTheme.labelLarge!.color,
-              ),
+        Seo.text(
+          text: value2,
+          style: TextTagStyle.p,
+          child: Text(
+            value2,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? const Color(0xFF424242)
+                      : Theme.of(context).textTheme.labelLarge!.color,
+                ),
+          ),
         ),
       ],
     ));

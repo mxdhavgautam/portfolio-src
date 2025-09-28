@@ -1,19 +1,19 @@
 class DataValues {
   // About App
   static const String appName = 'Madhav Gautam';
-  static const String appNameLong = 'mxdhavgautam.netlify.app';
+  static const String appNameLong = 'mxdhavgautam.com';
   static const String appDescription =
       'Hey, I\'m Madhav. Welcome to my developer portfolio.';
   static const String appDeveloper = 'Madhav Gautam';
-  static const String appPackage = 'app.netlify.mxdhavgautam';
-  static const String appVersion = '1.5.0';
+  static const String appPackage = 'com.mxdhavgautam';
+  static const String appVersion = '1.5.1';
   static const String appBuildNumber = '1';
 
   // External links
-  static Uri devURL = Uri.parse('https://mxdhavgautam.netlify.app');
+  static Uri devURL = Uri.parse('https://mxdhavgautam.com');
   static Uri githubURL = Uri.parse('https://github.com/mxdhavgautam');
   static Uri linkedinURL = Uri.parse('https://linkedin.com/in/mxdhavgautam');
-  static Uri twitterURL = Uri.parse('https://twitter.com/mxdhavgautam');
+  static Uri twitterURL = Uri.parse('https://x.com/mxdhavgautam');
   static Uri telegramURL = Uri.parse('https://t.me/mxdhavgautam');
   static Uri instagramURL = Uri.parse('https://instagram.com/mxdhavgautam');
   static Uri resumeURL = Uri.parse(
@@ -37,9 +37,7 @@ class DataValues {
   static const String aboutMeDescription =
       'Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.';
   static const String aboutMeBiographyTitle = 'Bio';
-  static const String aboutMeBiographyDescription =
-      'I am a Computer Science Engineering student specializing in Artificial Intelligence and Robotics at Vellore Institute of Technology, Chennai. With a passion for technology, I enjoy delving into various aspects of computing to get the most out of my devices. Currently, my focus lies in learning Dart and honing my skills as an intermediate Flutter developer.'
-      ' Coming from a Defence background, I possess remarkable networking and orating skills, which enable me to effectively communicate and connect with others. Moreover, my lifestyle has honed my ability to adapt swiftly to new situations, environments, and people along with the ability to remain composed and level-headed when confronted with high-pressure situations.';
+  static const String aboutMeBiographyDescription ='I\'m a Computer Science Engineering graduate from VIT Chennai, specializing in Artificial Intelligence and Robotics. My passion lies in exploring intelligent systems and data-driven solutions, with hands-on interest in machine learning, computer vision, and data analytics. Beyond the technical, I bring strong communication and collaboration skills, shaped by my experience in leadership roles and public speaking, that help me bridge the gap between ideas and execution. My adaptive mindset and composure under pressure allow me to thrive in fast-paced, evolving environments, both in research and team settings.';
   static const String aboutMeLanguageTitle = 'Languages';
   static const String aboutMeLanguageDescription = 'Hindi (Native)\n'
       'English (Professional)\n'
@@ -55,7 +53,7 @@ class DataValues {
   static const String aboutMeLocationDescription =
       'Chennai, India\nDelhi, India';
   static const String aboutMeWorkDomainTitle = 'Working Domain';
-  static const String aboutMeWorkDomainDescription = 'mxdhavgautam.github.io\n';
+  static const String aboutMeWorkDomainDescription = 'mxdhavgautam.com\n';
   static const String aboutMeStudentTitle = 'Engineering Student';
   static const String aboutMeStudentDescription =
       'As a student, my focus lies in studying computing technologies and comprehending the inner workings of computer systems, encompassing both hardware and software components that users interact with. My educational journey encompasses critical thinking, problem-solving, and analytical research, which I apply to various problem-solving scenarios using computing principles.';
@@ -78,7 +76,7 @@ class DataValues {
   static const String aboutMeBannerTitle = 'public profiles:';
   static const String aboutMeBannerWeb =
       'You can find all my public profiles at the top of this page.';
-  static Uri profilesURL = Uri.parse('https://mxdhavgautam.netlify.app');
+  static Uri profilesURL = Uri.parse('https://mxdhavgautam.com');
 
   // Education
   static const String educationTitle = 'Education';
@@ -99,7 +97,7 @@ class DataValues {
       'BTech in Computer Science Engineering with Specialisation in Artificial Intelligence and Robotics';
   static const String educationOrg2Course1Grade =
       'awarded by Vellore Institute of Technology';
-  static const String educationOrg2Course1Year = '2021 - 2025 (Ongoing)';
+  static const String educationOrg2Course1Year = '2021 - 2025';
   static const String educationOrg2Course2Name =
       'Flutter And Dart - The Complete Guide [2023 Edition]';
   static const String educationOrg2Course2Grade =
@@ -155,6 +153,11 @@ class DataValues {
   static const String experienceOrg2Years = '4 October - 4 December 2023';
   static const String experienceOrg2Vales =
       'Android, Flutter, Dart, Git, GitHub, UI UX Designing, Analytical Thinking, Material Design';
+  static const String experienceOrg3Title = 'CR3ATE.AI | Remote, United States';
+  static const String experienceOrg3Role = 'Developer Intern';
+  static const String experienceOrg3Years = 'January 2025 - Ongoing';
+  static const String experienceOrg3Vales =
+      'As a Developer Intern at CR3ATE.AI, I actively engage in machine learning, computer vision, and backend infrastructure, emphasizing advanced ML pipelines and integrations. My role includes developing and optimizing CoreML models for real-time computer vision tasks, such as blur detection in iOS camera applications, by evaluating sophisticated architectures like MobileNetV3 and EfficientNet using TensorFlow. Additionally, I have significantly contributed to integrating Hive APIs to facilitate advanced machine learning workflows, specifically supporting 3D Gaussian splat reconstructions relevant to AR, VR, and mixed reality applications. My ongoing responsibilities involve robust backend development, working with and modifying custom APIs in Nest.js hosted via Docker, integrated seamlessly with MongoDB to support ML-driven functionalities. I also specialize in AWS, crafting AWS Lambda functions for efficient file processing and uploads to S3 buckets. Through comprehensive JSON parsing, secure Firebase authentication implementations, and continuous research into cutting-edge ML and computer vision methodologies, I am consistently advancing my expertise in these interconnected domains.';
   // static const String experienceBanner = 'Find my working';
   // static const String experienceBannerTitle = 'toolkit';
   // static const String experienceBannerWeb =
@@ -172,7 +175,7 @@ class DataValues {
   static const String extracBanner = 'Find more about my';
   static const String extracBannerTitle = 'extra-curriculars';
   static const String extracBannerWeb =
-      'Visit linkedin.com/mxdhavgautam for more details >>';
+      'Visit linkedin.com/in/mxdhavgautam for more details >>';
   static Uri extracURL = Uri.parse('https://linkedin.com/in/mxdhavgautam');
 
   static const String extracOrg4Title = 'IEEE Computer Society VITC';
