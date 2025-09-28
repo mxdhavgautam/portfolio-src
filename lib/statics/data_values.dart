@@ -48,7 +48,7 @@ class DataValues {
   static const String aboutMeGenderDescription = 'Male (He/Him)';
   static const String aboutMeSkillsTitle = 'Skills';
   static const String aboutMeSkillsDescription =
-      'Programming Languages/Frameworks that I have worked with include Python, C, C++, Flutter/Dart, Analytical Thinking, Swift, SQL, HTML, JavaScript, TypeScript and Java';
+      'Python, C, C++, Flutter/Dart, Analytical Thinking, Swift, SQL, HTML, JavaScript, TypeScript and Java';
   static const String aboutMeLocationTitle = 'Current Locations';
   static const String aboutMeLocationDescription =
       'Chennai, India\nDelhi, India';
@@ -64,12 +64,11 @@ class DataValues {
   static const String aboutMeDeveloperDescription =
       'With a strong focus on critical thinking, problem-solving, and analytical research, I embrace challenges as learning opportunities and consistently push myself to grow. Through ongoing self-improvement and hands-on experience, I aim to become proficient in and capable of making valuable contributions to cutting-edge projects.';
   static const String aboutMeHobbiesTitle = 'Hobbies';
-  static const String aboutMeHobbiesDescription = 'Listening to podcasts and videos on things by Linus Tech Tips, MKBHD, 3Blue1Brown and Veritasium on YouTube\n'
-      'Trekking/Hiking\n'
-      'Working Out\n'
-      'Reading Books\n'
-      'Listening to Music\n'
-      '\n';
+  static const String aboutMeHobbiesDescription = 'Listening to podcasts and videos on things by Linus Tech Tips, MKBHD, 3Blue1Brown and Veritasium on YouTube, '
+      'Trekking/Hiking, '
+      'Working Out, '
+      'Reading Books, and '
+      'Listening to Music\n';
   static const String aboutMeGoalTitle = 'Goal';
   static const String aboutMeGoalDescription =
       'To grow personally and professionally, while making a positive impact on the community. Currently looking for internship roles in the field of software development, AI/ML engineering, data science and data analysis.';
