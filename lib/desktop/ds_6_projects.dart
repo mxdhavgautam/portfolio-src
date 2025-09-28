@@ -22,36 +22,44 @@ class DS6Projects extends StatelessWidget {
             const FrameTitle(
                 title: DataValues.projectsTitle,
                 description: DataValues.projectsDescription),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: ContainerCard().type3(
-                    image: 'portfolio',
-                    title: DataValues.projectsOrg1Title,
-                    role: DataValues.projectsOrg1Role,
-                    years: DataValues.projectsOrg1Years,
-                    values: DataValues.projectsOrg1Values,
-                    message: DataValues.siteUrl.toString(),
-                    url: DataValues.siteUrl,
-                    isButtonEnabled: true,
-                  ),
-                ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                Expanded(
-                  child: ContainerCard().type3(
-                    image: 'society',
-                    title: DataValues.projectsOrg2Title,
-                    role: DataValues.projectsOrg2Role,
-                    years: DataValues.projectsOrg2Years,
-                    values: DataValues.projectsOrg2Values,
-                    message: DataValues.societyUrl.toString(),
-                    url: DataValues.societyUrl,
-                    isButtonEnabled: true,
-                  ),
-                ),
-              ],
+            LayoutBuilder(
+              builder: (context, constraints) {
+                final double spacing = MediaQuery.of(context).size.width * 0.02;
+                final double itemWidth = (constraints.maxWidth - spacing * 1) / 2;
+                return Wrap(
+                  spacing: spacing,
+                  runSpacing: 30.0,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: itemWidth,
+                      child: RepaintBoundary(child: ContainerCard().type3(
+                        image: 'portfolio',
+                        title: DataValues.projectsOrg1Title,
+                        role: DataValues.projectsOrg1Role,
+                        years: DataValues.projectsOrg1Years,
+                        values: DataValues.projectsOrg1Values,
+                        message: DataValues.siteUrl.toString(),
+                        url: DataValues.siteUrl,
+                        isButtonEnabled: true,
+                      )),
+                    ),
+                    SizedBox(
+                      width: itemWidth,
+                      child: RepaintBoundary(child: ContainerCard().type3(
+                        image: 'society',
+                        title: DataValues.projectsOrg2Title,
+                        role: DataValues.projectsOrg2Role,
+                        years: DataValues.projectsOrg2Years,
+                        values: DataValues.projectsOrg2Values,
+                        message: DataValues.societyUrl.toString(),
+                        url: DataValues.societyUrl,
+                        isButtonEnabled: true,
+                      )),
+                    ),
+                  ],
+                );
+              },
             ),
             const SizedBox(height: 40.0),
           ],

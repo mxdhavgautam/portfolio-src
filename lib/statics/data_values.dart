@@ -146,13 +146,13 @@ class DataValues {
       'Software Development Life Cycle Process Intern';
   static const String experienceOrg1Years = '10 August - 23 September 2023';
   static const String experienceOrg1Vales =
-      'Qt, C/C++, UI/UX, MySQL, NoSQL, Computer Networking Protocols, Software Testing';
+      'As an SDLC Process Intern at WESEE (Ministry of Defence), I designed, developed, and integrated secure communication applications in Qt/Qt Creator for internal deployments. These applications enabled real-time data exchange over UDP and TCP/IP while maintaining secure offline persistence using SQLite. I implemented receiver-side control logic to safely execute actions based on validated command messages and integrated custom functionality into existing in-use software without disrupting system behavior. The work was performed independently in a secure, resource-constrained environment with careful documentation, and I actively participated in workshops and seminars to strengthen technical depth and professional practice.';
   static const String experienceOrg2Title = 'HCLTech | Lucknow';
   static const String experienceOrg2Role =
       'Software Development Intern (Flutter)';
   static const String experienceOrg2Years = '4 October - 4 December 2023';
   static const String experienceOrg2Vales =
-      'Android, Flutter, Dart, Git, GitHub, UI UX Designing, Analytical Thinking, Material Design';
+      'As a Software Development Intern (Flutter) at HCLTech, I developed an accessibility-focused “Elderly User Manual” mobile application using Flutter’s cross-platform framework. The app guides senior users through common smartphone tasks via clear step-by-step flows, larger typography, high-contrast themes, and simplified interactions. Working in an Agile setup, I iterated on user feedback to refine instructional content and usability, improving task completion confidence and reducing friction with everyday device operations. This project directly supports digital inclusion for elderly smartphone users.';
   static const String experienceOrg3Title = 'CR3ATE.AI | Remote, United States';
   static const String experienceOrg3Role = 'Developer Intern';
   static const String experienceOrg3Years = 'January 2025 - Ongoing';
@@ -180,7 +180,7 @@ class DataValues {
 
   static const String extracOrg4Title = 'IEEE Computer Society VITC';
   static const String extracOrg4Role = 'Advisory Board Member, Design Head';
-  static const String extracOrg4Years = 'January 2024 - Present';
+  static const String extracOrg4Years = 'January 2024 - September 2024';
   static const String extracOrg4Vales =
       'IEEE Computer Society VIT Chennai is a dynamic community dedicated to learning, creating, and exploring. Fueled by a shared passion for technology, we thrive on overcoming challenges and empowering members to innovate. Our focus on mutual learning and growth is the key to solving today\'s problems and preparing for a brighter future.';
 static const String extracOrg5Title = 'Voyage E-Summit 2024';
