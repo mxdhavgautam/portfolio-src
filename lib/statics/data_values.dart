@@ -203,8 +203,8 @@ static const String extracOrg5Title = 'Voyage E-Summit 2024';
   static const String projectsOrg2Years = 'January 2022';
   static const String projectsOrg2Values = 'This project aims to efficiently manage complaints in residential areas, societies, or hostels by recording and tracking their statuses (pending or resolved) using a MySQL database, error handling, and file handling for backups. Inspired by the inefficiencies of manual registers, it offers a streamlined, user-friendly solution to upgrade traditional complaint systems while maintaining accessible, organized records.';
   static const String projectsOrg3Title = 'Cardiac MRI Classification (Comparative Study)';
-  static const String projectsOrg3Role = 'Deep Learning: MobileNetV2 · ResNet152V2 · DenseNet201 · InceptionV3';
-  static const String projectsOrg3Years = '2025';
+  static const String projectsOrg3Role = 'Technologies: Deep Learning - MobileNetV2, ResNet152V2, DenseNet201, InceptionV3';
+  static const String projectsOrg3Years = 'January 2025 - May 2025';
   static const String projectsOrg3Values = 'This project applies deep learning to classify Cardiac MRI scans (Normal/Sick) using MobileNetV2, ResNet152V2, DenseNet201, and InceptionV3. It explores transfer learning, augmentation, class weighting, a simple spatial attention variant, and an attention ensemble. The repository includes a Jupyter notebook, saved model checkpoints, evaluation plots, and the accompanying paper; dataset ≈63k images (~1.5:1 ratio).';
   static Uri cardiacUrl = Uri.parse('https://github.com/mxdhavgautam/A-Comparative-Study-of-Deep-Learning-Models-and-Training-Techniques-for-Cardiac-MRI-Classification');
 
