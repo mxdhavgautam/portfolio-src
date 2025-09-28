@@ -195,7 +195,7 @@ static const String extracOrg5Title = 'Voyage E-Summit 2024';
       'Here, you\'ll find a collection of hands-on projects that highlight my journey as a budding Flutter developer. Through these projects, I\'ve gained valuable experience, honed my problem-solving skills, and applied industry best practices. Each project showcases my creativity and proficiency in Flutter development, offering a glimpse into my ability to bring ideas to life.';
   static const String projectsOrg1Title = 'Devfolio';
   static const String projectsOrg1Role = 'My Developer Portfolio';
-  static const String projectsOrg1Years = 'May 2023 - Present';
+  static const String projectsOrg1Years = 'May 2023';
   static const String projectsOrg1Values =
       'This responsive portfolio, built with Flutter, demonstrates my development skills as well as my work and presentation style. I aim to produce high-quality work from the first draft itself and I have applied this same philosophy to this project as well. I have consulted online resources such as StackOverflow, GitHub and Reddit to learn how to create this portfolio as this was my first project. This shows my eagerness to learn and my resourcefulness as an individual. The code for this project is available on my Github profile and the Social Media Icons used in this portfolio have been taken from \'Icons8.com\'.';
   static const String projectsOrg2Title = 'Society Complaint Management System';

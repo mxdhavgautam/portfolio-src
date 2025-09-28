@@ -34,6 +34,20 @@ class DS6Projects extends StatelessWidget {
                     SizedBox(
                       width: itemWidth,
                       child: RepaintBoundary(child: ContainerCard().type3(
+                        image: 'cardiac',
+                        title: DataValues.projectsOrg3Title,
+                        role: DataValues.projectsOrg3Role,
+                        years: DataValues.projectsOrg3Years,
+                        values: DataValues.projectsOrg3Values,
+                        message: DataValues.cardiacUrl.toString(),
+                        url: DataValues.cardiacUrl,
+                        isButtonEnabled: true,
+                        buttonText: 'View on GitHub >>',
+                      )),
+                    ),
+                    SizedBox(
+                      width: itemWidth,
+                      child: RepaintBoundary(child: ContainerCard().type3(
                         image: 'portfolio',
                         title: DataValues.projectsOrg1Title,
                         role: DataValues.projectsOrg1Role,
@@ -55,20 +69,6 @@ class DS6Projects extends StatelessWidget {
                         message: DataValues.societyUrl.toString(),
                         url: DataValues.societyUrl,
                         isButtonEnabled: true,
-                      )),
-                    ),
-                    SizedBox(
-                      width: itemWidth,
-                      child: RepaintBoundary(child: ContainerCard().type3(
-                        image: 'cardiac',
-                        title: DataValues.projectsOrg3Title,
-                        role: DataValues.projectsOrg3Role,
-                        years: DataValues.projectsOrg3Years,
-                        values: DataValues.projectsOrg3Values,
-                        message: DataValues.cardiacUrl.toString(),
-                        url: DataValues.cardiacUrl,
-                        isButtonEnabled: true,
-                        buttonText: 'View on GitHub >>',
                       )),
                     ),
                   ],
