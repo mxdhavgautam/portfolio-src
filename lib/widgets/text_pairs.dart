@@ -14,6 +14,7 @@ class SeoTextPairs {
       child: Text(
         text,
         style: style,
+        textAlign: TextAlign.justify,
       ),
     );
   }
@@ -65,6 +66,7 @@ class SeoTextPairs {
                       ? const Color(0xFF424242)
                       : Theme.of(context).textTheme.labelLarge!.color,
                 ),
+            textAlign: TextAlign.justify,
           ),
         ),
         isThreeLines ? const SizedBox(height: 20.0) : Container(),
@@ -78,6 +80,7 @@ class SeoTextPairs {
                       ? const Color(0xFF424242)
                       : Theme.of(context).textTheme.labelLarge!.color,
                 ),
+            textAlign: TextAlign.justify,
           ),
         ),
       ],
@@ -107,6 +110,7 @@ class SeoTextPairs {
                       ? const Color(0xFF424242)
                       : Theme.of(context).textTheme.labelLarge!.color,
                 ),
+            textAlign: TextAlign.justify,
           ),
         ),
         const SizedBox(height: 20.0),
@@ -120,6 +124,7 @@ class SeoTextPairs {
                       ? const Color(0xFF424242)
                       : Theme.of(context).textTheme.labelLarge!.color,
                 ),
+            textAlign: TextAlign.justify,
           ),
         ),
       ],

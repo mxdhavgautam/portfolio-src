@@ -62,7 +62,7 @@ class ContainerBanner {
               SelectableText(
                 description,
                 style: Theme.of(context).textTheme.labelLarge,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.justify,
               ),
             ],
           ),

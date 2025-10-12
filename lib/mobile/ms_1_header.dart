@@ -10,7 +10,16 @@ class MS1Header extends StatelessWidget {
 
   List<Widget> headerData(BuildContext context) {
     return [
-      Image.asset('assets/images/logo.png', height: 250.0, width: 250.0),
+      Builder(builder: (context) {
+        final double dpr = MediaQuery.of(context).devicePixelRatio;
+        return Image.asset(
+          'assets/images/logo.png',
+          height: 250.0,
+          width: 250.0,
+          cacheHeight: (250.0 * dpr).round(),
+          cacheWidth: (250.0 * dpr).round(),
+        );
+      }),
       const SizedBox(height: 40.0),
       Column(
         children: [

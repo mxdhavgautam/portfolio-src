@@ -52,14 +52,19 @@ class ContainerCard {
                     return Seo.image(
                       src: image,
                       alt: title,
-                      child: Image.asset(
-                        image,
-                        height: 70.0,
-                        width: 70.0,
-                        errorBuilder: (context, error, stackTrace) {
-                          return const SizedBox(height: 70.0, width: 70.0);
-                        },
-                      ),
+                      child: Builder(builder: (context) {
+                        final double dpr = MediaQuery.of(context).devicePixelRatio;
+                        return Image.asset(
+                          image,
+                          height: 70.0,
+                          width: 70.0,
+                          cacheHeight: (70.0 * dpr).round(),
+                          cacheWidth: (70.0 * dpr).round(),
+                          errorBuilder: (context, error, stackTrace) {
+                            return const SizedBox(height: 70.0, width: 70.0);
+                          },
+                        );
+                      }),
                     );
                   },
                 ),
@@ -76,7 +81,8 @@ class ContainerCard {
             ),
             const SizedBox(height: 10.0),
             SelectableText(description,
-                style: Theme.of(context).textTheme.labelLarge),
+                style: Theme.of(context).textTheme.labelLarge,
+                textAlign: TextAlign.justify),
             const SizedBox(height: 20.0),
             // ButtonTextSmall(
             //   text: 'View More >>',
@@ -136,14 +142,20 @@ class ContainerCard {
                     return Seo.image(
                       src: src,
                       alt: title,
-                      child: Image.asset(
-                        src,
-                        height: 70.0,
-                        semanticLabel: title,
-                        errorBuilder: (context, error, stackTrace) {
-                          return const SizedBox(height: 70.0, width: 70.0);
-                        },
-                      ),
+                      child: Builder(builder: (context) {
+                        final double dpr = MediaQuery.of(context).devicePixelRatio;
+                        return Image.asset(
+                          src,
+                          height: 70.0,
+                          width: 70.0,
+                          semanticLabel: title,
+                          cacheHeight: (70.0 * dpr).round(),
+                          cacheWidth: (70.0 * dpr).round(),
+                          errorBuilder: (context, error, stackTrace) {
+                            return const SizedBox(height: 70.0, width: 70.0);
+                          },
+                        );
+                      }),
                     );
                   },
                 ),
@@ -243,14 +255,20 @@ class ContainerCard {
                     return Seo.image(
                       src: src,
                       alt: title,
-                      child: Image.asset(
-                        src,
-                        height: 70.0,
-                        semanticLabel: title,
-                        errorBuilder: (context, error, stackTrace) {
-                          return const SizedBox(height: 70.0, width: 70.0);
-                        },
-                      ),
+                      child: Builder(builder: (context) {
+                        final double dpr = MediaQuery.of(context).devicePixelRatio;
+                        return Image.asset(
+                          src,
+                          height: 70.0,
+                          width: 70.0,
+                          semanticLabel: title,
+                          cacheHeight: (70.0 * dpr).round(),
+                          cacheWidth: (70.0 * dpr).round(),
+                          errorBuilder: (context, error, stackTrace) {
+                            return const SizedBox(height: 70.0, width: 70.0);
+                          },
+                        );
+                      }),
                     );
                   },
                 ),

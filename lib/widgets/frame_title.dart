@@ -31,7 +31,7 @@ class FrameTitle extends StatelessWidget {
               style: TextTagStyle.p,
               child: SelectableText(
                 description,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.justify,
                 style: Theme.of(context).textTheme.titleSmall,
               ),
             ),

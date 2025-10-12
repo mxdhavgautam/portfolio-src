@@ -29,7 +29,6 @@
     <link rel="preload" href="/assets/fonts/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin="">
 
     <!-- Browser meta tags & icons -->
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <!-- Flutter manages viewport automatically for Web; explicit viewport meta removed to avoid warnings -->
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,6 +37,8 @@
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="icons/favicon.ico" sizes="any">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
 
 
     <!-- Removed deprecated flutter.js and serviceWorkerVersion, using new bootstrap script instead -->
@@ -159,20 +160,7 @@
         }
       });
   </script>
-  <!-- One-time: Unregister any existing Flutter service workers and clear caches -->
-  <script>
-    (function () {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations()
-          .then(function (regs) { regs.forEach(function (reg) { reg.unregister(); }); })
-          .finally(function () {
-            if (window.caches) {
-              caches.keys().then(function (keys) { keys.forEach(function (k) { caches.delete(k); }); });
-            }
-          });
-      }
-    })();
-  </script>
+  
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
