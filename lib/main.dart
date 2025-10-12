@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'theme/responsive_screen_provider.dart';
@@ -26,8 +24,6 @@ import 'package:seo/seo.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
-  final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   usePathUrlStrategy();
   runApp(const MyApp());
 }
@@ -37,10 +33,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Centralized asset preloading; remove splash when done
+    // Defer initial heavy work until after splash is shown
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await _precacheAllAssets(context);
-      FlutterNativeSplash.remove();
+      // Allow the splash to be visible for a tick while we warm caches
+      await Future<void>.delayed(const Duration(milliseconds: 50));
+      final List<String> moreToCache = <String>[
+        'assets/images/hcl.png',
+        'assets/images/github.png',
+      ];
+      for (final String assetPath in moreToCache) {
+        precacheImage(AssetImage(assetPath), context);
+      }
     });
     return SeoController(
       enabled: true,
@@ -83,7 +86,19 @@ class _HomePageState extends State<HomePage> {
 
     super.initState();
 
-    // Precache is now centralized and handled during splash in MyApp
+    // Precache key images to reduce first-scroll jank, especially near extracurriculars
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final List<String> imagesToCache = <String>[
+        'assets/images/voyage.png',
+        'assets/images/comsoc.png',
+        'assets/images/enactus.png',
+        'assets/images/ncs.png',
+        'assets/images/logo.png',
+      ];
+      for (final String assetPath in imagesToCache) {
+        precacheImage(AssetImage(assetPath), context);
+      }
+    });
   }
 
   @override
@@ -159,17 +174,4 @@ class _HomePageState extends State<HomePage> {
             ),
     );
   }
-}
-
-Future<void> _precacheAllAssets(BuildContext context) async {
-  final String manifestJson = await rootBundle.loadString('AssetManifest.json');
-  final Map<String, dynamic> manifestMap = json.decode(manifestJson) as Map<String, dynamic>;
-  final Iterable<String> assetPaths = manifestMap.keys.where(
-    (String key) => key.startsWith('assets/images/') || key.startsWith('assets/icons/'),
-  );
-  final List<Future<void>> tasks = <Future<void>>[];
-  for (final String path in assetPaths) {
-    tasks.add(precacheImage(AssetImage(path), context));
-  }
-  await Future.wait(tasks);
 }
