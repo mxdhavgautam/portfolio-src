@@ -58,8 +58,6 @@ class ContainerCard {
                           image,
                           height: 70.0,
                           width: 70.0,
-                          cacheHeight: (70.0 * dpr).round(),
-                          cacheWidth: (70.0 * dpr).round(),
                           errorBuilder: (context, error, stackTrace) {
                             return const SizedBox(height: 70.0, width: 70.0);
                           },
@@ -148,7 +146,6 @@ class ContainerCard {
                           src,
                           height: 70.0,
                           semanticLabel: title,
-                          cacheHeight: (70.0 * dpr).round(),
                           errorBuilder: (context, error, stackTrace) {
                             return const SizedBox(height: 70.0, width: 70.0);
                           },
@@ -259,7 +256,6 @@ class ContainerCard {
                           src,
                           height: 70.0,
                           semanticLabel: title,
-                          cacheHeight: (70.0 * dpr).round(),
                           errorBuilder: (context, error, stackTrace) {
                             return const SizedBox(height: 70.0, width: 70.0);
                           },
