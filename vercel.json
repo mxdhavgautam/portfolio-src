@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/grabber/(.*)",
-      "destination": "https://video-grabber.vercel.app/$1"
+      "destination": "https://video-grabber.vercel.app/grabber/$1"
     },
     {
       "source": "/grabber",
-      "destination": "https://video-grabber.vercel.app/"
+      "destination": "https://video-grabber.vercel.app/grabber"
     }
   ],
   "routes": [
