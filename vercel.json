@@ -1,5 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/grabber/(.*)",
+      "destination": "https://video-grabber.vercel.app/$1"
+    },
+    {
+      "source": "/grabber",
+      "destination": "https://video-grabber.vercel.app/"
+    }
+  ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/favicon.ico", "dest": "/icons/favicon.ico" },
