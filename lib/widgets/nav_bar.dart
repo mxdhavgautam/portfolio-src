@@ -88,9 +88,9 @@ class NavBar {
         return Column(
           children: [
           Seo.image(
-            src: 'assets/images/logo.png',
+            src: 'assets/images/logo.webp',
             alt: 'Madhav Gautam logo',
-            child: Image.asset('assets/images/logo.png', height: 80.0, width: 80.0),
+            child: Image.asset('assets/images/logo.webp', height: 80.0, width: 80.0),
           ),
             const SizedBox(height: 10.0),
             SelectableText(

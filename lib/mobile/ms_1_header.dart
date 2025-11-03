@@ -13,7 +13,7 @@ class MS1Header extends StatelessWidget {
       Builder(builder: (context) {
         final double dpr = MediaQuery.of(context).devicePixelRatio;
         return Image.asset(
-          'assets/images/logo.png',
+          'assets/images/logo.webp',
           height: 250.0,
           width: 250.0,
           cacheHeight: (250.0 * dpr).round(),

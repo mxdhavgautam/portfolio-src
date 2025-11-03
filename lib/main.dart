@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
       // Allow the splash to be visible for a tick while we warm caches
       await Future<void>.delayed(const Duration(milliseconds: 50));
       final List<String> moreToCache = <String>[
-        'assets/images/hcl.png',
-        'assets/images/github.png',
+        'assets/images/hcl.webp',
+        'assets/images/github.webp',
       ];
       for (final String assetPath in moreToCache) {
         precacheImage(AssetImage(assetPath), context);
@@ -89,11 +89,11 @@ class _HomePageState extends State<HomePage> {
     // Precache key images to reduce first-scroll jank, especially near extracurriculars
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final List<String> imagesToCache = <String>[
-        'assets/images/voyage.png',
-        'assets/images/comsoc.png',
-        'assets/images/enactus.png',
-        'assets/images/ncs.png',
-        'assets/images/logo.png',
+        'assets/images/voyage.webp',
+        'assets/images/comsoc.webp',
+        'assets/images/enactus.webp',
+        'assets/images/ncs.webp',
+        'assets/images/logo.webp',
       ];
       for (final String assetPath in imagesToCache) {
         precacheImage(AssetImage(assetPath), context);

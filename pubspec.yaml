@@ -16,9 +16,9 @@ dependencies:
   flutter_native_splash: ^2.4.6
   seo: ^0.0.5
 flutter_native_splash:
-  image: assets/images/splash.png
+  image: assets/images/splash.webp
   color: "#F7F7F7"
-  image_dark: assets/images/splash-dark.png
+  image_dark: assets/images/splash-dark.webp
   color_dark: "#212121"
 
 dev_dependencies:

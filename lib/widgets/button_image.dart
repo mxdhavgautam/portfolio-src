@@ -26,7 +26,7 @@ class ButtonImage {
         },
         child: Tooltip(
           message: url.toString(),
-          child: Image.asset('assets/images/$name.png',
+          child: Image.asset('assets/images/$name.webp',
               height: height, width: width),
         ),
       ),

@@ -136,7 +136,7 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    final String src = 'assets/images/$image.png';
+                    final String src = 'assets/images/$image.webp';
                     return Seo.image(
                       src: src,
                       alt: title,
@@ -246,7 +246,7 @@ class ContainerCard {
               children: [
                 Builder(
                   builder: (context) {
-                    final String src = 'assets/images/$image.png';
+                    final String src = 'assets/images/$image.webp';
                     return Seo.image(
                       src: src,
                       alt: title,
