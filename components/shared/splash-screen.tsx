@@ -19,22 +19,29 @@ export function SplashScreen() {
       document.body.classList.add('splash-active')
     }
     
+    // Flag to ensure hideSplash is only called once
+    let hasHidden = false
+    
     // Function to hide splash screen (don't remove DOM, let React handle it)
     const hideSplash = () => {
-      if (typeof document !== 'undefined') {
-        // Set scroll position to top IMMEDIATELY before removing splash
+      // Prevent multiple calls
+      if (hasHidden) return
+      hasHidden = true
+      
+      if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+        // Set scroll position to top SYNCHRONOUSLY ONCE before removing splash
+        // Hero image has fixed dimensions (250x250) so no layout shift will occur
         // This ensures page is at top when content becomes visible
+        // After this, scroll position is NEVER touched again
         window.scrollTo(0, 0)
         document.documentElement.scrollTop = 0
         document.body.scrollTop = 0
         
+        // Remove splash styling - this reveals the content
         document.body.style.background = 'transparent'
         document.body.classList.remove('splash-active')
         document.documentElement.style.overflow = ''
         document.body.style.overflow = ''
-        
-        // Ensure scroll position stays at top (synchronous, no delay)
-        window.scrollTo(0, 0)
       }
       setIsVisible(false)
     }
@@ -95,10 +102,8 @@ export function SplashScreen() {
       
       if (checkCriticalSectionsLoaded()) {
         clearInterval(checkInterval)
-        // Small delay to ensure everything is rendered
-        setTimeout(() => {
-          hideSplash()
-        }, 150)
+        // Hide immediately without delay - scroll position is set synchronously in hideSplash
+        hideSplash()
       } else if (checkCount >= maxChecks) {
         // Fallback: hide after max checks even if not all loaded
         clearInterval(checkInterval)
@@ -109,9 +114,8 @@ export function SplashScreen() {
     // Also hide on window load event (fallback)
     const handleLoad = () => {
       clearInterval(checkInterval)
-      setTimeout(() => {
-        hideSplash()
-      }, 150)
+      // Hide immediately without delay
+      hideSplash()
     }
 
     if (typeof window !== 'undefined') {
