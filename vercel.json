@@ -11,7 +11,7 @@
     },
     {
       "source": "/favicon.ico",
-      "destination": "/icons/favicon.ico"
+      "destination": "/favicon.ico"
     },
     {
       "source": "/assets/(.*)",
@@ -24,31 +24,9 @@
     {
       "source": "/splash/(.*)",
       "destination": "/splash/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ],
   "headers": [
-    {
-      "source": "/index.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache"
-        }
-      ]
-    },
-    {
-      "source": "/flutter_service_worker.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache"
-        }
-      ]
-    },
     {
       "source": "/assets/(.*)",
       "headers": [
@@ -78,5 +56,4 @@
     }
   ]
 }
-
 

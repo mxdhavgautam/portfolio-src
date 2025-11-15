@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme colors - matching Flutter exactly */
+    --color-primary: #E53935;
+    --color-secondary: rgba(131, 121, 121, 1);
+    --color-text-primary: #E53935;
+    --color-text-white: rgba(255, 255, 255, 1);
+    --color-text-grey-dark: rgba(147, 147, 147, 1);
+    --color-text-grey-light: rgba(205, 205, 205, 1);
+    --color-button-primary: #E53935;
+    --color-button-secondary: rgba(50, 50, 50, 1);
+    --color-icon-primary: #E53935;
+    --color-icon-secondary: rgba(255, 255, 255, 1);
+    --color-background-black: rgba(18, 18, 18, 1);
+    --color-background-grey: rgba(25, 25, 25, 1);
+    --color-card-grey: rgba(15, 15, 15, 1);
+    --color-tooltip: rgba(33, 33, 33, 1);
+    --color-surface: #FFFFFF;
+    --color-surface-variant: #F7F7F7;
+    --color-card: #F2F2F2;
+    /* Light theme specific text colors */
+    --color-text-light-primary: #212121;
+    --color-text-light-secondary: #616161;
+    --color-text-light-tertiary: #424242;
+    --color-text-light-quaternary: #757575;
+  }
+
+  .dark {
+    /* Dark theme colors - matching Flutter exactly */
+    --color-surface: rgba(18, 18, 18, 1);
+    --color-surface-variant: rgba(31, 31, 31, 1);
+    --color-card: rgba(15, 15, 15, 1);
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+    /* Ensure page starts at top */
+    scroll-padding-top: 0;
+    /* Prevent any initial scroll offset */
+    overflow-x: hidden;
+    /* Set base background to match surface color */
+    background-color: var(--color-surface);
+  }
+
+  body {
+    @apply bg-surface text-foreground;
+    font-family: var(--font-poppins), 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1;
+    /* Ensure body starts at top */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Explicitly set background to match surface color */
+    background-color: var(--color-surface);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .bg-surface-variant {
+    background-color: var(--color-surface-variant);
+  }
+
+  .bg-card {
+    background-color: var(--color-card);
+  }
+
+  :root:not(.dark) .bg-card {
+    background-color: var(--color-surface-variant);
+  }
+
+  .text-foreground {
+    color: var(--color-text-white);
+  }
+
+  .dark .text-foreground {
+    color: var(--color-text-white);
+  }
+
+  :root:not(.dark) .text-foreground {
+    color: var(--color-text-light-primary);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-grey-dark {
+    color: var(--color-text-grey-dark);
+  }
+
+  :root:not(.dark) .text-grey-dark {
+    color: var(--color-text-light-secondary);
+  }
+
+  .text-label-large {
+    color: var(--color-text-grey-dark);
+  }
+
+  :root:not(.dark) .text-label-large {
+    color: var(--color-text-light-tertiary);
+  }
+
+  .bg-button-primary {
+    background-color: var(--color-button-primary);
+  }
+
+  .text-icon-secondary {
+    color: var(--color-icon-secondary);
+  }
+
+  .dark .bg-card-grey {
+    background-color: var(--color-card-grey);
+  }
+
+  .dark .bg-background-black {
+    background-color: var(--color-background-black);
+  }
+
+      /* Smooth scrolling is already defined above */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Toast animation - only animate opacity to avoid transform conflicts */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.15s ease-out;
+}
+

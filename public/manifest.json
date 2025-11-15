@@ -1,0 +1,34 @@
+{
+    "name": "Madhav Gautam",
+    "short_name": "Madhav Gautam",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#019FAB",
+    "description": "Hey, I'm Madhav. Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/icons/favicon.ico",
+            "type": "image/x-icon",
+            "sizes": "16x16 32x32"
+        },
+        {
+            "src": "/icons/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/icons/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        }
+    ]
+}
+
