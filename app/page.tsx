@@ -31,11 +31,8 @@ export default function HomePage() {
       history.scrollRestoration = 'manual'
     }
 
-    // Set scroll position to top immediately on mount
-    // Images have fixed dimensions so no layout shift will occur
-    window.scrollTo(0, 0)
-    document.documentElement.scrollTop = 0
-    document.body.scrollTop = 0
+    // Don't set scroll position here - splash screen handles it
+    // This prevents interfering with user scrolling after splash dismisses
 
     const handleResize = () => {
       setIsDesktop(isDesktopScreen(window.innerWidth))
