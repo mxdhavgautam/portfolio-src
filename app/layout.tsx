@@ -3,6 +3,8 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ThemeProvider } from '@/components/shared/theme-provider'
 import { SplashScreen } from '@/components/shared/splash-screen'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const poppins = localFont({
   src: [
@@ -81,8 +83,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.mxdhavgautam.com/icons/xpreview.png',
-        width: 1200,
-        height: 630,
+        width: 2400,
+        height: 1256,
         alt: 'Madhav Gautam Portfolio',
       },
     ],
@@ -93,7 +95,16 @@ export const metadata: Metadata = {
     title: 'Madhav Gautam | Developer Portfolio',
     description:
       "Hey, I'm Madhav. Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",
-    images: ['https://www.mxdhavgautam.com/icons/xpreview.png'],
+    site: '@mxdhavgautam',
+    creator: '@mxdhavgautam',
+    images: [
+      {
+        url: 'https://www.mxdhavgautam.com/icons/xpreview.png',
+        width: 2400,
+        height: 1256,
+        alt: 'Madhav Gautam Portfolio',
+      },
+    ],
   },
   robots: {
     index: true,
@@ -137,6 +148,8 @@ export default function RootLayout({
       <body className="font-poppins">
         <SplashScreen />
         <ThemeProvider>{children}</ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
