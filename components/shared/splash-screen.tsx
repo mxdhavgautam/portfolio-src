@@ -102,8 +102,10 @@ export function SplashScreen() {
       
       if (checkCriticalSectionsLoaded()) {
         clearInterval(checkInterval)
-        // Hide immediately without delay - scroll position is set synchronously in hideSplash
-        hideSplash()
+        // Small delay to ensure everything is rendered before dismissing splash
+        setTimeout(() => {
+          hideSplash()
+        }, 150)
       } else if (checkCount >= maxChecks) {
         // Fallback: hide after max checks even if not all loaded
         clearInterval(checkInterval)
@@ -114,8 +116,10 @@ export function SplashScreen() {
     // Also hide on window load event (fallback)
     const handleLoad = () => {
       clearInterval(checkInterval)
-      // Hide immediately without delay
-      hideSplash()
+      // Small delay to ensure everything is rendered before dismissing splash
+      setTimeout(() => {
+        hideSplash()
+      }, 150)
     }
 
     if (typeof window !== 'undefined') {
@@ -178,6 +182,7 @@ export function SplashScreen() {
           max-width: 100vw;
           max-height: 100vh;
           object-fit: contain;
+          margin: 0;
         }
         body.splash-active {
           overflow: hidden;
@@ -199,7 +204,6 @@ export function SplashScreen() {
           aria-hidden="true"
           src="splash/img/light-1x.png"
           alt=""
-          className="center"
         />
       </picture>
     </>
