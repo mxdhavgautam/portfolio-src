@@ -157,6 +157,16 @@
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   text-wrap: pretty;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .text-justify {
+    text-align: left;
+    text-justify: none;
+    hyphens: auto;
+  }
 }
 
 /* Splash Screen Styles */
