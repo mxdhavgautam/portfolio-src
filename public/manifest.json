@@ -3,14 +3,14 @@
     "short_name": "Madhav Gautam",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#121212",
-    "theme_color": "#019FAB",
+    "background_color": "#212121",
+    "theme_color": "#E53935",
     "description": "Hey, I'm Madhav. Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "/icons/favicon.ico",
+            "src": "/favicon.ico",
             "type": "image/x-icon",
             "sizes": "16x16 32x32"
         },

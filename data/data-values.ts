@@ -8,8 +8,8 @@ export class DataValues {
     "Hey, I'm Madhav. Welcome to my developer portfolio.";
   static readonly appDeveloper = 'Madhav Gautam';
   static readonly appPackage = 'com.mxdhavgautam';
-  static readonly appVersion = '2.0.3';
-  static readonly appBuildNumber = '2';
+  static readonly appVersion = '2.0.4';
+  static readonly appBuildNumber = '3';
 
   // External links
   static readonly devURL = 'https://mxdhavgautam.com';

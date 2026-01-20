@@ -29,21 +29,26 @@ export function SplashScreen() {
       hasHidden = true
       
       if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+        const container = document.getElementById('splash-container')
+        if (container) {
+          container.classList.add('hidden')
+        }
+
         // Set scroll position to top SYNCHRONOUSLY ONCE before removing splash
-        // Hero image has fixed dimensions (250x250) so no layout shift will occur
-        // This ensures page is at top when content becomes visible
-        // After this, scroll position is NEVER touched again
         window.scrollTo(0, 0)
         document.documentElement.scrollTop = 0
         document.body.scrollTop = 0
         
-        // Remove splash styling - this reveals the content
-        document.body.style.background = 'transparent'
-        document.body.classList.remove('splash-active')
-        document.documentElement.style.overflow = ''
-        document.body.style.overflow = ''
+        // Small delay to allow fade out before revealing content and unmounting
+        setTimeout(() => {
+          document.body.classList.remove('splash-active')
+          document.documentElement.style.overflow = ''
+          document.body.style.overflow = ''
+          setIsVisible(false)
+        }, 400)
+      } else {
+        setIsVisible(false)
       }
-      setIsVisible(false)
     }
 
     // Check if critical sections are loaded (header, about me, education)
@@ -142,70 +147,24 @@ export function SplashScreen() {
   if (!isVisible) return null
 
   return (
-    <>
-      <style jsx global>{`
-        html {
-          height: 100%;
-          overflow: hidden;
-        }
-        body {
-          margin: 0;
-          min-height: 100%;
-          background-color: #F7F7F7;
-          background-size: 100% 100%;
-          overflow: hidden;
-        }
-        @media (prefers-color-scheme: dark) {
-          body {
-            background-color: #212121;
-          }
-        }
-        #splash {
-          margin: 0;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          z-index: 99999;
-          pointer-events: none;
-          transition: opacity 0.3s ease-out;
-        }
-        #splash.hidden {
-          opacity: 0;
-          pointer-events: none;
-        }
-        #splash img {
-          display: block;
-          width: auto;
-          height: auto;
-          max-width: 100vw;
-          max-height: 100vh;
-          object-fit: contain;
-          margin: 0;
-        }
-        body.splash-active {
-          overflow: hidden;
-        }
-        body.splash-active > *:not(#splash) {
-          visibility: hidden;
-        }
-      `}</style>
+    <div id="splash-container">
       <picture id="splash">
         <source
-          srcSet="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x"
+          srcSet="/splash/img/light-1x.png 1x, /splash/img/light-2x.png 2x, /splash/img/light-3x.png 3x, /splash/img/light-4x.png 4x"
           media="(prefers-color-scheme: light)"
         />
         <source
-          srcSet="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x"
+          srcSet="/splash/img/dark-1x.png 1x, /splash/img/dark-2x.png 2x, /splash/img/dark-3x.png 3x, /splash/img/dark-4x.png 4x"
           media="(prefers-color-scheme: dark)"
         />
         <img
           aria-hidden="true"
-          src="splash/img/light-1x.png"
+          src="/splash/img/light-1x.png"
           alt=""
+          width={320}
+          height={180}
         />
       </picture>
-    </>
+    </div>
   )
 }
