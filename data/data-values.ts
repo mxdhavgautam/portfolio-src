@@ -19,7 +19,7 @@ export class DataValues {
   static readonly telegramURL = 'https://t.me/mxdhavgautam';
   static readonly instagramURL = 'https://instagram.com/mxdhavgautam';
   static readonly resumeURL =
-    'https://drive.google.com/file/d/1-PguY6olcJEz0vAg9q9jdlugQjhHljpN/view?usp=sharing';
+    'https://drive.google.com/file/d/1V0Hw4PZHLKYdP-nPoWT_a5lzu5F4kXFw/view?usp=sharing';
 
   // Header
   static readonly headerGreetings = "Hey! I'm";
