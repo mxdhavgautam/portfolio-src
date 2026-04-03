@@ -48,42 +48,57 @@ export function DS6Projects() {
         {itemWidth > 0 && (
           <>
             <div style={{ width: `${itemWidth}px` }}>
-          <ContainerCardType3
-            image="cardiac"
-            title={DataValues.projectsOrg3Title}
-            role={DataValues.projectsOrg3Role}
-            years={DataValues.projectsOrg3Years}
-            values={DataValues.projectsOrg3Values}
-            message={DataValues.cardiacUrl}
-            url={DataValues.cardiacUrl}
-            isButtonEnabled={true}
-            buttonText="View on GitHub >>"
-          />
-        </div>
-        <div style={{ width: `${itemWidth}px` }}>
-          <ContainerCardType3
-            image="portfolio"
-            title={DataValues.projectsOrg1Title}
-            role={DataValues.projectsOrg1Role}
-            years={DataValues.projectsOrg1Years}
-            values={DataValues.projectsOrg1Values}
-            message={DataValues.siteUrl}
-            url={DataValues.siteUrl}
-            isButtonEnabled={true}
-          />
-        </div>
-        <div style={{ width: `${itemWidth}px` }}>
-          <ContainerCardType3
-            image="society"
-            title={DataValues.projectsOrg2Title}
-            role={DataValues.projectsOrg2Role}
-            years={DataValues.projectsOrg2Years}
-            values={DataValues.projectsOrg2Values}
-            message={DataValues.societyUrl}
-            url={DataValues.societyUrl}
-            isButtonEnabled={true}
-          />
-        </div>
+              <ContainerCardType3
+                image="nandinizaura-card.png"
+                title={DataValues.projectsOrg2Title}
+                role={DataValues.projectsOrg2Role}
+                years={DataValues.projectsOrg2Years}
+                values={DataValues.projectsOrg2Values}
+                message={DataValues.nandinizauraUrl}
+                url={DataValues.nandinizauraUrl}
+                isButtonEnabled={true}
+                buttonText="Visit Website >>"
+              />
+            </div>
+            <div style={{ width: `${itemWidth}px` }}>
+              <ContainerCardType3
+                image="video-grabber-card.jpeg"
+                title={DataValues.projectsOrg4Title}
+                role={DataValues.projectsOrg4Role}
+                years={DataValues.projectsOrg4Years}
+                values={DataValues.projectsOrg4Values}
+                message={DataValues.videoGrabberUrl}
+                url={DataValues.videoGrabberUrl}
+                isButtonEnabled={true}
+                buttonText="View on GitHub >>"
+              />
+            </div>
+            <div style={{ width: `${itemWidth}px` }}>
+              <ContainerCardType3
+                image="cardiac"
+                title={DataValues.projectsOrg3Title}
+                role={DataValues.projectsOrg3Role}
+                years={DataValues.projectsOrg3Years}
+                values={DataValues.projectsOrg3Values}
+                message={DataValues.cardiacUrl}
+                url={DataValues.cardiacUrl}
+                isButtonEnabled={true}
+                buttonText="View on GitHub >>"
+              />
+            </div>
+            <div style={{ width: `${itemWidth}px` }}>
+              <ContainerCardType3
+                image="portfolio"
+                title={DataValues.projectsOrg1Title}
+                role={DataValues.projectsOrg1Role}
+                years={DataValues.projectsOrg1Years}
+                values={DataValues.projectsOrg1Values}
+                message={DataValues.siteUrl}
+                url={DataValues.siteUrl}
+                isButtonEnabled={true}
+                buttonText="View on GitHub >>"
+              />
+            </div>
           </>
         )}
       </div>
@@ -91,4 +106,3 @@ export function DS6Projects() {
     </section>
   )
 }
-

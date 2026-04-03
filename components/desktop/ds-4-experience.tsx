@@ -49,6 +49,17 @@ export function DS4Experience() {
           <>
             <div style={{ width: `${itemWidth}px` }}>
               <ContainerCardType3
+                image="astar-card.jpg"
+                title={DataValues.experienceOrg4Title}
+                role={DataValues.experienceOrg4Role}
+                years={DataValues.experienceOrg4Years}
+                values={DataValues.experienceOrg4Vales}
+                message=""
+                url=""
+              />
+            </div>
+            <div style={{ width: `${itemWidth}px` }}>
+              <ContainerCardType3
                 image="cr3ate"
                 title={DataValues.experienceOrg3Title}
                 role={DataValues.experienceOrg3Role}
@@ -91,4 +102,3 @@ export function DS4Experience() {
     </section>
   )
 }
-

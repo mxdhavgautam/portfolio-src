@@ -131,13 +131,17 @@ export function ContainerCardType3({
   isButtonEnabled,
   buttonText = 'Dive in >>',
 }: ContainerCardType3Props) {
+  const imageSrc = image.includes('.')
+    ? `/assets/images/${image}`
+    : `/assets/images/${image}.webp`
+
   return (
     <div className="bg-card dark:bg-card-grey rounded-[10px] p-[30px] flex flex-col justify-between min-h-full shadow-[0_3px_6px_rgba(0,0,0,0.13)] dark:shadow-[0_3px_3px_rgba(0,0,0,0.2)]">
       <div className="flex flex-col">
         <div className="mb-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/assets/images/${image}.webp`}
+            src={imageSrc}
             alt={title}
             className="h-[70px] w-auto"
             style={{ height: '70px', width: 'auto' }}
@@ -165,4 +169,3 @@ export function ContainerCardType3({
     </div>
   )
 }
-

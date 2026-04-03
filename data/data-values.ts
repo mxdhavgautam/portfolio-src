@@ -24,7 +24,8 @@ export class DataValues {
   // Header
   static readonly headerGreetings = "Hey! I'm";
   static readonly headerName = 'Madhav Gautam';
-  static readonly headerTitle = 'Student | Enthusiast | Developer';
+  static readonly headerTitle =
+    'R&D Engineer | ML Engineer | Full-Stack Developer';
 
   // Navigation Bar
   static readonly navBarAboutMe = 'About Me';
@@ -38,10 +39,10 @@ export class DataValues {
   // About me
   static readonly aboutMeTitle = 'About Me';
   static readonly aboutMeDescription =
-    'Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.';
+    'A snapshot of my recent work across scientific ML, cloud data infrastructure, AI tooling, and shipped software products.';
   static readonly aboutMeBiographyTitle = 'Bio';
   static readonly aboutMeBiographyDescription =
-    "I'm a Computer Science Engineering graduate from VIT Chennai, specializing in Artificial Intelligence and Robotics. My passion lies in exploring intelligent systems and data-driven solutions, with hands-on interest in machine learning, computer vision, and data analytics. Beyond the technical, I bring strong communication and collaboration skills, shaped by my experience in leadership roles and public speaking, that help me bridge the gap between ideas and execution. My adaptive mindset and composure under pressure allow me to thrive in fast-paced, evolving environments, both in research and team settings.";
+    "I'm a Computer Science graduate from VIT Chennai, currently working as a Research Officer at A*STAR's Quantum Innovation Centre in Singapore. My work spans scientific ML pipelines, multi-terabyte ETL and data lake architecture on AWS, anomaly detection for time-series data, and shipped full-stack products. I enjoy moving between research code, infrastructure, and product surfaces, and I bring a systems-first mindset shaped by hands-on experience across ML, backend, frontend, and developer tooling.";
   static readonly aboutMeLanguageTitle = 'Languages';
   static readonly aboutMeLanguageDescription =
     'Hindi (Native)\nEnglish (Professional)\nFrench (Limited Proficiency)\n';
@@ -51,20 +52,20 @@ export class DataValues {
   static readonly aboutMeGenderDescription = 'Male (He/Him)';
   static readonly aboutMeSkillsTitle = 'Skills';
   static readonly aboutMeSkillsDescription =
-    'Python, C, C++, Flutter/Dart, Analytical Thinking, Swift, SQL, HTML, JavaScript, TypeScript and Java';
+    'Python, TypeScript, Next.js, React, PyTorch, TensorFlow, AWS (EC2/S3/Lambda), Docker, Prisma, PostgreSQL, Nest.js, Flutter, CoreML, SQLite, LangChain, RAG, and OpenAI/Anthropic APIs';
   static readonly aboutMeLocationTitle = 'Current Locations';
   static readonly aboutMeLocationDescription = 'Chennai, India\nDelhi, India';
   static readonly aboutMeWorkDomainTitle = 'Working Domain';
   static readonly aboutMeWorkDomainDescription = 'mxdhavgautam.com\n';
-  static readonly aboutMeStudentTitle = 'Engineering Student';
+  static readonly aboutMeStudentTitle = 'Research Engineer';
   static readonly aboutMeStudentDescription =
-    'As a student, my focus lies in studying computing technologies and comprehending the inner workings of computer systems, encompassing both hardware and software components that users interact with. My educational journey encompasses critical thinking, problem-solving, and analytical research, which I apply to various problem-solving scenarios using computing principles.';
-  static readonly aboutMeEnthusiastTitle = 'Enthusiast';
+    'I work at the intersection of scientific computing, ML validation, and cloud infrastructure. Recent work has included designing AWS-backed ETL pipelines, profiling large magnetometer datasets, building calibration-aware preprocessing systems, and validating anomaly-detection baselines on GPU compute for the GNOME dark matter detection network.';
+  static readonly aboutMeEnthusiastTitle = 'AI Builder';
   static readonly aboutMeEnthusiastDescription =
-    "As a tech enthusiast, I immerse myself in the world of computing technologies, including custom ROMs, to maximize the potential of my devices. I am passionate about exploring software applications and programs, fine-tuning them to enhance performance and unlock new capabilities. I continuously strive to broaden my understanding of technology. Whether it's optimizing my devices or tackling real-world challenges, I am driven by the desire to push the boundaries of what is possible in the tech realm and my love for tech.";
-  static readonly aboutMeDeveloperTitle = 'Developer';
+    'I like building with modern AI tooling end to end, from model selection and data pipelines to RAG systems, agent workflows, and production integration. I actively work with OpenAI and Anthropic APIs, LangChain, vector databases, and agent-context patterns that make systems easier to operate and extend.';
+  static readonly aboutMeDeveloperTitle = 'Full-Stack Developer';
   static readonly aboutMeDeveloperDescription =
-    'With a strong focus on critical thinking, problem-solving, and analytical research, I embrace challenges as learning opportunities and consistently push myself to grow. Through ongoing self-improvement and hands-on experience, I aim to become proficient in and capable of making valuable contributions to cutting-edge projects.';
+    'I have built and shipped products across web, mobile, backend, and browser-extension surfaces. That includes production commerce systems, iOS ML integrations, secure APIs, payment workflows, and resilient client-side runtimes, with a focus on shipping useful software that holds up outside of demos.';
   static readonly aboutMeHobbiesTitle = 'Hobbies';
   static readonly aboutMeHobbiesDescription =
     'Listening to podcasts and videos on things by Linus Tech Tips, MKBHD, 3Blue1Brown and Veritasium on YouTube, ' +
@@ -74,7 +75,7 @@ export class DataValues {
     'Listening to Music\n';
   static readonly aboutMeGoalTitle = 'Goal';
   static readonly aboutMeGoalDescription =
-    'To grow personally and professionally, while making a positive impact on the community. Currently looking for internship roles in the field of software development, AI/ML engineering, data science and data analysis.';
+    'Currently looking for full-time roles in Pune or Mumbai starting in late June 2026 or July 2026 across AI/ML engineering, software engineering, data engineering, and GenAI product development.';
   static readonly aboutMeBanner = 'My';
   static readonly aboutMeBannerTitle = 'public profiles:';
   static readonly aboutMeBannerWeb =
@@ -142,7 +143,13 @@ export class DataValues {
   // Experience
   static readonly experienceTitle = 'Experience';
   static readonly experienceDescription =
-    "This section summarises my experience as an intern and glances over the skills I've utilised, applied and obtained during the course of my summer break.";
+    'This section highlights my work across research engineering, ML systems, and product development, from scientific data pipelines to shipped applications.';
+  static readonly experienceOrg4Title =
+    'A*STAR | Quantum Innovation Centre (QInC), Singapore';
+  static readonly experienceOrg4Role = 'Research Officer';
+  static readonly experienceOrg4Years = 'January 2026 - Present';
+  static readonly experienceOrg4Vales =
+    'At A*STAR, I design the Singapore-side cloud and ML stack for the GNOME dark matter detection project. My work includes building multi-terabyte ETL pipelines and AWS data lake workflows, profiling 347k raw HDF5 files across 9 stations, reproducing SR5/SR6 reference outputs to >99% fidelity, and validating anomaly-detection feasibility with an LSTM baseline on T4 GPU compute.';
   static readonly experienceOrg1Title =
     'WESEE | Ministry of Defense, New Delhi';
   static readonly experienceOrg1Role =
@@ -154,12 +161,12 @@ export class DataValues {
   static readonly experienceOrg2Role = 'Software Development Intern (Flutter)';
   static readonly experienceOrg2Years = '4 October - 4 December 2023';
   static readonly experienceOrg2Vales =
-    "As a Software Development Intern (Flutter) at HCLTech, I developed an accessibility-focused \"Elderly User Manual\" mobile application using Flutter's cross-platform framework. The app guides senior users through common smartphone tasks via clear step-by-step flows, larger typography, high-contrast themes, and simplified interactions. Working in an Agile setup, I iterated on user feedback to refine instructional content and usability, improving task completion confidence and reducing friction with everyday device operations. This project directly supports digital inclusion for elderly smartphone users.";
+    "As a Software Development Intern (Flutter) at HCLTech, I shipped an accessibility-first \"Elderly User Manual\" app for seniors with larger typography, high-contrast themes, clearer touch targets, and step-by-step smartphone task guidance. I owned the UI, implementation, testing, and pilot iteration in short Agile cycles shaped by user feedback.";
   static readonly experienceOrg3Title = 'CR3ATE.AI | United States';
   static readonly experienceOrg3Role = 'Developer Intern';
-  static readonly experienceOrg3Years = 'January 2025 - Ongoing (Remote)';
+  static readonly experienceOrg3Years = 'January 2025 - December 2025 (Remote)';
   static readonly experienceOrg3Vales =
-    'As a Developer Intern at CR3ATE.AI, I actively engage in machine learning, computer vision, and backend infrastructure, emphasizing advanced ML pipelines and integrations. My role includes developing and optimizing CoreML models for real-time computer vision tasks, such as blur detection in iOS camera applications, by evaluating sophisticated architectures like MobileNetV3 and EfficientNet using TensorFlow. Additionally, I have significantly contributed to integrating Hive APIs to facilitate advanced machine learning workflows, specifically supporting 3D Gaussian splat reconstructions relevant to AR, VR, and mixed reality applications. My ongoing responsibilities involve robust backend development, working with and modifying custom APIs in Nest.js hosted via Docker, integrated seamlessly with MongoDB to support ML-driven functionalities. I also specialize in AWS, crafting AWS Lambda functions for efficient file processing and uploads to S3 buckets. I also co-built the production iOS app and the customer‑facing web frontend and backend for cr3ate.ai, connecting to the ML pipeline via Nest.js APIs and AWS (Lambda/S3) to handle uploads, processing, and results end‑to‑end. Through comprehensive JSON parsing, secure Firebase authentication implementations, and continuous research into cutting-edge ML and computer vision methodologies, I am consistently advancing my expertise in these interconnected domains.';
+    'At CR3ATE.AI, I worked across ML, computer vision, iOS, and backend systems. I built CoreML blur-detection models for real-time iOS capture flows, shipped the production iOS app and web/backend stack, automated 3D Gaussian splat reconstruction workflows through Hive API integrations, and supported secure uploads and processing with Nest.js, AWS Lambda, S3, MongoDB, and Firebase Auth.';
 
   // Extra-Curriculars
   static readonly extracTitle = 'Extra-Curriculars';
@@ -190,25 +197,37 @@ export class DataValues {
   // Projects
   static readonly projectsTitle = 'Projects';
   static readonly projectsDescription =
-    "Here, you'll find a collection of hands-on projects that highlight my journey as a developer. Through these projects, I've gained valuable experience, honed my problem-solving skills, and applied industry best practices. Each project showcases my creativity and proficiency in web, mobile, and AI/ML development, offering a glimpse into my ability to bring ideas to life.";
+    'These projects reflect the work I want to be hired for: applied ML, research engineering, full-stack product delivery, and systems work that holds up beyond a prototype.';
   static readonly projectsOrg1Title = 'Devfolio';
   static readonly projectsOrg1Role = 'My Developer Portfolio';
-  static readonly projectsOrg1Years = 'May 2023';
+  static readonly projectsOrg1Years = '2025 - 2026';
   static readonly projectsOrg1Values =
-    'This responsive portfolio, rebuilt to Next.js from Flutter with pixel-perfect parity, demonstrates my development skills as well as my work and presentation style. I aim to produce high-quality work from the first draft itself and I have applied this same philosophy to this project as well. The original Flutter version was my first project, where I consulted online resources such as StackOverflow, GitHub and Reddit to learn how to create it. This shows my eagerness to learn and my resourcefulness as an individual. The code for this project is available on my Github profile and the Social Media Icons used in this portfolio have been taken from \'Icons8.com\'.';
-  static readonly projectsOrg2Title = 'Society Complaint Management System';
-  static readonly projectsOrg2Role = 'Technologies: Python and MySQL';
-  static readonly projectsOrg2Years = 'January 2022';
+    'This portfolio is a living product for presenting my work clearly and updating quickly as my experience evolves. I rebuilt it from Flutter to Next.js while preserving the original visual structure, and I use it as a lightweight system for curating projects, experience, and the kind of roles I am actively targeting.';
+  static readonly projectsOrg2Title =
+    "Nandiniz'Aura - Production E-Commerce Platform";
+  static readonly projectsOrg2Role =
+    'Next.js, TypeScript, PostgreSQL, Prisma, NextAuth, Razorpay, Resend, Vitest';
+  static readonly projectsOrg2Years = '2025 - Ongoing';
   static readonly projectsOrg2Values =
-    'This project aims to efficiently manage complaints in residential areas, societies, or hostels by recording and tracking their statuses (pending or resolved) using a MySQL database, error handling, and file handling for backups. Inspired by the inefficiencies of manual registers, it offers a streamlined, user-friendly solution to upgrade traditional complaint systems while maintaining accessible, organized records.';
+    "I built a full-stack production commerce platform for a small business with a public storefront, admin dashboard, checkout, order management, analytics, role-based auth, and protected APIs. The system includes 21 API routes, Razorpay webhook verification, CSRF handling, transactional email, and a 28-file test suite for API, auth, payments, and middleware coverage.";
   static readonly projectsOrg3Title = 'Cardiac MRI Classification (Comparative Study)';
   static readonly projectsOrg3Role =
     'Technologies: Deep Learning - MobileNetV2, ResNet152V2, DenseNet201, InceptionV3';
   static readonly projectsOrg3Years = 'January 2025 - May 2025';
   static readonly projectsOrg3Values =
-    'This project applies deep learning to classify Cardiac MRI scans (Normal/Sick) using MobileNetV2, ResNet152V2, DenseNet201, and InceptionV3. It explores transfer learning, augmentation, class weighting, a simple spatial attention variant, and an attention ensemble. The repository includes a Jupyter notebook, saved model checkpoints, evaluation plots, and the accompanying paper; dataset ≈63k images (~1.5:1 ratio).';
+    'This project applies deep learning to classify Cardiac MRI scans using MobileNetV2, ResNet152V2, DenseNet201, and InceptionV3 on a dataset of about 63k images. It explores transfer learning, augmentation, class weighting, a spatial attention block, and an attention ensemble, with reproducible training, evaluation plots, saved checkpoints, and the accompanying paper.';
+  static readonly projectsOrg4Title =
+    'Video Grabber - Chromium MV3 Browser Extension';
+  static readonly projectsOrg4Role =
+    'TypeScript, React, ffmpeg.wasm, OPFS, Chrome Extension APIs';
+  static readonly projectsOrg4Years = '2026';
+  static readonly projectsOrg4Values =
+    'I re-architected Video Grabber from a server/VPS model into a strict client-side Chromium MV3 extension using a background worker, offscreen ffmpeg runtime, OPFS checkpoints, and resumable jobs. The project also includes a deterministic error taxonomy, recovery matrix, and policy-aware distribution strategy for open-source unpacked installs.';
   static readonly cardiacUrl =
     'https://github.com/mxdhavgautam/A-Comparative-Study-of-Deep-Learning-Models-and-Training-Techniques-for-Cardiac-MRI-Classification';
+  static readonly nandinizauraUrl = 'https://nandinizaura.com';
+  static readonly videoGrabberUrl =
+    'https://github.com/mxdhavgautam/video-grabber';
 
   // Contact
   static readonly contactTitle = 'Contact';
@@ -224,8 +243,5 @@ export class DataValues {
 
   static readonly siteUrl =
     'https://github.com/mxdhavgautam/portfolio-src';
-  static readonly societyUrl =
-    'https://github.com/mxdhavgautam/SocietyComplaintManagementSystem';
   static readonly blankURL = '';
 }
-
