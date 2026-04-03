@@ -27,7 +27,7 @@ export function MS1Header() {
             <h1 className="text-[54px] font-bold text-foreground text-center">
               {DataValues.headerName}
             </h1>
-            <p className="text-xl font-medium text-grey-dark">
+            <p className="text-xl font-medium text-grey-dark text-center">
               {DataValues.headerTitle}
             </p>
             <div className="h-5" />
@@ -39,4 +39,3 @@ export function MS1Header() {
     </div>
   )
 }
-
