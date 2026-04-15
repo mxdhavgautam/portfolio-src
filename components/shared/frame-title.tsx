@@ -12,11 +12,15 @@ export function FrameTitle({
   isDesktop = false,
 }: FrameTitleProps) {
   return (
-    <div className="flex flex-col items-center text-center">
-      <h2 className="text-[42px] font-bold text-foreground mb-2.5">{title}</h2>
+    <div className="w-full flex flex-col items-center text-center">
+      <h2 className="w-full text-[42px] font-bold text-foreground mb-2.5 text-center">
+        {title}
+      </h2>
       <p
-        className={`text-base font-normal text-foreground/70 text-justify ${
-          isDesktop ? 'px-[160px] pt-2.5 pb-10' : ''
+        className={`w-full text-base font-normal text-foreground/70 text-justify ${
+          isDesktop
+            ? 'max-w-[1040px] px-[160px] pt-2.5 pb-10'
+            : 'max-w-[640px] px-1 pt-2.5'
         }`}
       >
         {description}
@@ -24,4 +28,3 @@ export function FrameTitle({
     </div>
   )
 }
-
