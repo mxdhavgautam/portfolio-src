@@ -33,6 +33,9 @@ const poppins = localFont({
   display: 'swap',
 })
 
+const socialPreviewUrl =
+  'https://www.mxdhavgautam.com/icons/xpreview.png?v=20260415'
+
 export const metadata: Metadata = {
   title: 'Madhav Gautam | Developer Portfolio',
   description:
@@ -82,7 +85,7 @@ export const metadata: Metadata = {
     siteName: 'Madhav Gautam',
     images: [
       {
-        url: 'https://www.mxdhavgautam.com/icons/xpreview.png',
+        url: socialPreviewUrl,
         width: 2400,
         height: 1256,
         alt: 'Madhav Gautam Portfolio',
@@ -99,7 +102,7 @@ export const metadata: Metadata = {
     creator: '@mxdhavgautam',
     images: [
       {
-        url: 'https://www.mxdhavgautam.com/icons/xpreview.png',
+        url: socialPreviewUrl,
         width: 2400,
         height: 1256,
         alt: 'Madhav Gautam Portfolio',
@@ -154,4 +157,3 @@ export default function RootLayout({
     </html>
   )
 }
-
