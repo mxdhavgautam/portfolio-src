@@ -34,7 +34,7 @@ const poppins = localFont({
 })
 
 const socialPreviewUrl =
-  'https://www.mxdhavgautam.com/icons/xpreview.png?v=20260415'
+  'https://www.mxdhavgautam.com/icons/xpreview-20260415.png'
 
 export const metadata: Metadata = {
   title: 'Madhav Gautam | Developer Portfolio',
