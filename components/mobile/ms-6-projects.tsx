@@ -17,7 +17,19 @@ export function MS6Projects() {
       />
       <div className="h-[30px]" />
       <ContainerCardType3
-        image="nandinizaura-card.png"
+        image="friday-for-codex-card.webp"
+        title={DataValues.projectsOrg5Title}
+        role={DataValues.projectsOrg5Role}
+        years={DataValues.projectsOrg5Years}
+        values={DataValues.projectsOrg5Values}
+        message={DataValues.fridayForCodexUrl}
+        url={DataValues.fridayForCodexUrl}
+        isButtonEnabled={true}
+        buttonText="View on GitHub >>"
+      />
+      <div className="h-[30px]" />
+      <ContainerCardType3
+        image="nandinizaura-card.webp"
         title={DataValues.projectsOrg2Title}
         role={DataValues.projectsOrg2Role}
         years={DataValues.projectsOrg2Years}
@@ -29,7 +41,7 @@ export function MS6Projects() {
       />
       <div className="h-[30px]" />
       <ContainerCardType3
-        image="video-grabber-card.jpeg"
+        image="video-grabber-card.webp"
         title={DataValues.projectsOrg4Title}
         role={DataValues.projectsOrg4Role}
         years={DataValues.projectsOrg4Years}

@@ -5,11 +5,11 @@ export class DataValues {
   static readonly appName = 'Madhav Gautam';
   static readonly appNameLong = 'mxdhavgautam.com';
   static readonly appDescription =
-    "Hey, I'm Madhav. Welcome to my developer portfolio.";
+    'Research engineer at A*STAR building scientific ML pipelines, cloud data systems, Agentic AI tooling, and full-stack products.';
   static readonly appDeveloper = 'Madhav Gautam';
   static readonly appPackage = 'com.mxdhavgautam';
-  static readonly appVersion = '2.0.5';
-  static readonly appBuildNumber = '4';
+  static readonly appVersion = '2.1.0';
+  static readonly appBuildNumber = '7';
 
   // External links
   static readonly devURL = 'https://mxdhavgautam.com';
@@ -39,13 +39,13 @@ export class DataValues {
   // About me
   static readonly aboutMeTitle = 'About Me';
   static readonly aboutMeDescription =
-    'A snapshot of my recent work across scientific ML, cloud data infrastructure, AI tooling, and shipped software products.';
+    'A snapshot of my recent work across scientific ML, cloud data infrastructure, Agentic AI tooling, and shipped software products.';
   static readonly aboutMeBiographyTitle = 'Bio';
   static readonly aboutMeBiographyDescription =
     "I'm a Computer Science graduate from VIT Chennai, currently working as a Research Officer at A*STAR's Quantum Innovation Centre in Singapore. My work spans scientific ML pipelines, multi-terabyte ETL and data lake architecture on AWS, anomaly detection for time-series data, and shipped full-stack products. I enjoy moving between research code, infrastructure, and product surfaces, and I bring a systems-first mindset shaped by hands-on experience across ML, backend, frontend, and developer tooling.";
   static readonly aboutMeLanguageTitle = 'Languages';
   static readonly aboutMeLanguageDescription =
-    'Hindi (Native)\nEnglish (Professional)\nFrench (Limited Proficiency)\n';
+    'Hindi (Native)\nEnglish (Native)\nFrench (Limited Proficiency)\n';
   static readonly aboutMeNationalityTitle = 'Nationality';
   static readonly aboutMeNationalityDescription = 'Indian';
   static readonly aboutMeGenderTitle = 'Gender';
@@ -68,14 +68,14 @@ export class DataValues {
     'I have built and shipped products across web, mobile, backend, and browser-extension surfaces. That includes production commerce systems, iOS ML integrations, secure APIs, payment workflows, and resilient client-side runtimes, with a focus on shipping useful software that holds up outside of demos.';
   static readonly aboutMeHobbiesTitle = 'Hobbies';
   static readonly aboutMeHobbiesDescription =
-    'Listening to podcasts and videos on things by Linus Tech Tips, MKBHD, 3Blue1Brown and Veritasium on YouTube, ' +
+    'Listening to podcasts and videos on things by Theo Browne (T3.gg), ThePrimeagen, Linus Tech Tips, MKBHD, 3Blue1Brown and Veritasium on YouTube, ' +
     'Trekking/Hiking, ' +
     'Working Out, ' +
     'Reading Books, and ' +
     'Listening to Music\n';
   static readonly aboutMeGoalTitle = 'Goal';
   static readonly aboutMeGoalDescription =
-    'Currently looking for full-time roles in Pune or Mumbai starting in late June 2026 or July 2026 across AI/ML engineering, software engineering, data engineering, and GenAI product development.';
+    'Currently looking for full-time roles in Delhi, Gurgaon, or remote teams starting in late June 2026 or July 2026 across AI/ML engineering, software engineering, data engineering, and GenAI product development.';
   static readonly aboutMeBanner = 'My';
   static readonly aboutMeBannerTitle = 'public profiles:';
   static readonly aboutMeBannerWeb =
@@ -222,12 +222,20 @@ export class DataValues {
     'TypeScript, React, ffmpeg.wasm, OPFS, Chrome Extension APIs';
   static readonly projectsOrg4Years = '2026';
   static readonly projectsOrg4Values =
-    'I re-architected Video Grabber from a server/VPS model into a strict client-side Chromium MV3 extension using a background worker, offscreen ffmpeg runtime, OPFS checkpoints, and resumable jobs. The project also includes a deterministic error taxonomy, recovery matrix, and policy-aware distribution strategy for open-source unpacked installs.';
+    'I re-architected Video Grabber from a server/VPS model into a strict client-side Chromium MV3 extension using a background worker, offscreen WASM based yt-dlp and ffmpeg runtime, OPFS checkpoints, and resumable jobs. The project also includes a deterministic error taxonomy, recovery matrix, and policy-aware distribution strategy for open-source unpacked installs.';
+  static readonly projectsOrg5Title = 'Friday for Codex';
+  static readonly projectsOrg5Role =
+    'macOS automation, voice activation, LaunchAgents, custom XTTS voice config, OpenAI Codex context workflows, Agent Driven Development';
+  static readonly projectsOrg5Years = '2026';
+  static readonly projectsOrg5Values =
+    'Friday for Codex is a local macOS voice-triggered wake flow for Codex. It opens the right workspace, plays an immediate greeting, and reads out a cached spoken briefing built from recent work context like Chronicle summaries, Codex chats, email, and calendar, with a 30-minute background refresh pipeline to keep wake-up fast.';
   static readonly cardiacUrl =
     'https://github.com/mxdhavgautam/A-Comparative-Study-of-Deep-Learning-Models-and-Training-Techniques-for-Cardiac-MRI-Classification';
   static readonly nandinizauraUrl = 'https://nandinizaura.com';
   static readonly videoGrabberUrl =
     'https://github.com/mxdhavgautam/video-grabber';
+  static readonly fridayForCodexUrl =
+    'https://github.com/mxdhavgautam/friday-for-codex';
 
   // Contact
   static readonly contactTitle = 'Contact';

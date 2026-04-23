@@ -13,12 +13,10 @@ interface ContainerCardType1Props {
 }
 
 export function ContainerCardType1({
-  title,
-  description,
-  image,
-  message,
-  url,
+  ...props
 }: ContainerCardType1Props) {
+  const { title, description, image } = props
+
   return (
     <div className="bg-card dark:bg-card-grey rounded-[10px] p-[30px] flex flex-col justify-between min-h-full shadow-[0_3px_6px_rgba(0,0,0,0.13)] dark:shadow-[0_3px_3px_rgba(0,0,0,0.2)]">
       <div className="flex flex-col">
@@ -59,9 +57,10 @@ export function ContainerCardType2({
   buttonEnabled,
 }: ContainerCardType2Props) {
   return (
-    <div className="bg-card dark:bg-card-grey rounded-[10px] p-[30px] flex flex-col justify-between min-h-full shadow-[0_3px_6px_rgba(0,0,0,0.13)] dark:shadow-[0_3px_3px_rgba(0,0,0,0.2)]">
+    <div className="w-full bg-card dark:bg-card-grey rounded-[10px] p-[30px] flex flex-col justify-between min-h-full shadow-[0_3px_6px_rgba(0,0,0,0.13)] dark:shadow-[0_3px_3px_rgba(0,0,0,0.2)]">
       <div className="flex flex-col">
         <div className="mb-5">
+          {/* Card art needs the browser's native intrinsic sizing here. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`/assets/images/${image}.webp`}
@@ -136,9 +135,10 @@ export function ContainerCardType3({
     : `/assets/images/${image}.webp`
 
   return (
-    <div className="bg-card dark:bg-card-grey rounded-[10px] p-[30px] flex flex-col justify-between min-h-full shadow-[0_3px_6px_rgba(0,0,0,0.13)] dark:shadow-[0_3px_3px_rgba(0,0,0,0.2)]">
+    <div className="w-full bg-card dark:bg-card-grey rounded-[10px] p-[30px] flex flex-col justify-between min-h-full shadow-[0_3px_6px_rgba(0,0,0,0.13)] dark:shadow-[0_3px_3px_rgba(0,0,0,0.2)]">
       <div className="flex flex-col">
         <div className="mb-5">
+          {/* Card art needs the browser's native intrinsic sizing here. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={imageSrc}

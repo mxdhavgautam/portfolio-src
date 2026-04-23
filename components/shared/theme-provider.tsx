@@ -23,10 +23,8 @@ export function ThemeProvider({
   defaultTheme = 'system',
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     const root = window.document.documentElement
 
     if (theme === 'system') {
@@ -58,10 +56,6 @@ export function ThemeProvider({
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [theme])
 
-  if (!mounted) {
-    return <>{children}</>
-  }
-
   return (
     <ThemeProviderContext.Provider value={{ theme, setTheme }}>
       {children}
@@ -77,4 +71,3 @@ export const useTheme = () => {
 
   return context
 }
-

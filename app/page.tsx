@@ -65,10 +65,10 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-surface">
-          {/* Mobile App Bar - Fixed at top */}
-          {!isDesktop && (
-            <header className="fixed top-0 left-0 right-0 z-30 bg-surface">
-              <div className="flex items-center justify-start px-4 h-14">
+      {/* Mobile App Bar - Fixed at top */}
+      {!isDesktop && (
+        <header className="fixed top-0 left-0 right-0 z-30 bg-surface">
+          <div className="flex items-center justify-start px-4 h-14">
             <button
               onClick={() => setMobileNavOpen(true)}
               className="p-2 hover:opacity-80 transition-opacity"
@@ -96,25 +96,25 @@ export default function HomePage() {
       <main className={`flex flex-col ${!isDesktop ? 'pt-14' : ''}`}>
         {isDesktop ? (
           <>
-            <DS1Header onNavigate={handleNavigate} />
-            <DS2AboutMe />
-            <DS3Education />
-            <DS4Experience />
-            <DS6Projects />
-            <DS5Extracurriculars />
-            <DS7Contact />
-            <DS8Footer />
+          <DS1Header onNavigate={handleNavigate} />
+          <DS2AboutMe />
+          <DS3Education />
+          <DS4Experience />
+          <DS6Projects />
+          <DS5Extracurriculars />
+          <DS7Contact />
+          <DS8Footer />
           </>
         ) : (
           <>
-            <MS1Header />
-            <MS2AboutMe />
-            <MS3Education />
-            <MS4Experience />
-            <MS6Projects />
-            <MS5Extracurriculars />
-            <MS7Contact />
-            <MS8Footer />
+          <MS1Header />
+          <MS2AboutMe />
+          <MS3Education />
+          <MS4Experience />
+          <MS6Projects />
+          <MS5Extracurriculars />
+          <MS7Contact />
+          <MS8Footer />
           </>
         )}
       </main>

@@ -17,7 +17,7 @@ export function MS4Experience() {
       />
       <div className="h-[30px]" />
       <ContainerCardType3
-        image="astar-card.jpg"
+        image="astar-card.webp"
         title={DataValues.experienceOrg4Title}
         role={DataValues.experienceOrg4Role}
         years={DataValues.experienceOrg4Years}

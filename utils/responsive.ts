@@ -11,4 +11,3 @@ export function isTabScreen(width: number): boolean {
 export function isDesktopScreen(width: number): boolean {
   return width >= 800
 }
-

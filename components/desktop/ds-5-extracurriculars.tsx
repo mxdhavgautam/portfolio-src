@@ -1,36 +1,10 @@
 // Equivalent to Flutter's DS5Extracurriculars component
 
-'use client'
-
-import { useEffect, useState } from 'react'
 import { ContainerCardType2, ContainerCardType3 } from '../shared/container-card'
 import { FrameTitle } from '../shared/frame-title'
 import { DataValues } from '@/data/data-values'
 
 export function DS5Extracurriculars() {
-  const [spacing, setSpacing] = useState(0)
-  const [itemWidth, setItemWidth] = useState(0)
-
-  useEffect(() => {
-    const updateLayout = () => {
-      // Match Flutter's calculation exactly:
-      // spacing = MediaQuery.of(context).size.width * 0.02 (full window width)
-      // itemWidth = (constraints.maxWidth - spacing * 2) / 3
-      // constraints.maxWidth = window width - 80px (40px padding each side)
-      const windowWidth = window.innerWidth
-      const sectionWidth = windowWidth - 80 // Account for 40px padding on each side
-      const newSpacing = windowWidth * 0.02 // Use full window width for spacing
-      // Ensure minimum 3 cards per row on desktop (min width 800px per Flutter)
-      const minCardWidth = windowWidth >= 800 ? (sectionWidth - newSpacing * 2) / 3 : 0
-      setSpacing(newSpacing)
-      setItemWidth(minCardWidth)
-    }
-
-    updateLayout()
-    window.addEventListener('resize', updateLayout)
-    return () => window.removeEventListener('resize', updateLayout)
-  }, [])
-
   return (
     <section
       id="extracurriculars"
@@ -43,11 +17,9 @@ export function DS5Extracurriculars() {
       />
       <div
         className="flex flex-wrap items-start justify-center"
-        style={{ columnGap: `${spacing}px`, rowGap: '30px' }}
+        style={{ columnGap: '2vw', rowGap: '30px' }}
       >
-        {itemWidth > 0 && (
-          <>
-            <div style={{ width: `${itemWidth}px` }}>
+        <div style={{ width: 'calc((96vw - 80px) / 3)' }}>
           <ContainerCardType3
             image="voyage"
             title={DataValues.extracOrg5Title}
@@ -59,7 +31,7 @@ export function DS5Extracurriculars() {
             isButtonEnabled={undefined}
           />
         </div>
-        <div style={{ width: `${itemWidth}px` }}>
+        <div style={{ width: 'calc((96vw - 80px) / 3)' }}>
           <ContainerCardType3
             image="comsoc"
             title={DataValues.extracOrg4Title}
@@ -71,7 +43,7 @@ export function DS5Extracurriculars() {
             isButtonEnabled={undefined}
           />
         </div>
-        <div style={{ width: `${itemWidth}px` }}>
+        <div style={{ width: 'calc((96vw - 80px) / 3)' }}>
           <ContainerCardType3
             image="enactus"
             title={DataValues.extracOrg1Title}
@@ -83,7 +55,7 @@ export function DS5Extracurriculars() {
             isButtonEnabled={undefined}
           />
         </div>
-        <div style={{ width: `${itemWidth}px` }}>
+        <div style={{ width: 'calc((96vw - 80px) / 3)' }}>
           <ContainerCardType2
             image="ncs"
             title={DataValues.extracOrg2Title}
@@ -103,7 +75,7 @@ export function DS5Extracurriculars() {
             url={DataValues.blankURL}
           />
         </div>
-        <div style={{ width: `${itemWidth}px` }}>
+        <div style={{ width: 'calc((96vw - 80px) / 3)' }}>
           <ContainerCardType2
             image="ncs"
             title={DataValues.extracOrg3Title}
@@ -123,11 +95,8 @@ export function DS5Extracurriculars() {
             url={DataValues.blankURL}
           />
         </div>
-          </>
-        )}
       </div>
       <div className="h-10" />
     </section>
   )
 }
-

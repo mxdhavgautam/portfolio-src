@@ -157,6 +157,7 @@ export function SplashScreen() {
           srcSet="/splash/img/dark-1x.png 1x, /splash/img/dark-2x.png 2x, /splash/img/dark-3x.png 3x, /splash/img/dark-4x.png 4x"
           media="(prefers-color-scheme: dark)"
         />
+        {/* A <picture> element needs a plain <img> fallback. */}
         <img
           aria-hidden="true"
           src="/splash/img/light-1x.png"

@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/shared/theme-provider'
 import { SplashScreen } from '@/components/shared/splash-screen'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { DataValues } from '@/data/data-values'
 
 const poppins = localFont({
   src: [
@@ -34,70 +35,65 @@ const poppins = localFont({
 })
 
 const socialPreviewUrl =
-  'https://www.mxdhavgautam.com/assets/images/xpreview-20260415.png'
+  'https://www.mxdhavgautam.com/assets/images/xpreview-20260423.webp'
+const metadataTitle =
+  `${DataValues.appName} | ${DataValues.headerTitle}`
+const metadataDescription = DataValues.appDescription
 
 export const metadata: Metadata = {
-  title: 'Madhav Gautam | Developer Portfolio',
-  description:
-    "Hey, I'm Madhav. Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",
+  metadataBase: new URL('https://www.mxdhavgautam.com'),
+  title: metadataTitle,
+  description: metadataDescription,
   keywords: [
     'Madhav Gautam',
-    'dev',
-    'madhav',
-    'maddy',
-    'mxdhav',
-    'gautam',
-    'iOS',
-    'Mac',
-    'Android',
     'mxdhavgautam',
-    'madhav gautam',
-    'mdv',
-    'cr3ate.ai',
-    'gaussian splat',
-    'intern',
-    'HCLTech',
-    'WESEE',
-    'DRDO',
+    'Madhav Gautam portfolio',
+    'A*STAR',
+    'Quantum Innovation Centre',
+    'research engineer',
+    'R&D engineer',
+    'ML engineer',
+    'full-stack developer',
+    'scientific ML',
+    'AWS data pipelines',
+    'GNOME project',
+    'GenAI',
+    'Next.js',
+    'TypeScript',
+    'React',
+    'Python',
     'Delhi',
-    'Lucknow',
-    'United States',
-    'internship',
+    'Gurgaon',
+    'remote',
     'machine learning',
-    'data analytics',
-    'data analysis',
-    'Flutter developer',
+    'AI engineer',
+    'software engineer',
+    'data engineer',
     'portfolio',
-    'VIT Chennai',
     'projects',
-    'experience',
-    'contact',
-    'software developer',
   ],
-  authors: [{ name: 'Madhav Gautam' }],
-  creator: 'Madhav Gautam',
+  authors: [{ name: DataValues.appDeveloper }],
+  creator: DataValues.appDeveloper,
   openGraph: {
     type: 'website',
-    title: 'Madhav Gautam | Developer Portfolio',
-    description:
-      "Hey, I'm Madhav. Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",
+    title: metadataTitle,
+    description: metadataDescription,
     url: 'https://www.mxdhavgautam.com/',
-    siteName: 'Madhav Gautam',
+    siteName: DataValues.appName,
     images: [
       {
         url: socialPreviewUrl,
         width: 2400,
         height: 1256,
-        alt: 'Madhav Gautam Portfolio',
+        alt: 'Madhav Gautam portfolio preview',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Madhav Gautam | Developer Portfolio',
-    description:
-      "Hey, I'm Madhav. Welcome to my Developer Portfolio, where you can explore my skills, education, experience, and more, as you scroll through.",
+    title: metadataTitle,
+    description: metadataDescription,
     site: '@mxdhavgautam',
     creator: '@mxdhavgautam',
     images: [
@@ -105,7 +101,7 @@ export const metadata: Metadata = {
         url: socialPreviewUrl,
         width: 2400,
         height: 1256,
-        alt: 'Madhav Gautam Portfolio',
+        alt: 'Madhav Gautam portfolio preview',
       },
     ],
   },
@@ -137,7 +133,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black',
-    title: 'Madhav Gautam',
+    title: DataValues.appName,
   },
 }
 

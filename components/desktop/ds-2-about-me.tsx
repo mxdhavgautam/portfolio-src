@@ -1,7 +1,5 @@
 // Equivalent to Flutter's DS2AboutMe component
 
-'use client'
-
 import { TextPairsType1 } from '../shared/text-pairs'
 import { ContainerCardType1 } from '../shared/container-card'
 import { FrameTitle } from '../shared/frame-title'
@@ -96,4 +94,3 @@ export function DS2AboutMe() {
     </section>
   )
 }
-
