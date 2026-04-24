@@ -35,7 +35,7 @@ const poppins = localFont({
 })
 
 const socialPreviewUrl =
-  'https://www.mxdhavgautam.com/assets/images/xpreview-20260423.webp'
+  'https://www.mxdhavgautam.com/assets/images/xpreview-20260424.jpg'
 const metadataTitle =
   `${DataValues.appName} | ${DataValues.headerTitle}`
 const metadataDescription = DataValues.appDescription
