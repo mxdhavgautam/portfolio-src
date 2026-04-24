@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /_next/
 Disallow: /public/
 Sitemap: https://www.mxdhavgautam.com/sitemap.xml
-

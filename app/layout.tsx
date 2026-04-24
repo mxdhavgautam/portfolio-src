@@ -39,6 +39,80 @@ const socialPreviewUrl =
 const metadataTitle =
   `${DataValues.appName} | ${DataValues.headerTitle}`
 const metadataDescription = DataValues.appDescription
+const siteUrl = 'https://www.mxdhavgautam.com/'
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}#person`,
+      name: DataValues.appDeveloper,
+      alternateName: 'mxdhavgautam',
+      url: siteUrl,
+      image: socialPreviewUrl,
+      jobTitle: DataValues.headerTitle,
+      description: metadataDescription,
+      email: `mailto:${DataValues.contactEmail}`,
+      nationality: DataValues.aboutMeNationalityDescription,
+      gender: DataValues.aboutMeGenderDescription,
+      sameAs: [
+        DataValues.githubURL,
+        DataValues.linkedinURL,
+        DataValues.twitterURL,
+        DataValues.telegramURL,
+        DataValues.instagramURL,
+      ],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'A*STAR Quantum Innovation Centre',
+        url: 'https://www.a-star.edu.sg/',
+      },
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'Vellore Institute of Technology',
+      },
+      knowsAbout: [
+        'Scientific machine learning',
+        'Machine learning engineering',
+        'AWS data pipelines',
+        'Full-stack development',
+        'Agentic AI tooling',
+        'Research engineering',
+        'Time-series anomaly detection',
+      ],
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': `${siteUrl}#profile-page`,
+      url: siteUrl,
+      name: metadataTitle,
+      description: metadataDescription,
+      about: {
+        '@id': `${siteUrl}#person`,
+      },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: socialPreviewUrl,
+        width: 1601,
+        height: 800,
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      url: siteUrl,
+      name: DataValues.appNameLong,
+      description: metadataDescription,
+      publisher: {
+        '@id': `${siteUrl}#person`,
+      },
+      inLanguage: 'en',
+    },
+  ],
+}
+
+const structuredDataJson = JSON.stringify(structuredData).replace(/</g, '\\u003c')
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mxdhavgautam.com'),
@@ -155,6 +229,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
       </head>
       <body className="font-poppins splash-active">
         <SplashScreen />
