@@ -35,7 +35,7 @@ const poppins = localFont({
 })
 
 const socialPreviewUrl =
-  'https://www.mxdhavgautam.com/assets/images/xpreview-20260424.jpg'
+  'https://www.mxdhavgautam.com/assets/images/x-preview_24-04-2026.jpg'
 const metadataTitle =
   `${DataValues.appName} | ${DataValues.headerTitle}`
 const metadataDescription = DataValues.appDescription
@@ -83,8 +83,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialPreviewUrl,
-        width: 2400,
-        height: 1256,
+        width: 1601,
+        height: 800,
         alt: 'Madhav Gautam portfolio preview',
       },
     ],
@@ -99,8 +99,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialPreviewUrl,
-        width: 2400,
-        height: 1256,
+        width: 1601,
+        height: 800,
         alt: 'Madhav Gautam portfolio preview',
       },
     ],
