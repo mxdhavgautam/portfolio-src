@@ -1,9 +1,6 @@
-'use client'
-
 // Equivalent to Flutter's ButtonIcon widget
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 interface ButtonIconProps {
   name: string
@@ -18,46 +15,30 @@ export function ButtonIcon({
   height = 30,
   width = 30,
 }: ButtonIconProps) {
-  const [isLight, setIsLight] = useState(false)
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const isDark = document.documentElement.classList.contains('dark')
-      setIsLight(!isDark)
-    }
-    checkTheme()
-    const observer = new MutationObserver(checkTheme)
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    })
-    return () => observer.disconnect()
-  }, [])
-
-  const assetName = isLight ? `${name}-light` : name
-
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
       title={url}
-      className="hover:opacity-80 transition-opacity cursor-pointer"
+      className="relative inline-block hover:opacity-80 transition-opacity cursor-pointer"
+      style={{ width, height }}
     >
       <Image
-        src={`/assets/icons/${assetName}.png`}
+        src={`/assets/icons/${name}.png`}
         alt={name}
         width={width}
         height={height}
-        onError={(e) => {
-          // Fallback to non-light version if light version doesn't exist
-          const target = e.target as HTMLImageElement
-          if (assetName.includes('-light')) {
-            target.src = `/assets/icons/${name}.png`
-          }
-        }}
+        className="absolute inset-0 block dark:block"
+      />
+      <Image
+        src={`/assets/icons/${name}-light.png`}
+        alt=""
+        aria-hidden="true"
+        width={width}
+        height={height}
+        className="absolute inset-0 block dark:hidden"
       />
     </a>
   )
 }
-

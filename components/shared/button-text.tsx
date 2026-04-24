@@ -4,18 +4,25 @@ interface ButtonTextLargeProps {
   text: string
   onPressed: () => void
   message: string
+  outlineTone?: 'neutral' | 'primary'
 }
 
 export function ButtonTextLarge({
   text,
   onPressed,
   message,
+  outlineTone = 'neutral',
 }: ButtonTextLargeProps) {
+  const outlineClassName =
+    outlineTone === 'primary'
+      ? 'nav-outline-primary'
+      : 'nav-outline-neutral'
+
   return (
     <button
       onClick={onPressed}
       title={message}
-      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+      className={`nav-outline-button rounded-[18px] px-6 py-2 text-[17px] font-medium text-foreground transition-all duration-200 hover:bg-surface-variant hover:text-primary hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] active:scale-[0.98] dark:hover:bg-background-grey ${outlineClassName}`}
     >
       {text}
     </button>
@@ -45,4 +52,3 @@ export function ButtonTextSmall({
     </a>
   )
 }
-

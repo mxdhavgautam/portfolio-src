@@ -135,6 +135,38 @@
   }
 }
 
+.nav-outline-button {
+  --nav-outline-color: rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.nav-outline-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px dashed var(--nav-outline-color);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.nav-outline-button:hover::before {
+  border-style: solid;
+  opacity: 0.45;
+}
+
+.nav-outline-neutral {
+  --nav-outline-color: rgba(0, 0, 0, 0.18);
+}
+
+.nav-outline-primary {
+  --nav-outline-color: rgba(229, 57, 53, 0.58);
+}
+
+.dark .nav-outline-neutral {
+  --nav-outline-color: rgba(255, 255, 255, 0.24);
+}
+
+
 /* Toast animation - only animate opacity to avoid transform conflicts */
 @keyframes fade-in {
   from {

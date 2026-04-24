@@ -21,6 +21,7 @@ export function SplashScreen() {
     
     // Flag to ensure hideSplash is only called once
     let hasHidden = false
+    let revealTimer: ReturnType<typeof setTimeout> | undefined
     
     // Function to hide splash screen (don't remove DOM, let React handle it)
     const hideSplash = () => {
@@ -39,7 +40,7 @@ export function SplashScreen() {
         document.documentElement.scrollTop = 0
         document.body.scrollTop = 0
         
-        // Small delay to allow fade out before revealing content and unmounting
+        // Keep the existing fade, but reveal as soon as the critical above-fold UI is ready.
         setTimeout(() => {
           document.body.classList.remove('splash-active')
           document.documentElement.style.overflow = ''
@@ -98,19 +99,20 @@ export function SplashScreen() {
       return fontsReady
     }
 
-    // Poll for critical sections to be loaded
+    // Poll for critical sections only. Waiting for window.load can include offscreen
+    // portfolio images and makes the splash feel slower than the page actually is.
     let checkCount = 0
-    const maxChecks = 200 // 10 seconds max (200 * 50ms)
+    const maxChecks = 30 // 1.5 seconds max (30 * 50ms)
     
     const checkInterval = setInterval(() => {
       checkCount++
       
       if (checkCriticalSectionsLoaded()) {
         clearInterval(checkInterval)
-        // Small delay to ensure everything is rendered before dismissing splash
-        setTimeout(() => {
+        // A single frame gives layout/paint a chance to settle without holding the splash.
+        revealTimer = setTimeout(() => {
           hideSplash()
-        }, 150)
+        }, 50)
       } else if (checkCount >= maxChecks) {
         // Fallback: hide after max checks even if not all loaded
         clearInterval(checkInterval)
@@ -118,28 +120,17 @@ export function SplashScreen() {
       }
     }, 50)
 
-    // Also hide on window load event (fallback)
-    const handleLoad = () => {
-      clearInterval(checkInterval)
-      // Small delay to ensure everything is rendered before dismissing splash
-      setTimeout(() => {
-        hideSplash()
-      }, 150)
-    }
-
     if (typeof window !== 'undefined') {
-      window.addEventListener('load', handleLoad)
-      
-      // Fallback timeout (max 3 seconds for critical sections)
+      // Fallback timeout (max 1.5 seconds for critical sections)
       const timeout = setTimeout(() => {
         clearInterval(checkInterval)
         hideSplash()
-      }, 3000)
+      }, 1500)
 
       return () => {
         clearInterval(checkInterval)
+        if (revealTimer) clearTimeout(revealTimer)
         clearTimeout(timeout)
-        window.removeEventListener('load', handleLoad)
       }
     }
   }, [])
@@ -150,17 +141,19 @@ export function SplashScreen() {
     <div id="splash-container">
       <picture id="splash">
         <source
-          srcSet="/splash/img/light-1x.png 1x, /splash/img/light-2x.png 2x, /splash/img/light-3x.png 3x, /splash/img/light-4x.png 4x"
+          srcSet="/splash/img/light-1x.webp 1x, /splash/img/light-2x.webp 2x, /splash/img/light-3x.webp 3x, /splash/img/light-4x.webp 4x"
           media="(prefers-color-scheme: light)"
+          type="image/webp"
         />
         <source
-          srcSet="/splash/img/dark-1x.png 1x, /splash/img/dark-2x.png 2x, /splash/img/dark-3x.png 3x, /splash/img/dark-4x.png 4x"
+          srcSet="/splash/img/dark-1x.webp 1x, /splash/img/dark-2x.webp 2x, /splash/img/dark-3x.webp 3x, /splash/img/dark-4x.webp 4x"
           media="(prefers-color-scheme: dark)"
+          type="image/webp"
         />
         {/* A <picture> element needs a plain <img> fallback. */}
         <img
           aria-hidden="true"
-          src="/splash/img/light-1x.png"
+          src="/splash/img/light-1x.webp"
           alt=""
           width={320}
           height={180}

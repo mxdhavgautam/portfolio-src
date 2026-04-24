@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import { ThemeProvider } from '@/components/shared/theme-provider'
 import { SplashScreen } from '@/components/shared/splash-screen'
+import { ThemeSync } from '@/components/shared/theme-sync'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { DataValues } from '@/data/data-values'
@@ -10,22 +10,22 @@ import { DataValues } from '@/data/data-values'
 const poppins = localFont({
   src: [
     {
-      path: './fonts/Poppins-Regular.ttf',
+      path: './fonts/Poppins-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/Poppins-Medium.ttf',
+      path: './fonts/Poppins-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/Poppins-SemiBold.ttf',
+      path: './fonts/Poppins-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },
     {
-      path: './fonts/Poppins-Bold.ttf',
+      path: './fonts/Poppins-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
@@ -142,11 +142,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const themeScript = `
+    (() => {
+      const root = document.documentElement;
+      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.remove('light', 'dark');
+      root.classList.add(theme);
+    })();
+  `
+
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
-      <body className="font-poppins">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className="font-poppins splash-active">
         <SplashScreen />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeSync />
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

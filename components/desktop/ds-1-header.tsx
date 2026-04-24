@@ -5,11 +5,7 @@ import { NavBar } from '@/components/shared/nav-bar'
 import { SocialProfiles } from '@/components/shared/social-profiles'
 import { DataValues } from '@/data/data-values'
 
-interface DS1HeaderProps {
-  onNavigate: (sectionId: string) => void
-}
-
-export function DS1Header({ onNavigate }: DS1HeaderProps) {
+export function DS1Header() {
   return (
     <div className="bg-surface-variant dark:bg-background-black pt-[60px] pb-[40px]">
       <div className="flex flex-col items-center">
@@ -40,10 +36,9 @@ export function DS1Header({ onNavigate }: DS1HeaderProps) {
           </div>
         </div>
         <div className="mt-[60px]">
-          <NavBar isDesktop={true} onNavigate={onNavigate} />
+          <NavBar />
         </div>
       </div>
     </div>
   )
 }
-

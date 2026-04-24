@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        desktop: '800px',
+      },
       colors: {
         primary: '#E53935',
         secondary: 'rgba(131, 121, 121, 1)',
@@ -37,4 +40,3 @@ const config: Config = {
   plugins: [],
 }
 export default config
-

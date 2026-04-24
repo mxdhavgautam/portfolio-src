@@ -24,8 +24,9 @@ export function MS1Header() {
             <p className="text-[28px] font-bold text-primary">
               {DataValues.headerGreetings}
             </p>
-            <h1 className="text-[54px] font-bold text-foreground text-center">
-              {DataValues.headerName}
+            <h1 className="text-[54px] font-bold text-foreground text-center leading-[1.5]">
+              <span className="block">Madhav</span>
+              <span className="block">Gautam</span>
             </h1>
             <p className="w-full max-w-[360px] px-5 text-xl font-medium leading-snug text-grey-dark text-center">
               {DataValues.headerTitle}

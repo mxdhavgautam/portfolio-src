@@ -3,10 +3,6 @@
 import { DataValues } from '@/data/data-values'
 
 export function DS8Footer() {
-  const handleSourceCodeClick = () => {
-    window.open(DataValues.siteUrl, '_blank', 'noopener,noreferrer')
-  }
-
   return (
     <footer className="w-full bg-surface-variant dark:bg-background-black">
       <div className="flex flex-col items-center">
@@ -19,13 +15,15 @@ export function DS8Footer() {
           <p className="text-sm font-normal text-foreground">
             {DataValues.builtWith}
           </p>
-          <button
-            onClick={handleSourceCodeClick}
+          <a
+            href={DataValues.siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             title={DataValues.siteUrl}
             className="text-sm font-normal text-primary hover:opacity-80 transition-opacity cursor-pointer"
           >
             Get Source Code
-          </button>
+          </a>
         </div>
         <div className="h-2.5" />
         <p className="text-sm font-normal text-foreground">
@@ -36,4 +34,3 @@ export function DS8Footer() {
     </footer>
   )
 }
-

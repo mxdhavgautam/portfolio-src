@@ -17,11 +17,10 @@ export function ButtonRectangle({
     <button
       onClick={onPressed}
       title={message}
-      className="min-w-[170px] h-[50px] px-6 rounded-[30px] text-white font-medium text-lg transition-opacity hover:opacity-90"
-      style={{ backgroundColor: color, boxShadow: 'none' }}
+      className="rounded-[18px] px-6 py-2 text-[17px] font-medium leading-normal text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-px active:translate-y-0"
+      style={{ backgroundColor: color, boxShadow: '0 5px 12px rgba(229, 57, 53, 0.16)' }}
     >
       {name}
     </button>
   )
 }
-

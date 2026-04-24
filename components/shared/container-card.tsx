@@ -65,6 +65,8 @@ export function ContainerCardType2({
           <img
             src={`/assets/images/${image}.webp`}
             alt={title}
+            loading="lazy"
+            decoding="async"
             className="h-[70px] w-auto"
             style={{ height: '70px', width: 'auto' }}
           />
@@ -143,6 +145,8 @@ export function ContainerCardType3({
           <img
             src={imageSrc}
             alt={title}
+            loading="lazy"
+            decoding="async"
             className="h-[70px] w-auto"
             style={{ height: '70px', width: 'auto' }}
           />

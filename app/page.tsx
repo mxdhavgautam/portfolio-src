@@ -1,6 +1,3 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import { DS1Header } from '@/components/desktop/ds-1-header'
 import { DS2AboutMe } from '@/components/desktop/ds-2-about-me'
 import { DS3Education } from '@/components/desktop/ds-3-education'
@@ -17,86 +14,16 @@ import { MS5Extracurriculars } from '@/components/mobile/ms-5-extracurriculars'
 import { MS6Projects } from '@/components/mobile/ms-6-projects'
 import { MS7Contact } from '@/components/mobile/ms-7-contact'
 import { MS8Footer } from '@/components/mobile/ms-8-footer'
-import { MobileNavDrawer } from '@/components/shared/mobile-nav-drawer'
-import { isDesktopScreen } from '@/utils/responsive'
+import { PageControls } from '@/components/shared/page-controls'
 
 export default function HomePage() {
-  const [isDesktop, setIsDesktop] = useState(false)
-  const [showBackToTop, setShowBackToTop] = useState(false)
-  const [mobileNavOpen, setMobileNavOpen] = useState(false)
-
-  useEffect(() => {
-    // Prevent browser scroll restoration
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual'
-    }
-
-    // Don't set scroll position here - splash screen handles it
-    // This prevents interfering with user scrolling after splash dismisses
-
-    const handleResize = () => {
-      setIsDesktop(isDesktopScreen(window.innerWidth))
-    }
-
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY >= 300)
-    }
-
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
-  const handleNavigate = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <div className="min-h-screen bg-surface">
-      {/* Mobile App Bar - Fixed at top */}
-      {!isDesktop && (
-        <header className="fixed top-0 left-0 right-0 z-30 bg-surface">
-          <div className="flex items-center justify-start px-4 h-14">
-            <button
-              onClick={() => setMobileNavOpen(true)}
-              className="p-2 hover:opacity-80 transition-opacity"
-              aria-label="Open menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-6 h-6 text-foreground"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
-        </header>
-      )}
+      <PageControls />
 
-      <main className={`flex flex-col ${!isDesktop ? 'pt-14' : ''}`}>
-        {isDesktop ? (
-          <>
-          <DS1Header onNavigate={handleNavigate} />
+      <main className="flex flex-col pt-14 desktop:pt-0">
+        <div className="hidden desktop:block">
+          <DS1Header />
           <DS2AboutMe />
           <DS3Education />
           <DS4Experience />
@@ -104,9 +31,9 @@ export default function HomePage() {
           <DS5Extracurriculars />
           <DS7Contact />
           <DS8Footer />
-          </>
-        ) : (
-          <>
+        </div>
+
+        <div className="desktop:hidden">
           <MS1Header />
           <MS2AboutMe />
           <MS3Education />
@@ -115,40 +42,8 @@ export default function HomePage() {
           <MS5Extracurriculars />
           <MS7Contact />
           <MS8Footer />
-          </>
-        )}
+        </div>
       </main>
-
-      {/* Mobile Navigation Drawer */}
-      <MobileNavDrawer
-        isOpen={mobileNavOpen}
-        onClose={() => setMobileNavOpen(false)}
-        onNavigate={handleNavigate}
-      />
-
-      {/* Back to Top Button */}
-      {showBackToTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-button-primary text-icon-secondary flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity z-50"
-          aria-label="Go to top"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.5 15.75l7.5-7.5 7.5 7.5"
-            />
-          </svg>
-        </button>
-      )}
     </div>
   )
 }
