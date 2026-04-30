@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { SplashScreen } from '@/components/shared/splash-screen'
@@ -211,6 +211,14 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#121212' },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -222,6 +230,7 @@ export default function RootLayout({
       const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.remove('light', 'dark');
       root.classList.add(theme);
+      root.style.colorScheme = theme;
     })();
   `
 

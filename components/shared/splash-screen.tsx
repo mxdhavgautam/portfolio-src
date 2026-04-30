@@ -1,5 +1,6 @@
 'use client'
 
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react'
 
 export function SplashScreen() {
@@ -139,26 +140,28 @@ export function SplashScreen() {
 
   return (
     <div id="splash-container">
-      <picture id="splash">
-        <source
-          srcSet="/splash/img/light-1x.webp 1x, /splash/img/light-2x.webp 2x, /splash/img/light-3x.webp 3x, /splash/img/light-4x.webp 4x"
-          media="(prefers-color-scheme: light)"
-          type="image/webp"
-        />
-        <source
-          srcSet="/splash/img/dark-1x.webp 1x, /splash/img/dark-2x.webp 2x, /splash/img/dark-3x.webp 3x, /splash/img/dark-4x.webp 4x"
-          media="(prefers-color-scheme: dark)"
-          type="image/webp"
-        />
-        {/* A <picture> element needs a plain <img> fallback. */}
+      <div id="splash">
         <img
+          className="splash-img splash-img-light"
           aria-hidden="true"
-          src="/splash/img/light-1x.webp"
+          src="/splash/img/light-2x.webp"
+          srcSet="/splash/img/light-1x.webp 1x, /splash/img/light-2x.webp 2x, /splash/img/light-3x.webp 3x, /splash/img/light-4x.webp 4x"
+          sizes="(max-width: 356px) 90vw, 320px"
           alt=""
           width={320}
           height={180}
         />
-      </picture>
+        <img
+          className="splash-img splash-img-dark"
+          aria-hidden="true"
+          src="/splash/img/dark-2x.webp"
+          srcSet="/splash/img/dark-1x.webp 1x, /splash/img/dark-2x.webp 2x, /splash/img/dark-3x.webp 3x, /splash/img/dark-4x.webp 4x"
+          sizes="(max-width: 356px) 90vw, 320px"
+          alt=""
+          width={320}
+          height={180}
+        />
+      </div>
     </div>
   )
 }

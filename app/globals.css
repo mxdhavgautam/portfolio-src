@@ -39,6 +39,7 @@
 
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
     /* Ensure page starts at top */
     scroll-padding-top: 0;
     /* Prevent any initial scroll offset */
@@ -230,13 +231,25 @@
   max-height: 100vh;
 }
 
-#splash img {
+#splash .splash-img {
   display: block;
   width: 320px;
   height: 180px;
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
+}
+
+#splash .splash-img-dark {
+  display: none;
+}
+
+:root.dark #splash .splash-img-light {
+  display: none;
+}
+
+:root.dark #splash .splash-img-dark {
+  display: block;
 }
 
 body.splash-active {
