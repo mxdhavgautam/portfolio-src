@@ -145,8 +145,8 @@ export function SplashScreen() {
           className="splash-img splash-img-light"
           aria-hidden="true"
           src="/splash/img/light-2x.webp"
-          srcSet="/splash/img/light-1x.webp 1x, /splash/img/light-2x.webp 2x, /splash/img/light-3x.webp 3x, /splash/img/light-4x.webp 4x"
-          sizes="(max-width: 356px) 90vw, 320px"
+          srcSet="/splash/img/light-1x.webp 320w, /splash/img/light-2x.webp 640w, /splash/img/light-3x.webp 960w"
+          sizes="(min-width: 800px) min(400px, 52vw), min(320px, 90vw)"
           alt=""
           width={320}
           height={180}
@@ -155,8 +155,8 @@ export function SplashScreen() {
           className="splash-img splash-img-dark"
           aria-hidden="true"
           src="/splash/img/dark-2x.webp"
-          srcSet="/splash/img/dark-1x.webp 1x, /splash/img/dark-2x.webp 2x, /splash/img/dark-3x.webp 3x, /splash/img/dark-4x.webp 4x"
-          sizes="(max-width: 356px) 90vw, 320px"
+          srcSet="/splash/img/dark-1x.webp 320w, /splash/img/dark-2x.webp 640w, /splash/img/dark-3x.webp 960w"
+          sizes="(min-width: 800px) min(400px, 52vw), min(320px, 90vw)"
           alt=""
           width={320}
           height={180}

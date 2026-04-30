@@ -225,18 +225,16 @@
 
 #splash {
   margin: 0;
-  width: auto;
-  height: auto;
+  width: min(320px, 90vw);
+  aspect-ratio: 16 / 9;
   max-width: 100vw;
   max-height: 100vh;
 }
 
 #splash .splash-img {
   display: block;
-  width: 320px;
-  height: 180px;
-  max-width: 90vw;
-  max-height: 90vh;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -250,6 +248,12 @@
 
 :root.dark #splash .splash-img-dark {
   display: block;
+}
+
+@media (min-width: 800px) {
+  #splash {
+    width: min(400px, 52vw);
+  }
 }
 
 body.splash-active {
