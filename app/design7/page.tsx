@@ -1,246 +1,151 @@
 import Link from "next/link"
 
-import {
-  DataValues,
-  currentSystems,
-  explorations,
-  labStatus,
-  notes,
-  shippedWork,
-  skills,
-} from "./data-values"
+import { DataValues, featuredProjects, introBullets, linkLog } from "./data-values"
 
-const sectionLabel = "font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6f47]"
+function Arrow() {
+  return (
+    <span aria-hidden="true" className="text-[#d8e070] transition group-hover:translate-x-0.5">
+      -&gt;
+    </span>
+  )
+}
 
 export default function Design7() {
   return (
-    <div className="min-h-dvh bg-[#f8f3e7] text-[#191714] antialiased">
-      <div
-        className="pointer-events-none fixed inset-0 opacity-[0.45]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(25,23,20,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(25,23,20,0.06) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
-
-      <header className="sticky top-0 z-40 border-b border-[#191714]/15 bg-[#f8f3e7]/88 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
-          <Link href="/" className="font-mono text-sm font-semibold tracking-tight">
-            {DataValues.appNameLong}/design7
-          </Link>
-          <nav className="hidden items-center gap-5 font-mono text-xs text-[#51493f] md:flex">
-            {["systems", "exploring", "shipped", "notes", "contact"].map((item) => (
-              <a key={item} href={`#${item}`} className="hover:text-[#b4452f]">
-                {item}
-              </a>
-            ))}
-          </nav>
-          <a
-            href={DataValues.resumeURL}
-            className="border border-[#191714]/25 bg-[#fffaf0] px-4 py-2 font-mono text-xs font-semibold transition hover:border-[#b4452f] hover:text-[#b4452f]"
-          >
-            resume
-          </a>
-        </div>
-      </header>
-
-      <main className="relative z-10">
-        <section className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">
-          <div className="flex min-h-[70dvh] flex-col justify-center">
-            <p className={sectionLabel}>Living lab notebook</p>
-            <h1 className="mt-5 max-w-4xl font-serif text-6xl font-black leading-[0.95] tracking-tight text-[#191714] sm:text-7xl lg:text-8xl">
-              Madhav Gautam is building in public context.
-            </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#51493f]">
-              A research-builder and systems-minded product engineer working across scientific data
-              infrastructure, AI tooling, full-stack products, and practical ML validation.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#systems"
-                className="border border-[#191714] bg-[#191714] px-5 py-3 font-mono text-sm font-semibold text-[#fffaf0] transition hover:bg-[#b4452f]"
-              >
-                read current systems
-              </a>
-              <a
-                href={`mailto:${DataValues.contactEmail}`}
-                className="border border-[#191714]/25 bg-[#fffaf0] px-5 py-3 font-mono text-sm font-semibold transition hover:border-[#b4452f] hover:text-[#b4452f]"
-              >
-                start a thread
-              </a>
-            </div>
-          </div>
-
-          <aside className="self-center border border-[#191714]/20 bg-[#fffaf0] shadow-[10px_10px_0_rgba(25,23,20,0.10)]">
-            <div className="border-b border-[#191714]/15 px-5 py-4 font-mono text-xs text-[#8b6f47]">
-              active-context.md
-            </div>
-            <div className="divide-y divide-[#191714]/12">
-              {labStatus.map((item) => (
-                <div key={item.label} className="grid gap-3 p-5 sm:grid-cols-[0.36fr_0.64fr]">
-                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#8b6f47]">
-                    {item.label}
-                  </p>
-                  <div>
-                    <p className="text-xl font-semibold leading-tight">{item.value}</p>
-                    <p className="mt-2 text-sm leading-6 text-[#51493f]">{item.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </aside>
-        </section>
-
-        <section id="systems" className="border-y border-[#191714]/15 bg-[#ede2cd]/70">
-          <div className="mx-auto max-w-7xl px-5 py-16">
-            <div className="max-w-3xl">
-              <p className={sectionLabel}>Current systems</p>
-              <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
-                The live work is scientific, infrastructural, and a little messy in the useful way.
-              </h2>
-            </div>
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
-              {currentSystems.map((system) => (
-                <article key={system.title} className="border border-[#191714]/18 bg-[#fffaf0] p-6">
-                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#b4452f]">
-                    {system.tag}
-                  </p>
-                  <h3 className="mt-4 text-2xl font-bold leading-tight">{system.title}</h3>
-                  <ul className="mt-6 space-y-3">
-                    {system.notes.map((note) => (
-                      <li key={note} className="grid grid-cols-[18px_1fr] gap-3 text-sm leading-6 text-[#51493f]">
-                        <span className="mt-2 h-px bg-[#b4452f]" />
-                        <span>{note}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="exploring" className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[0.36fr_0.64fr]">
-          <div>
-            <p className={sectionLabel}>What he is exploring</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight">
-              Questions with working code attached.
-            </h2>
-          </div>
-          <div className="space-y-4">
-            {explorations.map((item, index) => (
-              <article key={item.question} className="border-l-2 border-[#b4452f] bg-[#fffaf0] p-5">
-                <p className="font-mono text-xs text-[#8b6f47]">question {String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-3 text-2xl font-semibold leading-snug">{item.question}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#51493f]">{item.context}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="shipped" className="border-y border-[#191714]/15 bg-[#191714] text-[#fffaf0]">
-          <div className="mx-auto max-w-7xl px-5 py-16">
-            <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[#d7b16c]">
-                  Shipped work
-                </p>
-                <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
-                  Artifacts, not vibes.
-                </h2>
-              </div>
-              <p className="max-w-md text-sm leading-7 text-[#d9cfbe]">
-                Product work spans Nandiniz&apos;Aura, Friday for Codex, Video Grabber, CR3ATE.AI,
-                HCLTech, and WESEE.
+    <main className="min-h-dvh bg-[#080a09] px-5 py-10 text-[#e5e0d1] antialiased sm:px-6 sm:py-14">
+      <div className="mx-auto w-full max-w-[760px]">
+        <header className="border-b border-[#2b302c] pb-8">
+          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#8d9487]">
+            Minimal Dark Developer Index / design7
+          </p>
+          <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h1 className="text-4xl font-semibold leading-none tracking-tight text-[#f2efe3] sm:text-5xl">
+                {DataValues.name}
+              </h1>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-[#a7ada1]">
+                {DataValues.summary}
               </p>
             </div>
-            <div className="grid gap-px overflow-hidden border border-[#fffaf0]/15 bg-[#fffaf0]/15 md:grid-cols-2">
-              {shippedWork.map((work) => (
-                <a
-                  key={work.title}
-                  href={work.href}
-                  className="group bg-[#191714] p-6 transition hover:bg-[#241f19]"
-                >
+            <Link
+              href="/"
+              className="group inline-flex w-fit items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#d8e070] transition hover:text-[#f2efe3]"
+            >
+              home <Arrow />
+            </Link>
+          </div>
+          <p className="mt-7 font-mono text-xs leading-6 text-[#747c70]">
+            {DataValues.handle} / {DataValues.role}
+          </p>
+        </header>
+
+        <section aria-label="Intro notes" className="border-b border-[#2b302c] py-8">
+          <ul className="space-y-4">
+            {introBullets.map((item) => (
+              <li key={item.label} className="grid gap-2 sm:grid-cols-[7.5rem_1fr]">
+                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#6f776b]">
+                  {item.label}
+                </span>
+                <span className="text-sm leading-7 text-[#c7c9bd]">{item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="featured-projects" className="border-b border-[#2b302c] py-9">
+          <div className="mb-5 flex items-baseline justify-between gap-4">
+            <h2
+              id="featured-projects"
+              className="font-mono text-xs uppercase tracking-[0.22em] text-[#f2efe3]"
+            >
+              Featured projects
+            </h2>
+            <span className="font-mono text-[11px] text-[#6f776b]">compact rows</span>
+          </div>
+
+          <div className="divide-y divide-[#252a27] border-y border-[#252a27]">
+            {featuredProjects.map((project) => (
+              <a
+                key={project.code}
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group grid gap-3 py-5 transition hover:bg-[#0d100e] sm:grid-cols-[5.5rem_1fr]"
+              >
+                <div className="flex items-baseline justify-between gap-4 sm:block">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#d8e070]">
+                    {project.code}
+                  </p>
+                  <p className="mt-2 font-mono text-[11px] text-[#6f776b]">{project.period}</p>
+                </div>
+                <div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#d7b16c]">
-                        {work.kind}
+                      <h3 className="text-lg font-semibold leading-snug text-[#f2efe3] group-hover:text-[#d8e070]">
+                        {project.title}
+                      </h3>
+                      <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.16em] text-[#7f877b]">
+                        {project.kind}
                       </p>
-                      <h3 className="mt-3 text-2xl font-bold leading-tight">{work.title}</h3>
                     </div>
-                    <p className="font-mono text-xs text-[#d9cfbe]">{work.date}</p>
+                    <Arrow />
                   </div>
-                  <p className="mt-5 text-sm leading-7 text-[#d9cfbe]">{work.summary}</p>
-                  <p className="mt-6 font-mono text-xs font-semibold text-[#d7b16c] group-hover:text-[#fffaf0]">
-                    open reference
-                  </p>
-                </a>
-              ))}
-            </div>
+                  <p className="mt-4 text-sm leading-7 text-[#b7bbaf]">{project.summary}</p>
+                  <p className="mt-3 font-mono text-xs leading-6 text-[#777f73]">{project.stack}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
 
-        <section id="notes" className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[0.64fr_0.36fr]">
-          <div>
-            <p className={sectionLabel}>Notes and threads</p>
-            <div className="mt-6 space-y-4">
-              {notes.map((note) => (
-                <article key={note.label} className="border border-[#191714]/15 bg-[#fffaf0] p-5">
-                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#b4452f]">
-                    {note.label}
-                  </p>
-                  <h3 className="mt-3 text-2xl font-semibold leading-tight">{note.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#51493f]">{note.body}</p>
-                </article>
-              ))}
-            </div>
+        <section aria-labelledby="working-notes" className="border-b border-[#2b302c] py-9">
+          <h2
+            id="working-notes"
+            className="font-mono text-xs uppercase tracking-[0.22em] text-[#f2efe3]"
+          >
+            Working notes
+          </h2>
+          <div className="mt-5 space-y-4 text-sm leading-7 text-[#c7c9bd]">
+            <p>
+              The through-line is inspectability: make large research data traceable, make product
+              systems recoverable, and keep AI tooling fast enough to use every day.
+            </p>
+            <p>
+              This index deliberately avoids the usual portfolio homepage shape. It is a quiet
+              ledger for technical readers who want the active work, the shipped artifacts, and the
+              next useful link without a tour.
+            </p>
           </div>
-          <aside className="h-fit border border-[#191714]/20 bg-[#ede2cd] p-6">
-            <p className={sectionLabel}>Working stack</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="border border-[#191714]/20 bg-[#fffaf0] px-3 py-1.5 font-mono text-xs text-[#51493f]"
-                >
-                  {skill}
+        </section>
+
+        <section aria-labelledby="link-log" className="py-9">
+          <h2 id="link-log" className="font-mono text-xs uppercase tracking-[0.22em] text-[#f2efe3]">
+            Open source / notable links
+          </h2>
+          <div className="mt-5 divide-y divide-[#252a27] border-y border-[#252a27]">
+            {linkLog.map((item) => (
+              <a
+                key={`${item.date}-${item.label}`}
+                href={item.href}
+                target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                className="group grid gap-2 py-4 text-sm transition hover:bg-[#0d100e] sm:grid-cols-[6rem_1fr_1.5rem]"
+              >
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#6f776b]">
+                  {item.date}
                 </span>
-              ))}
-            </div>
-          </aside>
-        </section>
-
-        <section id="contact" className="border-t border-[#191714]/15 bg-[#ede2cd]">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 md:grid-cols-[1fr_1fr] md:items-end">
-            <div>
-              <p className={sectionLabel}>Contact</p>
-              <h2 className="mt-4 font-serif text-5xl font-black leading-tight">
-                Useful conversation beats polished positioning.
-              </h2>
-              <p className="mt-5 max-w-xl text-sm leading-7 text-[#51493f]">
-                Best fit: research engineering, AI tooling, systems-heavy product engineering,
-                full-stack roles, and data infrastructure work. Start window: late June or July
-                2026. Locations: Delhi, Gurgaon, or remote.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <a href={`mailto:${DataValues.contactEmail}`} className="border border-[#191714] bg-[#191714] px-5 py-3 font-mono text-sm font-semibold text-[#fffaf0]">
-                email
+                <span>
+                  <span className="block font-medium text-[#f2efe3] group-hover:text-[#d8e070]">
+                    {item.label}
+                  </span>
+                  <span className="mt-1 block text-xs leading-6 text-[#8f968a]">{item.note}</span>
+                </span>
+                <Arrow />
               </a>
-              <a href={DataValues.githubURL} className="border border-[#191714]/25 bg-[#fffaf0] px-5 py-3 font-mono text-sm font-semibold">
-                github
-              </a>
-              <a href={DataValues.linkedinURL} className="border border-[#191714]/25 bg-[#fffaf0] px-5 py-3 font-mono text-sm font-semibold">
-                linkedin
-              </a>
-              <a href={DataValues.twitterURL} className="border border-[#191714]/25 bg-[#fffaf0] px-5 py-3 font-mono text-sm font-semibold">
-                x/twitter
-              </a>
-            </div>
+            ))}
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
   )
 }

@@ -1,254 +1,154 @@
-import Image from "next/image"
 import Link from "next/link"
+import type { ReactNode } from "react"
+
 import {
-  capabilities,
-  currentWork,
-  experience,
-  profile,
+  currentFocus,
+  documentHome,
+  experienceSnapshot,
   selectedWork,
-  thinking,
 } from "./data-values"
 
-const navItems = [
-  ["Thesis", "#thesis"],
-  ["Work", "#work"],
-  ["Profile", "#profile"],
-  ["Contact", "#contact"],
-]
-
-function SectionLabel({ eyebrow, title }: { eyebrow: string; title: string }) {
+function DocumentHeading({ children }: { children: ReactNode }) {
   return (
-    <div className="border-t border-[#d8d2c5] pt-4">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#8b3f2f]">
-        {eyebrow}
-      </p>
-      <h2 className="mt-3 max-w-xl text-3xl font-semibold leading-tight tracking-tight text-[#201f1b] sm:text-4xl">
-        {title}
-      </h2>
-    </div>
+    <h2 className="mb-4 mt-11 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#777066]">
+      {children}
+    </h2>
   )
 }
 
-function ExternalMark() {
+function InlineArrow() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4" fill="none">
-      <path
-        d="M6.5 13.5 13.5 6.5M8 6.5h5.5V12"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-      />
-    </svg>
+    <span aria-hidden="true" className="text-[#9a9287] transition group-hover:text-[#24211d]">
+      -&gt;
+    </span>
   )
 }
 
 export default function Design6() {
   return (
-    <div className="min-h-dvh bg-[#f5f1e8] text-[#201f1b] antialiased">
-      <header className="sticky top-0 z-40 border-b border-[#d8d2c5] bg-[#f5f1e8]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+    <main className="min-h-dvh bg-[#fbfaf7] px-5 py-8 text-[#292621] antialiased sm:px-8 sm:py-12">
+      <article className="mx-auto max-w-[820px]">
+        <header className="border-b border-[#e5dfd5] pb-8">
           <Link
             href="/"
-            className="text-sm font-semibold tracking-tight text-[#201f1b] transition hover:text-[#8b3f2f]"
+            className="inline-flex text-sm text-[#766f65] underline decoration-[#d1c8bb] underline-offset-4 transition hover:text-[#24211d]"
           >
-            {profile.name}
+            mxdhavgautam.com
           </Link>
-          <nav className="hidden items-center gap-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#5e5a50] md:flex">
-            {navItems.map(([label, href]) => (
-              <a key={label} href={href} className="transition hover:text-[#8b3f2f]">
-                {label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </header>
 
-      <main className="mx-auto max-w-6xl px-5 sm:px-8">
-        <section
-          id="thesis"
-          className="grid min-h-[calc(100dvh-58px)] items-end gap-12 border-b border-[#d8d2c5] py-16 md:grid-cols-[1.28fr_0.72fr] md:py-24"
-        >
-          <div>
-            <p className="mb-8 max-w-md text-[11px] font-semibold uppercase tracking-[0.26em] text-[#8b3f2f]">
-              Research-builder / systems-minded product engineer / AI tooling builder
-            </p>
-            <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight text-[#201f1b] sm:text-7xl lg:text-8xl">
-              {profile.thesis}
+          <div className="mt-10">
+            <p className="text-sm text-[#8c8478]">{documentHome.updated}</p>
+            <h1 className="mt-3 text-4xl font-semibold leading-tight tracking-normal text-[#181613] sm:text-5xl">
+              {documentHome.title}
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-[#5e5a50]">
-              {profile.summary}
-            </p>
           </div>
 
-          <aside className="border-t border-[#d8d2c5] pt-5 md:self-stretch">
-            <div className="flex h-full flex-col justify-between gap-10">
-              <div className="space-y-6 text-sm leading-7 text-[#5e5a50]">
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8b3f2f]">
-                    Current
-                  </p>
-                  <p className="mt-2 text-[#201f1b]">{profile.role}</p>
-                  <p>{profile.location}</p>
-                </div>
-                <p>{profile.availability}</p>
-              </div>
+          <dl className="mt-6 grid gap-3 text-sm leading-6 text-[#665f56] sm:grid-cols-[8rem_1fr]">
+            <dt className="text-[#9a9287]">Currently</dt>
+            <dd>{documentHome.metadata[0]}</dd>
+            <dt className="text-[#9a9287]">Location</dt>
+            <dd>{documentHome.metadata[1]}</dd>
+            <dt className="text-[#9a9287]">Availability</dt>
+            <dd>{documentHome.metadata[2]}</dd>
+          </dl>
+        </header>
 
-              <div className="flex flex-wrap gap-3 text-[11px] font-semibold uppercase tracking-[0.18em]">
-                <a
-                  href="#work"
-                  className="inline-flex min-h-11 items-center border border-[#201f1b] px-4 transition hover:bg-[#201f1b] hover:text-[#f5f1e8]"
-                >
-                  Read work
-                </a>
-                <a
-                  href={profile.links.resume}
-                  className="inline-flex min-h-11 items-center border border-[#d8d2c5] px-4 text-[#5e5a50] transition hover:border-[#201f1b] hover:text-[#201f1b]"
-                >
-                  Resume
-                </a>
-              </div>
-            </div>
-          </aside>
-        </section>
-
-        <section className="grid gap-10 border-b border-[#d8d2c5] py-16 md:grid-cols-[0.72fr_1.28fr]">
-          <SectionLabel eyebrow="Current focus" title="Large research data, made reproducible." />
-          <div className="grid gap-px bg-[#d8d2c5] sm:grid-cols-2">
-            {currentWork.map((item) => (
-              <article key={item.label} className="bg-[#f5f1e8] p-6">
-                <h3 className="text-base font-semibold text-[#201f1b]">{item.label}</h3>
-                <p className="mt-4 text-sm leading-7 text-[#5e5a50]">{item.detail}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="work" className="border-b border-[#d8d2c5] py-16">
-          <div className="grid gap-10 md:grid-cols-[0.72fr_1.28fr]">
-            <SectionLabel eyebrow="Selected work" title="Products and tools with operational edges." />
-            <div className="space-y-0">
-              {selectedWork.map((work, index) => (
-                <a
-                  key={work.title}
-                  href={work.href}
-                  className="group grid gap-5 border-t border-[#d8d2c5] py-7 transition first:border-t-0 hover:border-[#8b3f2f] sm:grid-cols-[8.5rem_1fr] md:grid-cols-[4rem_8.5rem_1fr]"
-                >
-                  <span className="text-sm font-semibold tabular-nums text-[#8b3f2f]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="relative aspect-[4/3] overflow-hidden border border-[#d8d2c5] bg-[#ede7da]">
-                    <Image
-                      src={work.image}
-                      alt={work.imageAlt}
-                      fill
-                      sizes="(min-width: 768px) 136px, 50vw"
-                      className="object-cover opacity-80 grayscale transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
-                    />
-                  </span>
-                  <span>
-                    <span className="flex flex-col justify-between gap-2 sm:flex-row sm:items-baseline">
-                      <span className="text-2xl font-semibold tracking-tight text-[#201f1b] group-hover:text-[#8b3f2f]">
-                        {work.title}
-                      </span>
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#7c776c]">
-                        {work.meta}
-                      </span>
-                    </span>
-                    <span className="mt-4 block max-w-3xl text-sm leading-7 text-[#5e5a50]">
-                      {work.body}
-                    </span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="profile" className="grid gap-10 border-b border-[#d8d2c5] py-16 md:grid-cols-[0.72fr_1.28fr]">
-          <SectionLabel eyebrow="Profile" title="Research instincts, product taste, implementation range." />
-          <div>
-            <p className="max-w-3xl text-xl leading-9 tracking-tight text-[#201f1b]">
-              {profile.profile}
-            </p>
-            <div className="mt-10 flex flex-wrap gap-2">
-              {capabilities.map((capability) => (
-                <span
-                  key={capability}
-                  className="border border-[#d8d2c5] px-3 py-2 text-xs font-medium text-[#5e5a50]"
-                >
-                  {capability}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="grid gap-10 border-b border-[#d8d2c5] py-16 md:grid-cols-[0.72fr_1.28fr]">
-          <SectionLabel eyebrow="Experience" title="Recent roles, reduced to the work that matters." />
-          <div className="space-y-8">
-            {experience.map((item) => (
-              <article key={item.org} className="grid gap-4 border-t border-[#d8d2c5] pt-6 sm:grid-cols-[11rem_1fr]">
-                <p className="text-xs font-semibold uppercase leading-6 tracking-[0.18em] text-[#7c776c]">
-                  {item.years}
-                </p>
-                <div>
-                  <h3 className="text-xl font-semibold tracking-tight text-[#201f1b]">
-                    {item.role}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-[#8b3f2f]">{item.org}</p>
-                  <p className="mt-4 text-sm leading-7 text-[#5e5a50]">{item.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="grid gap-10 border-b border-[#d8d2c5] py-16 md:grid-cols-[0.72fr_1.28fr]">
-          <SectionLabel eyebrow="Current thinking" title="The operating notes behind the work." />
-          <div className="grid gap-px bg-[#d8d2c5]">
-            {thinking.map((note) => (
-              <article key={note.title} className="bg-[#f5f1e8] p-6">
-                <h3 className="text-xl font-semibold leading-8 tracking-tight text-[#201f1b]">
-                  {note.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-[#5e5a50]">{note.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="grid gap-10 py-16 md:grid-cols-[0.72fr_1.28fr]">
-          <SectionLabel eyebrow="Contact" title="Useful conversations are welcome." />
-          <div className="flex flex-col justify-between gap-10">
-            <p className="max-w-2xl text-lg leading-8 text-[#5e5a50]">
-              For AI/ML engineering, full-stack product engineering, data engineering, GenAI tooling, or research engineering roles aligned with a late June / July 2026 start window.
-            </p>
-            <div className="grid gap-4 text-sm sm:grid-cols-2">
+        <section
+          aria-label="Quick links"
+          className="mt-7 border-l-4 border-[#d8d0c4] bg-[#f2eee7] px-5 py-4"
+        >
+          <p className="text-sm font-semibold text-[#3d3832]">Quick links</p>
+          <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {documentHome.links.map((link) => (
               <a
-                href={`mailto:${profile.email}`}
-                className="inline-flex min-h-14 items-center justify-between gap-3 border border-[#201f1b] px-5 font-semibold transition hover:bg-[#201f1b] hover:text-[#f5f1e8]"
+                key={link.label}
+                href={link.href}
+                className="group inline-flex items-center gap-1.5 text-[#5c554d] underline decoration-[#c8beb0] underline-offset-4 transition hover:text-[#24211d]"
               >
-                {profile.email}
+                {link.label}
+                <InlineArrow />
               </a>
-              {[
-                ["LinkedIn", profile.links.linkedin],
-                ["GitHub", profile.links.github],
-                ["X / Twitter", profile.links.x],
-              ].map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="inline-flex min-h-14 items-center justify-between gap-3 border border-[#d8d2c5] px-5 font-semibold text-[#5e5a50] transition hover:border-[#201f1b] hover:text-[#201f1b]"
-                >
-                  {label}
-                  <ExternalMark />
-                </a>
-              ))}
-            </div>
+            ))}
           </div>
         </section>
-      </main>
-    </div>
+
+        <section aria-label="Intro" className="mt-8 space-y-4">
+          <p className="text-[17px] leading-8 text-[#3d3832]">{documentHome.intro}</p>
+          <p className="text-[15px] leading-7 text-[#665f56]">{documentHome.note}</p>
+        </section>
+
+        <DocumentHeading>Selected Work</DocumentHeading>
+        <section className="divide-y divide-[#e5dfd5] border-y border-[#e5dfd5]">
+          {selectedWork.map((work) => (
+            <a
+              key={work.title}
+              href={work.href}
+              className="group block py-6 transition hover:bg-[#f5f1ea]"
+            >
+              <div className="grid gap-4 sm:grid-cols-[11.25rem_1fr]">
+                <div className="text-sm leading-6 text-[#8c8478]">
+                  <p>{work.period}</p>
+                  <p>{work.context}</p>
+                </div>
+                <div>
+                  <h3 className="inline-flex items-center gap-2 text-xl font-semibold leading-snug tracking-normal text-[#24211d]">
+                    {work.title}
+                    <InlineArrow />
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-7 text-[#514b43]">{work.summary}</p>
+                  <ul className="mt-3 space-y-1 text-sm leading-6 text-[#665f56]">
+                    {work.notes.map((note) => (
+                      <li key={note} className="grid grid-cols-[1rem_1fr] gap-2">
+                        <span className="text-[#aaa196]">-</span>
+                        <span>{note}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </a>
+          ))}
+        </section>
+
+        <div className="grid gap-10 border-b border-[#e5dfd5] pb-12 md:grid-cols-[0.95fr_1.05fr]">
+          <section>
+            <DocumentHeading>Current Focus</DocumentHeading>
+            <ul className="space-y-3 text-[15px] leading-7 text-[#514b43]">
+              {currentFocus.map((item) => (
+                <li key={item} className="grid grid-cols-[1rem_1fr] gap-2">
+                  <span className="text-[#aaa196]">-</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <DocumentHeading>Experience Snapshot</DocumentHeading>
+            <div className="space-y-5">
+              {experienceSnapshot.map((item) => (
+                <article key={`${item.org}-${item.period}`}>
+                  <p className="text-sm text-[#8c8478]">{item.period}</p>
+                  <h3 className="mt-1 text-base font-semibold text-[#24211d]">{item.role}</h3>
+                  <p className="text-sm text-[#766f65]">{item.org}</p>
+                  <p className="mt-2 text-[15px] leading-7 text-[#514b43]">{item.note}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <footer className="py-8 text-sm leading-7 text-[#766f65]">
+          Best entry point:{" "}
+          <a
+            href={`mailto:${documentHome.email}`}
+            className="text-[#3d3832] underline decoration-[#c8beb0] underline-offset-4 transition hover:text-[#181613]"
+          >
+            {documentHome.email}
+          </a>
+          .
+        </footer>
+      </article>
+    </main>
   )
 }
