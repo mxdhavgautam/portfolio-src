@@ -1,6 +1,6 @@
 # My Developer Portfolio
 
-Welcome to the source code repository of my personal portfolio website! This repository contains all the code and assets needed to run my portfolio website, which is live at [mxdhavgautam.com](https://mxdhavgautam.com/). Feel free to explore the code, provide feedback, or even use it for your own purposes, all under the terms of the [MIT Open Source License](LICENSE).
+Welcome to the source code repository of the older/obsolete version of my personal portfolio website. This repository contains all the code and assets needed to run my static website, the new version is live at [mxdhavgautam.com](https://mxdhavgautam.com/). Feel free to explore the code, provide feedback, or even use it for your own purposes, all under the terms of the [MIT Open Source License](LICENSE).
 
 ## Table of Contents
 
