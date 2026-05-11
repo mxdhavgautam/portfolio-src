@@ -1,3 +1,5 @@
+## 🚧 THIS CODE IS NO LONGER BEING USED OR MAINTAINED
+
 # My Developer Portfolio
 
 Welcome to the source code repository of the older/obsolete version of my personal portfolio website. This repository contains all the code and assets needed to run my static website, the new version is live at [mxdhavgautam.com](https://mxdhavgautam.com/). Feel free to explore the code, provide feedback, or even use it for your own purposes, all under the terms of the [MIT Open Source License](LICENSE).
@@ -5,7 +7,6 @@ Welcome to the source code repository of the older/obsolete version of my person
 ## Table of Contents
 
 - [Overview](#overview)
-- [Live Demo](#live-demo)
 - [Features](#features)
 - [Installation and Usage](#installation-and-usage)
 - [Web Build](#web-build)
@@ -15,10 +16,6 @@ Welcome to the source code repository of the older/obsolete version of my person
 ## Overview
 
 This repository contains the source code for my personal portfolio website. The project is built with [Next.js](https://nextjs.org), a React-based web framework, and it showcases my skills, projects, and experiences in a visually appealing manner. This is a pixel-perfect migration from the original Flutter implementation, maintaining the same design, functionality, and user experience.
-
-## Live Demo
-
-Check out the live version of my portfolio at [mxdhavgautam.com](https://mxdhavgautam.com/).
 
 ## Features
 
